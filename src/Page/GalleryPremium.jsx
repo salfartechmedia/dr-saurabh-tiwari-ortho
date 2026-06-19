@@ -307,7 +307,7 @@ function Lightbox({ photo, index, total, onPrev, onNext, onClose, slideshow, onT
 }
 
 /* ─── MAIN ───────────────────────────────────────────────── */
-export default function Gallery() {
+export default function GalleryPremium() {
   const [activeCat, setActiveCat] = useState("All");
   const [search, setSearch]       = useState("");
   const [active, setActive]       = useState(null); // { photo, index }
@@ -564,11 +564,11 @@ export default function Gallery() {
       </div>
 
       {/* FOOTER */}
-      {/* <div style={{ background:"#060D1A", padding:"16px 24px", textAlign:"center" }}>
+      <div style={{ background:"#060D1A", padding:"16px 24px", textAlign:"center" }}>
         <p style={{ color:"rgba(100,140,180,.6)", fontSize:13 }}>
           Designed &amp; Developed by <span style={{ color:"#fff", fontWeight:800 }}>Salfartech</span>
         </p>
-      </div> */}
+      </div>
 
       {/* ══════════ LIGHTBOX ══════════ */}
       {active && (

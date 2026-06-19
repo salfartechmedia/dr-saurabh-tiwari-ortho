@@ -89,12 +89,12 @@ const specialities = [
   },
 ];
 
-export default function OurSpecialities() {
+export default function SpecialitiesPage() {
   const [active, setActive] = useState(specialities[0].id);
   const current = specialities.find((s) => s.id === active);
 
   return (
-    <div className="min-h-screen bg-blu-900 font-sans">
+    <div className="min-h-screen bg-blue-900 font-sans">
       {/* ── Header ── */}
       <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 pt-16 pb-12 px-6 text-center">
         {/* subtle radial glow */}
@@ -202,6 +202,11 @@ export default function OurSpecialities() {
           </div>
 
         </div>
+      </div>
+
+      {/* Footer strip */}
+      <div className="text-center pb-8 text-blue-500 text-xs tracking-wide">
+        © 2025 Abhay Jeevan Hospital · Lucknow
       </div>
 
       <style>{`

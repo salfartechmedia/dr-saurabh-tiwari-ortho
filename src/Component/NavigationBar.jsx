@@ -35,11 +35,11 @@ const NavigationBar = () => {
             </div> */}
                         <img src={LogoAH} className="w-11 h-11 flex items-center justify-center text-xl " alt="" />
                         <div>
-                            <h2 className="text-lg font-extrabold text-slate-900 leading-none">
+                            <h2 className="text-lg font-extrabold text-[#082c77] underline leading-none">
                                 Abhay Jeevan Hospital
                             </h2>
 
-                            <p className="text-[10px] tracking-widest font-semibold text-red-700 mt-1">
+                            <p className="text-[10px] tracking-widest font-semibold text-cyan-500 mt-1">
                                 24×7 EMERGENCY · MULTISPECIALTY
                             </p>
                         </div>
@@ -49,28 +49,28 @@ const NavigationBar = () => {
                     <div className="hidden lg:flex items-center gap-1">
                         <Link
                             to="/"
-                            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-red-50 hover:text-red-700 transition"
+                            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-cyan-50 hover:text-[#082c77] transition"
                         >
                             Home
                         </Link>
 
                         <Link
                             to="/about"
-                            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-red-50 hover:text-red-700 transition"
+                            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-cyan-50 hover:text-[#082c77] transition"
                         >
                             About
                         </Link>
 
                         <Link
                             to="/specialities"
-                            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-red-50 hover:text-red-700 transition"
+                            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-cyan-50 hover:text-[#082c77] transition"
                         >
                             Our Specialities
                         </Link>
 
                         <Link
                             to="/consultants"
-                            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-red-50 hover:text-red-700 transition"
+                            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-cyan-50 hover:text-[#082c77] transition"
                         >
                             Consultants
                         </Link>
@@ -82,27 +82,27 @@ const NavigationBar = () => {
                             Gallery
                         </Link>
 
-                        <Link
+                        {/* <Link
                             to="/contact"
                             className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-red-50 hover:text-red-700 transition"
                         >
                             Contact
-                        </Link>
+                        </Link> */}
                     </div>
 
                     {/* Desktop CTA */}
                     <div className="hidden lg:flex items-center gap-3">
-                        <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-2 text-center">
-                            <p className="text-[10px] font-bold text-red-700">
+                        <div className="bg-cyan-50 border border-[#082c77] rounded-xl px-4 py-2 text-center">
+                            <p className="text-[10px] font-bold text-[#082c77]">
                                 EMERGENCY
                             </p>
 
-                            <p className="text-sm font-extrabold text-red-700">
+                            <p className="text-sm font-extrabold text-[#082c77]">
                                 📞 98765 43210
                             </p>
                         </div>
 
-                        <Link to='book-appointment' className="bg-gradient-to-r from-red-700 to-red-900 text-white px-5 py-3 rounded-xl text-sm font-semibold shadow-md hover:shadow-lg transition">
+                        <Link to='book-appointment' className="bg-gradient-to-r from-[#082c77] to-cyan-300 text-white px-5 py-3 rounded-xl text-sm font-semibold shadow-md hover:shadow-lg transition">
                             Book Appointment
                         </Link>
                     </div>
