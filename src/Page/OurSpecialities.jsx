@@ -25,7 +25,7 @@ const specialities = [
       { title: "Laparoscopic Fertility Surgery", desc: "Minimally invasive correction of endometriosis, fibroids, and blocked tubes." },
       { title: "Counselling & Support", desc: "Dedicated emotional support and guidance throughout the entire treatment cycle." },
     ],
-    accentColor: "from-cyan-500 to-blue-600",
+    accentColor: "from-cyan-800 to-blue-900",
     lightBg: "bg-cyan-50",
     borderAccent: "border-cyan-400",
     badgeColor: "bg-cyan-100 text-cyan-800",
@@ -96,7 +96,7 @@ export default function OurSpecialities() {
   return (
     <div className="min-h-screen bg-blu-900 font-sans">
       {/* ── Header ── */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 pt-16 pb-12 px-6 text-center">
+      <div className="relative overflow-hidden bg-gradient-to-br from-[#082c77] via-blue-950 to-blue-950 pt-16 pb-12 px-6 text-center">
         {/* subtle radial glow */}
         <div className="absolute inset-0 opacity-20 pointer-events-none"
           style={{ background: "radial-gradient(ellipse 70% 50% at 50% 0%, #06b6d4, transparent)" }} />
@@ -104,7 +104,7 @@ export default function OurSpecialities() {
           Abhay Jeevan Hospital
         </p>
         <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
-          Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">Specialities</span>
+          Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-cyan-200">Specialities</span>
         </h1>
         <p className="mt-4 text-blue-200 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
           World-class medical care delivered with compassion — right here in Lucknow.
@@ -120,8 +120,8 @@ export default function OurSpecialities() {
                 flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold
                 border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400
                 ${active === s.id
-                  ? "bg-cyan-500 border-cyan-400 text-white shadow-lg shadow-cyan-500/30 scale-105"
-                  : "bg-blue-800/60 border-blue-600 text-blue-200 hover:bg-blue-700/80 hover:text-white hover:border-blue-400"
+                  ? "bg-cyan-500 border-cyan-500 text-white shadow-lg shadow-cyan-500/30 scale-105"
+                  : "bg-blue-800/60 border- text-blue-200 hover:bg-[#082c77] hover:text-white hover:border-white"
                 }
               `}
             >
@@ -137,11 +137,11 @@ export default function OurSpecialities() {
         <div key={current.id} className="animate-fade-in">
 
           {/* Hero Card */}
-          <div className={`rounded-2xl overflow-hidden shadow-2xl border border-blue-700`}>
+          <div className={`rounded-2xl overflow-hidden shadow-2xl border`}>
             {/* gradient bar */}
-            <div className={`h-1.5 w-full bg-gradient-to-r ${current.accentColor}`} />
+            <div className={`h-1.5 w-full bg-gray-100 ${current.accentColor}`} />
 
-            <div className="bg-blue-800/50 backdrop-blur-sm p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start">
+            <div className="bg-[#082c77] backdrop-blur-sm p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start">
               {/* Icon + Stat */}
               <div className="flex-shrink-0 flex flex-col items-center gap-3">
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${current.accentColor} flex items-center justify-center text-white shadow-lg`}>
@@ -166,7 +166,7 @@ export default function OurSpecialities() {
 
           {/* Services Grid */}
           <div className="mt-8">
-            <h3 className="text-cyan-400 font-semibold uppercase tracking-widest text-xs mb-5 pl-1">
+            <h3 className="text-[#082c77] font-semibold uppercase tracking-widest text-xs mb-5 pl-1">
               What We Offer
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -175,16 +175,16 @@ export default function OurSpecialities() {
                   key={i}
                   className={`
                     group relative rounded-xl border ${current.borderAccent}/40
-                    bg-blue-800/40 hover:bg-blue-700/50
+                    bg-gray-100 hover:bg-blue-900
                     p-5 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5
                     cursor-default
                   `}
                 >
                   {/* accent line left */}
                   <div className={`absolute left-0 top-4 bottom-4 w-0.5 rounded-full bg-gradient-to-b ${current.accentColor} opacity-60 group-hover:opacity-100 transition-opacity`} />
-                  <div className="pl-3">
-                    <h4 className="text-white font-bold text-sm mb-1.5">{h.title}</h4>
-                    <p className="text-blue-300 text-xs leading-relaxed">{h.desc}</p>
+                  <div className="pl-3 hover:text-white">
+                    <h4 className="hover:text-white text-black font-bold text-sm mb-1.5">{h.title}</h4>
+                    <p className="text-blu-300 text-xs leading-relaxed">{h.desc}</p>
                   </div>
                 </div>
               ))}
@@ -196,7 +196,7 @@ export default function OurSpecialities() {
             <button className={`px-8 py-3.5 rounded-full font-bold text-sm bg-gradient-to-r ${current.accentColor} text-white shadow-lg hover:shadow-cyan-500/30 hover:scale-105 transition-all duration-200`}>
               Book an Appointment
             </button>
-            <button className="px-8 py-3.5 rounded-full font-semibold text-sm border border-blue-500 text-blue-200 hover:bg-blue-700/50 hover:text-white transition-all duration-200">
+            <button className="px-8 py-3.5 rounded-full font-semibold text-sm border border-gray-50 hover:bg-blue-700/50 hover:text-white transition-all duration-200">
               Know More
             </button>
           </div>

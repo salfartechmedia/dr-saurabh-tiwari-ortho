@@ -1,12 +1,12 @@
 import React from "react";
+import LogoA from '../assets/LogoA.png'
 
 const NAV_LINKS = [
   "Home",
-  "Services",
-  "Doctors",
   "About",
-  "Facilities",
-  "Contact",
+  "Specialities",
+  "Our Doctors",
+  "Gallery",
 ];
 
 const SERVICES = [
@@ -14,14 +14,12 @@ const SERVICES = [
   { title: "General Medicine" },
   { title: "General Surgery" },
   { title: "Gynecology & Obstetrics" },
-  { title: "Orthopedics" },
-  { title: "Neurology" },
-  { title: "Pulmonology" },
+
 ];
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1A1A2E] border-t-4 border-red-700 pt-12 pb-6 px-6">
+    <footer className="bg-blue-950 border-t-4 border-[#082c77] pt-12 pb-6 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
@@ -29,8 +27,8 @@ const Footer = () => {
           {/* Hospital Info */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-700 to-red-900 flex items-center justify-center text-white font-bold text-lg">
-                ✚
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                 <img src={LogoA} className="w-11 h-11 flex items-center justify-center text-xl " alt="" />
               </div>
 
               <div>
@@ -38,7 +36,7 @@ const Footer = () => {
                   Abhay Jeevan Hospital
                 </h3>
 
-                <p className="text-red-600 text-[10px] tracking-widest font-semibold">
+                <p className="text-cyan-500 text-[10px] tracking-widest font-semibold">
                   RAEBARELI · UTTAR PRADESH
                 </p>
               </div>
@@ -50,7 +48,7 @@ const Footer = () => {
               thousands of patients ki seva kar rahi hai.
             </p>
 
-            <h4 className="text-red-600 font-bold text-xl">
+            <h4 className="text-cyan-500 font-bold text-xl">
               📞 98765 43210
             </h4>
 
@@ -107,7 +105,7 @@ const Footer = () => {
                   Monday – Saturday
                 </p>
 
-                <p className="text-red-600 font-bold">
+                <p className="text-cyan-500 font-bold">
                   9:00 AM – 2:00 PM
                 </p>
               </div>
@@ -117,7 +115,7 @@ const Footer = () => {
                   Monday – Saturday
                 </p>
 
-                <p className="text-red-600 font-bold">
+                <p className="text-cyan-500 font-bold">
                   5:00 PM – 8:00 PM
                 </p>
               </div>
@@ -127,18 +125,18 @@ const Footer = () => {
                   Sunday
                 </p>
 
-                <p className="text-red-600 font-bold">
+                <p className="text-cyan-500 font-bold">
                   Emergency Only
                 </p>
               </div>
             </div>
 
-            <div className="mt-5 bg-red-900/20 border border-red-700/40 rounded-xl p-4">
-              <p className="text-red-400 text-sm font-semibold">
+            <div className="mt-5 bg-cyan-500/20 border border-white rounded-xl p-4">
+              <p className="text-white text-sm font-semibold">
                 🚨 EMERGENCY
               </p>
 
-              <p className="text-red-500 font-extrabold text-lg">
+              <p className="text-cyan text-white font-extrabold text-lg">
                 24 × 7 OPEN
               </p>
             </div>
@@ -151,12 +149,12 @@ const Footer = () => {
             © 2024 Abhay Jeevan Hospital. All Rights Reserved.
           </p>
 
-          <p className="text-slate-500 text-sm text-center md:text-right">
+          {/* <p className="text-slate-500 text-sm text-center md:text-right">
             Designed & Developed by{" "}
             <span className="text-red-600 font-semibold">
               Salfartech
             </span>
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>
