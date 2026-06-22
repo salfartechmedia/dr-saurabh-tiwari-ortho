@@ -1,51 +1,64 @@
 import { useState, useRef, useEffect } from "react";
 // import BreadCrumb from "../Component/BreadCrumb";
+import DrAnjali from '../assets/Consultants/DrAnjali.jpeg'
+import DrLal from '../assets/Consultants/DrLal.jpeg'
 
 const doctors = [
   {
     id: 1,
-    name: "Dr. Priya Sharma",
-    specialty: "Cardiologist",
-    qualification: "MBBS, MD, DM (Cardiology)",
-    experience: "18 Years",
+    name: "Dr. Anjali Singh",
+    specialty: "Gynecologist & Infertility Specialist",
+    qualification: "MBBS, MS (Gold Medalist) FMAS, DNB, MNAMS, CIMP",
+    experience: "12 Years",
     timing: "Mon–Sat | 10:00 AM – 2:00 PM",
-    emoji: "🫀",
+    emoji: DrAnjali,
     color: "#c0392b",
     tagline: "Heart Care Specialist",
   },
   {
     id: 2,
-    name: "Dr. Anil Verma",
-    specialty: "Orthopedic Surgeon",
-    qualification: "MBBS, MS (Ortho)",
-    experience: "14 Years",
+    name: "Dr. Lal Ratnakar Singh",
+    specialty: "General Physician",
+    qualification: "MBBS, MD, ACPE, CPE (Gold Medalist)",
+    experience: "10 Years",
     timing: "Mon–Fri | 11:00 AM – 3:00 PM",
-    emoji: "🦴",
+    emoji: DrLal,
     color: "#2980b9",
     tagline: "Bone & Joint Expert",
   },
-  // {
-  //   id: 3,
-  //   name: "Dr. Sunita Patel",
-  //   specialty: "Gynaecologist",
-  //   qualification: "MBBS, MS (OBG)",
-  //   experience: "20 Years",
-  //   timing: "Tue–Sun | 9:00 AM – 1:00 PM",
-  //   emoji: "🌸",
-  //   color: "#8e44ad",
-  //   tagline: "Women's Health Specialist",
-  // },
-  // {
-  //   id: 4,
-  //   name: "Dr. Ramesh Gupta",
-  //   specialty: "Neurologist",
-  //   qualification: "MBBS, MD, DM (Neurology)",
-  //   experience: "16 Years",
-  //   timing: "Mon–Sat | 12:00 PM – 4:00 PM",
-  //   emoji: "🧠",
-  //   color: "#16a085",
-  //   tagline: "Brain & Spine Specialist",
-  // },
+  {
+    id: 3,
+    name: "Dr. S J Patel",
+    specialty: "Pediatrician",
+    qualification: "MBBS, MS (OBG)",
+    experience: "20 Years",
+    timing: "Tue–Sun | 3:00 pM – 4:00 PM",
+    emoji: "🌸",
+    color: "#8e44ad",
+    tagline: "Child's health Specialist",
+  },
+  {
+    id: 4,
+    name: "Dr. Raviraj Patil",
+    specialty: "General Surgeon",
+    qualification: "MBBS, Ms",
+    experience: "16 Years",
+    timing: "Mon–Sat | 12:00 PM – 4:00 PM",
+    emoji: "🧠",
+    color: "#16a085",
+    tagline: "Brain & Spine Specialist",
+  },
+  {
+    id: 4,
+    name: "Dr. Pankaj Singh",
+    specialty: "Plastic Surgeon",
+    qualification: "MBBS, MS, MCh",
+    experience: "16 Years",
+    timing: "Mon–Sat | 12:00 PM – 4:00 PM",
+    emoji: "🧠",
+    color: "#16a085",
+    tagline: "Plastic Surgeon",
+  },
 ];
 
 const CARD_WIDTH = 320;
@@ -130,11 +143,11 @@ export default function Consultant() {
       >
       {/* Header */}
       <div className="text-center mb-12">
-        <span className="inline-block bg-red-100 text-red-700 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">
+        <span className="inline-block bg-red-100 text-blue-950 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">
           Our Medical Team
         </span>
-        <h2 className="text-4xl font-bold text-gray-900 mb-2">
-          Meet Our <span className="text-red-600">Specialists</span>
+        <h2 className="text-4xl font-bold text-cyan-500 mb-2">
+          Meet Our <span className="text-blue-950">Specialists</span>
         </h2>
         <p className="text-gray-500 text-base max-w-md mx-auto">
           Dedicated doctors with decades of experience, committed to your health
@@ -175,14 +188,14 @@ export default function Consultant() {
         className="mt-6 flex items-center gap-3 bg-white rounded-2xl shadow-md px-6 py-3 border border-gray-100"
         style={{ transition: "all 0.4s" }}
         >
-        <span className="text-2xl">{doc.emoji}</span>
+        <span className="text-2xl"><img src={doc.emoji} className="w-16 rounded-full" alt="" /></span>
         <div>
           <p className="text-sm font-semibold text-gray-800">{doc.name}</p>
           <p className="text-xs text-gray-400">{doc.timing}</p>
         </div>
         <a
           href="#"
-          className="ml-4 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-colors"
+          className="ml-4 bg-cyan-500 hover:bg-blue-blue-950 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-colors"
           >
           Book OPD
         </a>
@@ -192,7 +205,7 @@ export default function Consultant() {
       <div className="flex items-center gap-6 mt-8">
         <button
           onClick={handlePrev}
-          className="w-11 h-11 rounded-full bg-white border border-gray-200 shadow hover:shadow-md flex items-center justify-center text-gray-600 hover:text-red-600 hover:border-red-300 transition-all"
+          className="w-11 h-11 rounded-full bg-white border border-gray-200 shadow hover:shadow-md flex items-center justify-center text-gray-600 hover:text-blue-950 hover:border-red-300 transition-all"
           >
           <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
             <path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -209,7 +222,7 @@ export default function Consultant() {
               style={{
                   width: i === active ? 28 : 8,
                   height: 8,
-                  background: i === active ? "#dc2626" : "#d1d5db",
+                  background: i === active ? "#dc2621" : "#d1d5db",
                 }}
                 />
             ))}
@@ -283,23 +296,22 @@ function DoctorCard({ doc, isActive, hovered }) {
         />
 
         {/* Emoji avatar */}
-        <div
+        <img src={doc.emoji}
           className="absolute flex items-center justify-center"
           style={{
             bottom: -36,
             left: "50%",
             transform: "translateX(-50%)",
-            width: 72,
-            height: 72,
+            width: 96,
+            height: 96,
             borderRadius: "50%",
             background: "white",
             border: `3px solid ${doc.color}`,
             fontSize: 32,
             boxShadow: `0 4px 20px ${doc.color}40`,
           }}
-        >
-          {doc.emoji}
-        </div>
+        />
+        
 
         {/* Experience badge */}
         <div

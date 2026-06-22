@@ -11,6 +11,12 @@ import About from './Page/About.jsx'
 import OurSpecialities from './Page/OurSpecialities.jsx'
 import Consultants from './Page/Consultants.jsx'
 import Contact from './Page/Contact.jsx'
+import Gynecology from './Page/Specialities/Gynecology.jsx'
+import InfertilityIVF from './Page/Specialities/InfertilityIVF.jsx'
+import GeneralMedicine from './Page/Specialities/GeneralMedicine.jsx'
+import Paediiatrics from './Page/Specialities/Paediiatrics.jsx'
+import GeneralSurgery from './Page/Specialities/GeneralSurgery.jsx'
+import PlasticAndReconstructiveSurgery from './Page/Specialities/PlasticAndReconstructiveSurgery.jsx'
 // import { BrowserRouter } from 'react-router-dom'
 const router = createBrowserRouter([
   {
@@ -38,7 +44,7 @@ const router = createBrowserRouter([
         element: <Gallery/>
       },
       {
-        path: 'Specialities',
+        path: 'specialities',
         element: <OurSpecialities/>
       },
       {
@@ -48,6 +54,30 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <Contact/>
+      },
+      {
+        path: 'specialities/gynecology',
+        element: <Gynecology/>
+      },
+      {
+        path: 'specialities/infertility-and-ivf',
+        element: <InfertilityIVF/>
+      },
+      {
+        path: 'specialities/general-medicine',
+        element: <GeneralMedicine/>
+      },
+      {
+        path: 'specialities/pardiatrics',
+        element: <Paediiatrics/>
+      },
+      {
+        path: 'specialities/general-surgery',
+        element: <GeneralSurgery/>
+      },
+      {
+        path: 'specialities/plastic-and-reconstructive-surgery',
+        element: <PlasticAndReconstructiveSurgery/>
       },
     ]
   }

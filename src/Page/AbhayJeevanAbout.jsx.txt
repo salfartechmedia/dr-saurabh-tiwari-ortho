@@ -161,7 +161,7 @@ function SectionLabel({ text }) {
 /* ══════════════════════════════════════════════
    MAIN COMPONENT
 ══════════════════════════════════════════════ */
-export default function About() {
+export default function AbhayJeevanAbout() {
   return (
     <div
       className="min-h-screen font-sans text-white overflow-x-hidden"
@@ -744,6 +744,11 @@ export default function About() {
         </div>
       </section>
 
+      {/* ── FOOTER CREDIT ── */}
+      <div className="text-center pb-8 text-cyan-800/50 text-xs">
+        Designed &amp; Developed by{" "}
+        <span className="text-cyan-600 font-medium">SalfarTech, Bhopal</span>
+      </div>
     </div>
   );
 }
