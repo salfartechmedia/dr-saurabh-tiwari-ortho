@@ -345,8 +345,8 @@ export default function HeroSection() {
           style={{ animationDelay: "1.1s" }}
         >
           {[
-            { name: "Dr. Anjali Singh", spec: "Gynecologist & Laparoscopic Surgeon", emoji: DrLal},
-            { name: "Dr. L.R. Singh", spec: "MD — General Medicine", emoji: DrAnjali},
+            { name: "Dr. Anjali Singh", spec: "Gynecologist & Laparoscopic Surgeon", emoji: DrAnjali},
+            { name: "Dr. L.R. Singh", spec: "MD — General Medicine", emoji: DrLal},
           ].map((doc) => (
             <div
               key={doc.name}
