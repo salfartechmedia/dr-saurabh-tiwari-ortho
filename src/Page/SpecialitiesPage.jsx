@@ -100,14 +100,14 @@ export default function SpecialitiesPage() {
         {/* subtle radial glow */}
         <div className="absolute inset-0 opacity-20 pointer-events-none"
           style={{ background: "radial-gradient(ellipse 70% 50% at 50% 0%, #06b6d4, transparent)" }} />
-        <p className="text-cyan-400 uppercase tracking-[0.25em] text-xs font-semibold mb-3">
+        <p className="text-[#FCA311] uppercase tracking-[0.25em] text-xs font-semibold mb-3">
           Abhay Jeevan Hospital
         </p>
         <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
-          Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">Specialities</span>
+          Our <span className=" text-[#FCA311]">Specialities</span>
         </h1>
         <p className="mt-4 text-blue-200 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
-          World-class medical care delivered with compassion — right here in Lucknow.
+          World-class medical care delivered with compassion — right here in Prayagraj.
         </p>
 
         {/* ── Tab Buttons ── */}

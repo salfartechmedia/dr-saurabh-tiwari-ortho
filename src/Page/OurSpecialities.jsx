@@ -104,7 +104,7 @@ export default function OurSpecialities() {
           Abhay Jeevan Hospital
         </p>
         <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
-          Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-cyan-200">Specialities</span>
+          Our <span className="text-[#FCA311]">Specialities</span>
         </h1>
         <p className="mt-4 text-blue-200 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
           World-class medical care delivered with compassion — right here in Lucknow.
@@ -120,7 +120,7 @@ export default function OurSpecialities() {
                 flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold
                 border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400
                 ${active === s.id
-                  ? "bg-cyan-500 border-cyan-500 text-white shadow-lg shadow-cyan-500/30 scale-105"
+                  ? "bg-[#FCA311] text-blue-950 shadow-lg shadow-cyan-500/30 scale-105"
                   : "bg-blue-800/60 border- text-blue-200 hover:bg-[#082c77] hover:text-white hover:border-white"
                 }
               `}
@@ -144,11 +144,11 @@ export default function OurSpecialities() {
             <div className="bg-[#082c77] backdrop-blur-sm p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start">
               {/* Icon + Stat */}
               <div className="flex-shrink-0 flex flex-col items-center gap-3">
-                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${current.accentColor} flex items-center justify-center text-white shadow-lg`}>
+                <div className={`w-20 h-20 rounded-2xl bg-[#FCA311] flex items-center justify-center text-white shadow-lg`}>
                   <span className="scale-150">{current.icon}</span>
                 </div>
                 <div className="text-center">
-                  <p className="text-3xl font-extrabold text-cyan-400">{current.heroStat}</p>
+                  <p className="text-3xl font-extrabold text-white">{current.heroStat}</p>
                   <p className="text-blue-300 text-xs mt-0.5 font-medium uppercase tracking-wide">{current.heroLabel}</p>
                 </div>
               </div>
@@ -193,10 +193,10 @@ export default function OurSpecialities() {
 
           {/* CTA */}
           <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center items-center">
-            <button className={`px-8 py-3.5 rounded-full font-bold text-sm bg-gradient-to-r ${current.accentColor} text-white shadow-lg hover:shadow-cyan-500/30 hover:scale-105 transition-all duration-200`}>
+            <button className={`px-8 py-3.5 rounded-full font-bold text-sm bg-[#FCA311] text-white shadow-lg hover:shadow-cyan-500/30 hover:scale-105 transition-all duration-200`}>
               Book an Appointment
             </button>
-            <button className="px-8 py-3.5 rounded-full font-semibold text-sm border border-gray-50 hover:bg-blue-700/50 hover:text-white transition-all duration-200">
+            <button className="px-8 py-3.5 rounded-full font-semibold text-sm bg-gray-200 border border-gray-50 hover:bg-blue-700/50 hover:text-white transition-all duration-200">
               Know More
             </button>
           </div>

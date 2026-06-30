@@ -148,7 +148,7 @@ export default function Consultant() {
     <>
       {/* <Breadcrumb/> */}
       <div
-        className="min-h-screen bg-[#0B1F3A] flex flex-col mt12 md:mt20 items-center justify-center py-10 md:py-16 px-3 sm:px-4 overflow-hidden"
+        className="min-h-screen mt-20 bg-[#0B1F3A] flex flex-col mt12 md:mt20 items-center justify-center py-10 md:py-16 px-3 sm:px-4 overflow-hidden"
         style={{ fontFamily: "'Segoe UI', system-ui, sans-serif" }}
       >
         {/* Header */}
@@ -344,12 +344,12 @@ function DoctorCard({ doc, isActive, hovered }) {
 
       {/* Card body */}
       <div className="text-base sm:text-lg font-bold">
-        <p className="text-xs font-semibold tracking-widest uppercase mb-1" style={{ color: doc.color }}>
+        <p className="text-xs mt-16 text-center font-semibold tracking-widest uppercase mb-1" style={{ color: doc.color }}>
           {doc.tagline}
         </p>
-        <h3 className="text-lg font-bold text-gray-900 mb-0.5">{doc.name}</h3>
-        <p className="text-xs sm:text-sm font-semiboldd text-gray-600 mb-1">{doc.specialty}</p>
-        <p className="text-xs sm:text-sm font-semibold">{doc.qualification}</p>
+        <h3 className="text-lg text-center font-bold text-gray-900 mb-0.5">{doc.name}</h3>
+        <p className="text-xs sm:text-sm text-center font-semiboldd text-gray-600 mb-1">{doc.specialty}</p>
+        <p className="text-xs sm:text-sm text-center font-semibold">{doc.qualification}</p>
 
         {/* Divider */}
         <div className="h-px bg-gray-100 mb-4" />

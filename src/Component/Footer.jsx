@@ -10,9 +10,8 @@ const NAV_LINKS = [
 ];
 
 const SERVICES = [
-  { title: "Cardiology" },
+  { title: "Infertility & IVF " },
   { title: "General Medicine" },
-  { title: "General Surgery" },
   { title: "Gynecology & Obstetrics" },
 
 ];

@@ -164,7 +164,7 @@ export default function AboutSection() {
 
           {/* ── RIGHT: 3-IMAGE PUZZLE ── */}
           <div
-            className="relative hiden lg:flex items-center justify-center"
+            className="relative lg:flex items-center justify-center"
             style={{
               opacity: visible ? 1 : 0,
               transform: visible ? "translateX(0)" : "translateX(28px)",
@@ -336,7 +336,7 @@ export default function AboutSection() {
                   boxShadow: "0 6px 20px rgba(252,163,17,0.4)",
                 }}
               >
-                <div className="font-extrabold text-lg leading-none" style={{ color: "#172554" }}>25+</div>
+                <div className="font-extrabold text-lg leading-none" style={{ color: "#172554" }}>3+</div>
                 <div className="text-[9px] font-semibold leading-tight" style={{ color: "#172554" }}>Years of<br />Trust</div>
               </div>
 

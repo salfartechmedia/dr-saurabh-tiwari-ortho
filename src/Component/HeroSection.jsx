@@ -155,7 +155,7 @@ export default function HeroSection() {
             src={DrAnjaliC}
             // src={DrLalOPD}
             alt="Abhay Jeevan Hospital"
-            className="w-full h-full object-cover object-center"
+            className="w-full hidden lg:block h-full object-cover object-center"
           />
         </div>
 
@@ -293,7 +293,7 @@ export default function HeroSection() {
               style={{ animationDelay: "0.74s" }}
             >
               <button className="bg-[#FCA311] px-7 sm:px-9 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base shadow-lg">
-                Appointment Book Karein
+                Book Your Appointment
               </button>
               <button
                 className="btn-ghost px-7 sm:px-9 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base"
@@ -301,7 +301,7 @@ export default function HeroSection() {
                   border: "1.5px solid rgba(252,163,17,0.45)",
                 }}
               >
-                Emergency: 108
+                Emergency
               </button>
             </div>
 

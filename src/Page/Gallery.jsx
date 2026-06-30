@@ -215,7 +215,7 @@ export default function AbhayJeevanGallery() {
           {/* Eyebrow tag */}
           <div className="inline-flex items-center gap-2 mb-6">
             <div className="w-8 h-px bg-cyan-500" />
-            <span className="text-cyan-400 text-xs font-semibold tracking-widest uppercase">
+            <span className="text-[#FCA311] text-xs font-semibold tracking-widest uppercase">
               Our Facilities
             </span>
             <div className="w-8 h-px bg-cyan-500" />
@@ -224,9 +224,9 @@ export default function AbhayJeevanGallery() {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight tracking-tight">
             Hospital{" "}
             <span
-              className="bg-clip-text text-transparent"
+              className="bg-clip-text text-[#FCA311]"
               style={{
-                backgroundImage: "linear-gradient(90deg, #06B6D4, #22D3EE, #67E8F9)",
+                // backgroundImage: "linear-gradient(90deg, #06B6D4, #22D3EE, #67E8F9)",
               }}
             >
               Gallery
@@ -245,7 +245,7 @@ export default function AbhayJeevanGallery() {
           >
             {statsData.map((s, i) => (
               <div key={i} className="px-8 py-4 text-center">
-                <div className="text-2xl font-bold text-cyan-300">{s.value}</div>
+                <div className="text-2xl font-bold text-[#FCA311]">{s.value}</div>
                 <div className="text-xs text-cyan-500/70 mt-1 tracking-wide">{s.label}</div>
               </div>
             ))}
@@ -264,8 +264,8 @@ export default function AbhayJeevanGallery() {
               key={cat}
               onClick={() => handleCategory(cat)}
               className={`shrink-0 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${activeCategory === cat
-                ? "bg-cyan-500 text-white border-cyan-400 shadow-lg"
-                : "text-cyan-400/70 border-cyan-700/30 hover:border-cyan-500/50 hover:text-cyan-300"
+                ? "bg-[#FCA311] text-white border-[#FCA311] shadow-lg"
+                : "text-[#FCA311]/70 border-cyan-700/30 hover:border-[#FCA311]/50 hover:text-[#FCA311]"
                 }`}
               style={
                 activeCategory === cat
@@ -276,7 +276,7 @@ export default function AbhayJeevanGallery() {
               {cat}
             </button>
           ))}
-          <span className="ml-auto shrink-0 text-cyan-600/50 text-xs">
+          <span className="ml-auto shrink-0 text-[#FCA311]/50 text-xs">
             {filtered.length} items
           </span>
         </div>
@@ -327,7 +327,7 @@ export default function AbhayJeevanGallery() {
 
               <div className="absolute top-3 left-3">
                 <span
-                  className="text-xs px-3 py-1 rounded-full font-semibold text-cyan-300 border border-cyan-500/30"
+                  className="text-xs px-3 py-1 rounded-full font-semibold text-[#FCA311] border border-cyan-500/30"
                   style={{
                     background: "rgba(6,182,212,0.12)",
                     backdropFilter: "blur(8px)",
@@ -483,7 +483,7 @@ export default function AbhayJeevanGallery() {
             }}
           />
           <div className="relative z-10">
-            <p className="text-cyan-400 text-xs font-semibold tracking-widest uppercase mb-3">
+            <p className="text-[#FCA311] text-xs font-semibold tracking-widest uppercase mb-3">
               Visit Us
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -494,15 +494,14 @@ export default function AbhayJeevanGallery() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
-                className="px-8 py-3.5 rounded-full text-white font-semibold text-sm transition-all duration-300 hover:scale-105"
+                className="px-8 bg-[#FCA311] py-3.5 rounded-full text-white font-semibold text-sm transition-all duration-300 hover:scale-105"
                 style={{
-                  background: "linear-gradient(90deg, #06B6D4, #0891B2)",
                   boxShadow: "0 0 30px rgba(6,182,212,0.3)",
                 }}
               >
                 Book Appointment
               </button>
-              <button className="px-8 py-3.5 rounded-full text-cyan-400 font-semibold text-sm border border-cyan-700/40 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-300">
+              <button className="px-8 py-3.5 rounded-full text-[#FCA311] font-semibold text-sm border border-cyan-700/40 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-300">
                 Contact Us
               </button>
             </div>

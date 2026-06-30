@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import AHOutA from  '../assets/gallery/AHOutA.jpeg'
+import DrLal from '../assets/gallery/DrLal.jpeg'
+import DrAnjaliC from '../assets/gallery/DrAnjaliC.jpeg'
 
 /* ─── DATA ─── */
 const stats = [
@@ -86,33 +88,20 @@ const values = [
 
 const doctors = [
   {
-    name: "Dr. Abhay Kumar Shrivastava",
+    name: "Dr. Anjali Singh",
     role: "Chairman & Chief Surgeon",
     dept: "General & Laparoscopic Surgery",
     exp: "30+ yrs",
-    img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80",
+    img: DrAnjaliC,
   },
   {
-    name: "Dr. Meera Joshi",
-    role: "Medical Director",
+    name: "Dr. Lal Ratnakar Singh",
+    role: "General Physician",
     dept: "Internal Medicine",
     exp: "22+ yrs",
-    img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80",
+    img: DrLal,
   },
-  {
-    name: "Dr. Rajiv Bhatnagar",
-    role: "Head of Cardiology",
-    dept: "Interventional Cardiology",
-    exp: "18+ yrs",
-    img: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&q=80",
-  },
-  {
-    name: "Dr. Sunita Patel",
-    role: "Head of Gynaecology",
-    dept: "Obstetrics & Gynaecology",
-    exp: "20+ yrs",
-    img: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80",
-  },
+  
 ];
 
 /* ─── SCROLL REVEAL HOOK ─── */
@@ -152,8 +141,8 @@ function Reveal({ children, delay = 0, className = "" }) {
 function SectionLabel({ text }) {
   return (
     <div className="flex items-center gap-3 mb-4">
-      <div className="w-8 h-px bg-cyan-500" />
-      <span className="text-cyan-400 text-xs font-semibold tracking-widest uppercase">{text}</span>
+      <div className="w-8 h-px bg-[#FCA311]" />
+      <span className="text-[#FCA311] text-xs font-semibold tracking-widest uppercase">{text}</span>
       <div className="w-8 h-px bg-cyan-500" />
     </div>
   );
@@ -203,9 +192,9 @@ export default function About() {
               <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
                 Healing with{" "}
                 <span
-                  className="bg-clip-text text-transparent"
+                  className="bg-clip-text bg-[#FCA311] text-transparent"
                   style={{
-                    backgroundImage: "linear-gradient(90deg, #06B6D4, #22D3EE, #67E8F9)",
+                    // backgroundImage: "linear-gradient(90deg, #06B6D4, #22D3EE, #67E8F9)",
                   }}
                 >
                   Heart &amp; Science
@@ -218,9 +207,9 @@ export default function About() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <button
-                  className="px-7 py-3.5 rounded-full text-white font-semibold text-sm transition-all duration-300 hover:scale-105"
+                  className="px-7 py-3.5 rounded-full text-white font-semibold text-sm bg-[#FCA311] transition-all duration-300 hover:scale-105"
                   style={{
-                    background: "linear-gradient(90deg, #06B6D4, #0891B2)",
+                    // background: "linear-gradient(90deg, #06B6D4, #0891B2)",
                     boxShadow: "0 0 28px rgba(6,182,212,0.35)",
                   }}
                 >
@@ -296,7 +285,7 @@ export default function About() {
               className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 rounded-3xl overflow-hidden"
               style={{
                 border: "1px solid rgba(6,182,212,0.15)",
-                background: "rgba(6,182,212,0.04)",
+                background: "rgba(252,163,17,0.04)",
               }}
             >
               {stats.map((s, i) => (
@@ -305,12 +294,12 @@ export default function About() {
                   className="flex flex-col items-center py-8 px-4 text-center relative"
                   style={
                     i < stats.length - 1
-                      ? { borderRight: "1px solid rgba(6,182,212,0.1)" }
+                      ? { borderRight: "1px solid rgba(252,163,17,0.1)" }
                       : {}
                   }
                 >
                   <span className="text-2xl mb-2">{s.icon}</span>
-                  <div className="text-2xl font-bold text-cyan-300">{s.value}</div>
+                  <div className="text-2xl font-bold text-[#FCA311]">{s.value}</div>
                   <div className="text-xs text-cyan-500/60 mt-1 leading-snug">{s.label}</div>
                 </div>
               ))}
@@ -380,7 +369,7 @@ export default function About() {
                 Growing with{" "}
               <span
                 className="bg-clip-text text-transparent"
-                style={{ backgroundImage: "linear-gradient(90deg, #06B6D4, #22D3EE)" }}
+                style={{ backgroundImage: "linear-gradient(90deg, #FCA311)" }}
               >
           Trust
               </span>
@@ -394,7 +383,7 @@ export default function About() {
               className="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-px"
               style={{
                 background:
-                  "linear-gradient(to bottom, transparent, #06B6D4 10%, #06B6D4 90%, transparent)",
+                  "linear-gradient(to bottom, transparent, #FCA311 10%, #FCA311 90%, transparent)",
                 transform: "md:translateX(-50%)",
               }}
             />
@@ -504,7 +493,7 @@ export default function About() {
               Meet Our{" "}
               <span
                 className="bg-clip-text text-transparent"
-                style={{ backgroundImage: "linear-gradient(90deg, #06B6D4, #22D3EE)" }}
+                style={{ backgroundImage: "linear-gradient(90deg, #FCA311)" }}
               >
                 Experts
               </span>
@@ -514,7 +503,7 @@ export default function About() {
             </p>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 grid-cols-2 gap-6">
             {doctors.map((doc, i) => (
               <Reveal key={i} delay={i * 80}>
                 <div
@@ -544,7 +533,7 @@ export default function About() {
                       style={{
                         background: "rgba(6,182,212,0.15)",
                         border: "1px solid rgba(6,182,212,0.3)",
-                        color: "#06B6D4",
+                        color: "#FCA311",
                         backdropFilter: "blur(8px)",
                       }}
                     >
@@ -560,7 +549,7 @@ export default function About() {
                   {/* Info */}
                   <div className="p-5">
                     <h4 className="text-white font-semibold text-base leading-snug">{doc.name}</h4>
-                    <div className="text-cyan-400 text-xs font-medium mt-1">{doc.role}</div>
+                    <div className="text-[#FCA311] text-xs font-medium mt-1">{doc.role}</div>
                     <div className="text-cyan-200/40 text-xs mt-1">{doc.dept}</div>
                   </div>
                 </div>
@@ -603,7 +592,7 @@ export default function About() {
               >
                 <SectionLabel text="Why Choose Us" />
                 <h3 className="text-3xl font-bold text-white mb-6 leading-tight">
-                  Bhopal's Most Trusted Multi-Specialty Hospital
+                  Prayagraj's Most Trusted Multi-Specialty Hospital
                 </h3>
 
                 <ul className="space-y-4">
@@ -656,7 +645,7 @@ export default function About() {
                 }}
               />
               <div className="relative z-10">
-                <p className="text-cyan-400 text-xs font-semibold tracking-widest uppercase mb-3">
+                <p className="text-[#FCA311] text-xs font-semibold tracking-widest uppercase mb-3">
                   Get In Touch
                 </p>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
@@ -668,15 +657,15 @@ export default function About() {
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <button
-                    className="w-full sm:w-auto px-9 py-4 rounded-full text-white font-semibold text-sm transition-all duration-300 hover:scale-105"
+                    className="w-full sm:w-auto px-9 py-4 rounded-full bg-[#FCA311] text-blue-950 font-semibold text-sm transition-all duration-300 hover:scale-105"
                     style={{
-                      background: "linear-gradient(90deg, #06B6D4, #0891B2)",
+                      // background: "linear-gradient(90deg, #06B6D4, #0891B2)",
                       boxShadow: "0 0 32px rgba(6,182,212,0.35)",
                     }}
                   >
                     Book Appointment
                   </button>
-                  <button className="w-full sm:w-auto px-9 py-4 rounded-full text-cyan-400 font-semibold text-sm border border-cyan-700/40 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-300">
+                  <button className="w-full sm:w-auto px-9 py-4 rounded-full text-[#FCA311] font-semibold text-sm border border-cyan-700/40 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-300">
                     Call: +91 98765 43210
                   </button>
                 </div>
