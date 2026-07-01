@@ -165,7 +165,7 @@ export default function AboutSection() {
 
           {/* ── RIGHT: 3-IMAGE PUZZLE ── */}
           <div
-            className="relative lg:flex items-center justify-center"
+            className="relative lg:flex mb-20 items-center justify-center"
             style={{
               opacity: visible ? 1 : 0,
               transform: visible ? "translateX(0)" : "translateX(28px)",
@@ -174,8 +174,7 @@ export default function AboutSection() {
           >
             {/* Container for the 3 puzzle pieces */}
             <div className="relative flex items-center justify-center min-h-[420px] lg:min-h-0"
-            //  style={{ width: "460px", height: "440px" }}
-            >
+             style={{ width: "460px", height: "440px" }}>
 
               {/* ─── DECORATIVE BACKGROUND RING ─── */}
               <div
@@ -324,8 +323,8 @@ export default function AboutSection() {
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
                 <div>
-                  <div className="text-[10px] font-extrabold tracking-wider text-white">NABH</div>
-                  <div className="text-[9px] text-blue-300 -mt-0.5">Certified</div>
+                  <div className="text-[10px] font-extrabold tracking-wider text-white">Trusted</div>
+                  <div className="text-[9px] text-blue-300 -mt-0.5">Healthcare</div>
                 </div>
               </div>
 

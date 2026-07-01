@@ -11,7 +11,7 @@ const WhatsAppButton = () => {
   };
 
   return (
-    <div className="fixed md:bottom-8 bottom-20 md:left-8 right-8 z-50">
+    <div className="fixed md:bottom-8 bottom-20 md:left-8 left-5 z-50">
       <div className="relative flex items-center justify-center">
         {/* Ping/pulse rings - continuous animation */}
         <span className="absolute inline-flex h-14 w-14 rounded-full bg-green-500 opacity-75 animate-ping"></span>

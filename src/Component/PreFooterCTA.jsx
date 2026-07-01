@@ -5,11 +5,11 @@ export default function PreFooterCTA() {
       <div className="max- mx-auto flex flex-col lg:flex-row min-h-[480px]">
 
         {/* ── LEFT: Hospital Photo ── */}
-        <div className="relative lg:w-1/2 min-h-[280px] lg:min-h-full overflow-hidden">
+        <div className="relative p-10 lg:w-1/2 min-h-[280px] lg:min-h-full overflow-hidden">
           <img
             src={AHOutA}
             alt="Abhay Jeevan Hospital Building"
-            className="w-full h-full object-cover"
+            className="w-full rounded-3xl h-full object-cover"
             style={{ minHeight: "320px" }}
           />
           {/* Dark overlay at bottom for text legibility */}

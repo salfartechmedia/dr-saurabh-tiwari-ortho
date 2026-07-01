@@ -42,9 +42,7 @@ const Footer = () => {
             </div>
 
             <p className="text-slate-400 text-sm leading-7 mb-4">
-              Raebareli ka trusted multispecialty hospital jahan 15+ saalon se
-              Dr. Anjali Singh aur Dr. Lal Ratnakar Singh ki expert team
-              thousands of patients ki seva kar rahi hai.
+            Abhay Jeevan Hospital is a trusted 15-bedded multi-specialty hospital dedicated to providing compassionate, high-quality healthcare. We blend cutting-edge technology with heartfelt care to deliver outcomes that truly matter—for patients, families, and communities across the region.
             </p>
 
             <h4 className="text-[#FCA311] font-bold text-xl">
@@ -77,7 +75,7 @@ const Footer = () => {
           {/* Services */}
           <div>
             <h4 className="text-white font-semibold text-base mb-4 border-b border-[#FCA311]/20 pb-3">
-              Services
+              Our Specialities
             </h4>
 
             <div className="space-y-2">
@@ -130,14 +128,14 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="mt-5 bg-cyan-500/20 border border-white rounded-xl p-4">
-              <p className="text-white text-sm font-semibold">
-                🚨 EMERGENCY
+            <div className="mt-5 bg-cyan-500/20 border rounded-xl p-4">
+              <p className="text-white text-lg font-bold">
+              Location
               </p>
 
-              <p className="text-cyan text-white font-extrabold text-lg">
-                24 × 7 OPEN
-              </p>
+              <a href="https://maps.app.goo.gl/YLUbSP6AHAZbG5eT8" target="_blank" className="text-cyan text-white text-sm">
+                Yojna-3, Jhusi, Jhusi Kohna, Uttar Pradesh 211019
+              </a>
             </div>
           </div>
         </div>
@@ -145,7 +143,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-[#FCA311]/50 pt-5 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-slate-500 text-sm text-center md:text-left">
-            © 2024 Abhay Jeevan Hospital. All Rights Reserved.
+            © 2026 Abhay Jeevan Hospital. All Rights Reserved.
           </p>
 
           {/* <p className="text-slate-500 text-sm text-center md:text-right">

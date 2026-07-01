@@ -48,10 +48,7 @@ const MobileActionBar = () => {
       {/* Book appointment section */}
       <button
         onClick={handleBooking}
-        className="relative flex-1 flex items-center justify-center gap-2 overflow-hidden active:brightness-95"
-        style={{
-          background: "linear-gradient(135deg, #FCA311)",
-        }}
+        className="relative flex-1 flex items-center justify-center gap-2 overflow-hidden active:brightness-95 bg-blue-950"
       >
         <span
           className="absolute top-0 h-full w-2/5"

@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 // import BreadCrumb from "../Component/BreadCrumb";
 import DrAnjali from '../assets/Consultants/DrAnjali.jpeg'
 import DrLal from '../assets/Consultants/DrLal.jpeg'
+import Docemoji from '../assets/Consultants/Docemoji.jpeg'
 
 const doctors = [
   {
@@ -12,7 +13,7 @@ const doctors = [
     experience: "12 Years",
     timing: "Mon–Sat | 10:00 AM – 2:00 PM",
     emoji: DrAnjali,
-    color: "#FCA311",
+    color: "#0B1F3A",
     tagline: "Heart Care Specialist",
   },
   {
@@ -23,7 +24,7 @@ const doctors = [
     experience: "10 Years",
     timing: "Mon–Fri | 11:00 AM – 3:00 PM",
     emoji: DrLal,
-    color: "#FCA311",
+    color: "#0B1F3A",
     tagline: "Bone & Joint Expert",
   },
   {
@@ -33,8 +34,8 @@ const doctors = [
     qualification: "MBBS, MS (OBG)",
     experience: "20 Years",
     timing: "Tue–Sun | 3:00 pM – 4:00 PM",
-    emoji: "🌸",
-    color: "#FCA311",
+    emoji: Docemoji,
+    color: "#0B1F3A",
     tagline: "Child's health Specialist",
   },
   {
@@ -44,8 +45,8 @@ const doctors = [
     qualification: "MBBS, Ms",
     experience: "16 Years",
     timing: "Mon–Sat | 12:00 PM – 4:00 PM",
-    emoji: "🧠",
-    color: "#FCA311",
+    emoji: Docemoji,
+    color: "#0B1F3A",
     tagline: "Brain & Spine Specialist",
   },
   {
@@ -55,8 +56,8 @@ const doctors = [
     qualification: "MBBS, MS, MCh",
     experience: "16 Years",
     timing: "Mon–Sat | 12:00 PM – 4:00 PM",
-    emoji: "🧠",
-    color: "#FCA311",
+    emoji: Docemoji,
+    color: "#0B1F3A",
     tagline: "Plastic Surgeon",
   },
 ];
@@ -148,18 +149,18 @@ export default function Consultant() {
     <>
       {/* <Breadcrumb/> */}
       <div
-        className="min-h-screen mt-20 bg-[#0B1F3A] flex flex-col mt12 md:mt20 items-center justify-center py-10 md:py-16 px-3 sm:px-4 overflow-hidden"
+        className="min-h-screen mt-20 bg-[#0B1F3A flex flex-col mt12 md:mt20 items-center justify-center py-10 md:py-16 px-3 sm:px-4 overflow-hidden"
         style={{ fontFamily: "'Segoe UI', system-ui, sans-serif" }}
       >
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block bg-[#FCA311] text-blue-950 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">
+          <span className="inline-block bg-[#0B1F3A] text-white text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">
             Our Medical Team
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#FCA311] mb-2">
-            Meet Our <span className="text-white">Specialists</span>
+            Meet Our <span className="text-[#0B1F3A]">Specialists</span>
           </h2>
-          <p className="text-gray-50 text-sm sm:text-base max-w-md mx-auto px-2">
+          <p className="text-gra-50 text-sm sm:text-base max-w-md mx-auto px-2">
             Dedicated doctors with decades of experience, committed to your health
             and well-being.
           </p>
@@ -214,7 +215,7 @@ export default function Consultant() {
           </div>
           <a
             href="#"
-            className="ml-4 bg-[#FCA311] hover:bg-blue-blue-950 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-colors"
+            className="ml-4 bg-[#0B1F3A] hover:bg-blue-blue-950 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-colors"
           >
             Book OPD
           </a>

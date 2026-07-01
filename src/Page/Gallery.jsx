@@ -200,7 +200,7 @@ export default function AbhayJeevanGallery() {
       </div>
 
       {/* ─── HERO SECTION ─── */}
-      <section className="relative overflow-hidden py-20 px-4">
+      <section className="relative overflow-hidden md:py-20 px-4">
         {/* Ambient glow orbs */}
         <div
           className="absolute -top-32 -left-32 w-96 h-96 rounded-full blur-3xl opacity-10 pointer-events-none"
