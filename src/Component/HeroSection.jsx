@@ -6,6 +6,7 @@ import DrAnjali from '../assets/Consultants/DrAnjali.jpeg'
 // import DrAnjaliCverticle from '../assets/DrAnjaliCverticle.jpeg'
 import DrAnjaliCverticle from '../assets/DrAnjaliCverticle.jpg'
 import DrLal from '../assets/Consultants/DrLal.jpeg'
+import { Link } from "react-router-dom";
 
 /* ─── Animated ECG / heartbeat line (SVG) ───────────────────────────── */
 function EcgLine() {
@@ -303,17 +304,17 @@ export default function HeroSection() {
               className="hero-fade-up flex flex-wrap gap-3 sm:gap-4"
               style={{ animationDelay: "0.74s" }}
             >
-              <button className="bg-[#FCA311] px-7 sm:px-9 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base shadow-lg">
+              <Link to='book-appointment' className="bg-[#FCA311] px-7 sm:px-9 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base shadow-lg">
                 Book Your Appointment
-              </button>
-              <button
+              </Link>
+              <a href="tel:+919876543210"
                 className="btn-ghost px-7 sm:px-9 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base"
                 style={{
                   border: "1.5px solid rgba(252,163,17,0.45)",
                 }}
               >
                 Emergency
-              </button>
+              </a>
             </div>
 
             {/* Stats strip */}

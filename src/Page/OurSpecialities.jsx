@@ -107,7 +107,7 @@ export default function OurSpecialities() {
           Our <span className="text-[#FCA311]">Specialities</span>
         </h1>
         <p className="mt-4 text-blue-200 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
-          World-class medical care delivered with compassion — right here in Lucknow.
+          World-class medical care delivered with compassion — right here in Prayagraj.
         </p>
 
         {/* ── Tab Buttons ── */}
@@ -186,20 +186,22 @@ export default function OurSpecialities() {
                     <h4 className="hover:text-white text-black font-bold text-sm mb-1.5">{h.title}</h4>
                     <p className="text-blu-300 text-xs leading-relaxed">{h.desc}</p>
                   </div>
+                  
                 </div>
+                
               ))}
             </div>
           </div>
 
           {/* CTA */}
-          <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center items-center">
+          {/* <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center items-center">
             <button className={`px-8 py-3.5 rounded-full font-bold text-sm bg-[#FCA311] text-white shadow-lg hover:shadow-cyan-500/30 hover:scale-105 transition-all duration-200`}>
               Book an Appointment
             </button>
             <button className="px-8 py-3.5 rounded-full font-semibold text-sm bg-gray-200 border border-gray-50 hover:bg-blue-700/50 hover:text-white transition-all duration-200">
               Know More
             </button>
-          </div>
+          </div> */}
 
         </div>
       </div>

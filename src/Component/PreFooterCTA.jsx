@@ -70,7 +70,7 @@ export default function PreFooterCTA() {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-10">
+          {/* <div className="flex flex-col sm:flex-row gap-4 mb-10">
             <a
               href="#appointment"
               className="inline-flex items-center justify-center gap-2 font-bold text-sm px-7 py-4 rounded-xl transition-all duration-200 hover:brightness-110 active:scale-95"
@@ -89,7 +89,7 @@ export default function PreFooterCTA() {
             >
               Contact Us
             </a>
-          </div>
+          </div> */}
 
           {/* Divider */}
           <div
@@ -116,7 +116,7 @@ export default function PreFooterCTA() {
                   href="tel:+917554001234"
                   className="text-sm font-semibold hover:underline"
                 >
-                  +91 755-400-1234
+                  +91 9335399454
                 </a>
               </div>
             </div>

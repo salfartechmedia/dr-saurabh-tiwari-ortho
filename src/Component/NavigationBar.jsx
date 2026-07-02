@@ -1,10 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import LogoAH from '../assets/LogoAH.png'
+import LogoAH from "../assets/LogoAH.png";
 
 const NavigationBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [specialityOpen, setSpecialityOpen] = useState(false);
+    const [mobileSpecialityOpen, setMobileSpecialityOpen] = useState(false);
+
+    const specialities = [
+        {
+            name: "General Medicine",
+            path: "/specialities/general-medicine",
+        },
+        {
+            name: "Infertility & IVF",
+            path: "/specialities/infertility-and-ivf",
+        },
+        {
+            name: "Gynecology",
+            path: "/specialities/gynecology",
+        },
+    ];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -20,20 +37,23 @@ const NavigationBar = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
-      ${scrolled
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+                scrolled
                     ? "bg-white/95 backdrop-blur-md shadow-lg"
                     : "bg-white/90 backdrop-blur-md"
-                }`}
+            }`}
         >
             <div className="max-w-7xl mx-auto px-4 lg:px-8">
                 <div className="h-20 flex items-center justify-between">
+
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-3">
-                        {/* <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-red-700 to-red-900 flex items-center justify-center text-white font-bold text-xl shadow-md">
-              ✚
-            </div> */}
-                        <img src={LogoAH} className="w-11 h-11 flex items-center justify-center text-xl " alt="" />
+                        <img
+                            src={LogoAH}
+                            className="w-11 h-11"
+                            alt="Hospital Logo"
+                        />
+
                         <div>
                             <h2 className="text-lg font-extrabold text-[#082c77] underline leading-none">
                                 Abhay Jeevan Hospital
@@ -47,6 +67,7 @@ const NavigationBar = () => {
 
                     {/* Desktop Menu */}
                     <div className="hidden lg:flex items-center gap-1">
+
                         <Link
                             to="/"
                             className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-gray-50 hover:text-[#082c77] transition"
@@ -61,12 +82,30 @@ const NavigationBar = () => {
                             About
                         </Link>
 
-                        <Link
-                            to="/specialities"
-                            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-gray-50 hover:text-[#082c77] transition"
+                        {/* Specialities Dropdown */}
+                        <div
+                            className="relative"
+                            onMouseEnter={() => setSpecialityOpen(true)}
+                            onMouseLeave={() => setSpecialityOpen(false)}
                         >
-                            Our Specialities
-                        </Link>
+                            <button className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-gray-50 hover:text-[#082c77] transition">
+                                Our Specialities ▼
+                            </button>
+
+                            {specialityOpen && (
+                                <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50">
+                                    {specialities.map((item) => (
+                                        <Link
+                                            key={item.path}
+                                            to={item.path}
+                                            className="block px-5 py-3 text-sm text-slate-700 hover:bg-[#082c77] hover:text-white transition"
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
 
                         <Link
                             to="/consultants"
@@ -77,32 +116,28 @@ const NavigationBar = () => {
 
                         <Link
                             to="/gallery"
-                            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-gray-50 hover:text- transition"
+                            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-gray-50 hover:text-[#082c77] transition"
                         >
                             Gallery
                         </Link>
-
-                        {/* <Link
-                            to="/contact"
-                            className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-red-50 hover:text-red-700 transition"
-                        >
-                            Contact
-                        </Link> */}
-                    </div>
+                                            </div>
 
                     {/* Desktop CTA */}
                     <div className="hidden lg:flex items-center gap-3">
-                        <div className="bg-gay-50 border border-[#082c77] rounded-xl px-4 py-2 text-center">
+                        <div className="bg-gray-50 border border-[#082c77] rounded-xl px-4 py-2 text-center">
                             <p className="text-[10px] font-bold text-[#082c77]">
                                 EMERGENCY
                             </p>
 
-                            <p className="text-sm font-extrabold text-[#082c77]">
+                            <a href="tel:+919876543210" className="text-sm font-extrabold text-[#082c77]">
                                 📞 +91 93353 99454
-                            </p>
+                            </a>
                         </div>
 
-                        <Link to='book-appointment' className="bg-blue-950 text-white px-5 py-3 rounded-xl text-sm font-semibold shadow-md hover:shadow-lg transition">
+                        <Link
+                            to="/book-appointment"
+                            className="bg-blue-950 text-white px-5 py-3 rounded-xl text-sm font-semibold shadow-md hover:shadow-lg transition"
+                        >
                             Book Appointment
                         </Link>
                     </div>
@@ -121,6 +156,7 @@ const NavigationBar = () => {
             {menuOpen && (
                 <div className="lg:hidden bg-white border-t shadow-lg">
                     <div className="px-5 py-4 flex flex-col">
+
                         <Link
                             to="/"
                             className="py-3 border-b"
@@ -137,13 +173,40 @@ const NavigationBar = () => {
                             About
                         </Link>
 
-                        <Link
-                            to="/specialities"
-                            className="py-3 border-b"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            Our Specialities
-                        </Link>
+                        {/* Mobile Specialities Dropdown */}
+                        <div className="border-b">
+                            <button
+                                className="w-full flex justify-between items-center py-3"
+                                onClick={() =>
+                                    setMobileSpecialityOpen(
+                                        !mobileSpecialityOpen
+                                    )
+                                }
+                            >
+                                <span>Our Specialities</span>
+                                <span>
+                                    {mobileSpecialityOpen ? "−" : "+"}
+                                </span>
+                            </button>
+
+                            {mobileSpecialityOpen && (
+                                <div className="pl-4 pb-3">
+                                    {specialities.map((item) => (
+                                        <Link
+                                            key={item.path}
+                                            to={item.path}
+                                            className="block py-2 text-sm text-slate-700"
+                                            onClick={() => {
+                                                setMenuOpen(false);
+                                                setMobileSpecialityOpen(false);
+                                            }}
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
 
                         <Link
                             to="/consultants"
@@ -175,18 +238,22 @@ const NavigationBar = () => {
                             </p>
 
                             <p className="text-lg font-extrabold text-red-700">
-                                📞 98765 43210
+                                📞 +91 93353 99454
                             </p>
                         </div>
 
-                        <button className="mt-4 w-full bg-blue-900 text-white py-3 rounded-xl font-semibold">
+                        <Link
+                            to="/book-appointment"
+                            onClick={() => setMenuOpen(false)}
+                            className="mt-4 w-full bg-blue-900 text-white py-3 rounded-xl font-semibold text-center"
+                        >
                             Book Appointment
-                        </button>
+                        </Link>
                     </div>
                 </div>
             )}
         </nav>
     );
-}; 151
+};
 
 export default NavigationBar;

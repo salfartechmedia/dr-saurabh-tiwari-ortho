@@ -31,7 +31,7 @@ const Home = () => {
       <div class="elfsight-app-4e6e246f-3a88-44d1-811f-94b962667e51" data-elfsight-app-lazy></div>
       </div>
       <PreFooterCTA />
-      <HospitalPhotoBanner/>
+      {/* <HospitalPhotoBanner/> */}
 
 
       {/* <Footer/> */}

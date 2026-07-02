@@ -2,25 +2,26 @@ import { useState, useEffect, useRef } from "react";
 import AHOutA from  '../assets/gallery/AHOutA.jpeg'
 import DrLal from '../assets/gallery/DrLal.jpeg'
 import DrAnjaliC from '../assets/gallery/DrAnjaliC.jpeg'
+import { Link } from "react-router-dom";
 
 /* ─── DATA ─── */
 const stats = [
-  { value: "25+", label: "Years of Service", icon: "🏥" },
-  { value: "1,00,000+", label: "Patients Treated", icon: "🫀" },
-  { value: "150+", label: "Medical Experts", icon: "👨‍⚕️" },
-  { value: "40+", label: "Specialities", icon: "🔬" },
+  { value: "3+", label: "Years of Service", icon: "🏥" },
+  { value: "10,000+", label: "Patients Treated", icon: "🫀" },
+  { value: "6+", label: "Specialities", icon: "🔬" },
   { value: "24/7", label: "Emergency Care", icon: "🚑" },
-  { value: "NABH", label: "Accredited", icon: "🏆" },
+  { value: "Trusted", label: "Care", icon: "🏆" },
+  { value: "Caringƒ", label: "Hand", icon: "🏆" },
 ];
 
 const timeline = [
   {
     year: "1 September 2024",
     title: "Foundation",
-    desc: "Abhay Jeevan Hospital was established in Bhopal with a vision to provide affordable, accessible, and patient-centered healthcare to the community.",
+    desc: "Abhay Jeevan Hospital was established in Prayagraj with a vision to provide affordable, accessible, and patient-centered healthcare to the community.",
   },
   {
-    year: "2024",
+    year: "....",
     title: "Patient Care Begins",
     desc: "Started 24×7 emergency services, outpatient consultations, and essential healthcare facilities to serve patients with compassion and efficiency.",
   },
@@ -42,7 +43,7 @@ const timeline = [
   {
     year: "2024",
     title: "New Campus",
-    desc: "Inaugurated a 300-bed new campus with modular OTs, NICU, and a fully automated laboratory.",
+    desc: "Inaugurated a 15-bed new campus with modular OTs, NICU, and a fully automated laboratory.",
   },
 ];
 
@@ -206,7 +207,7 @@ export default function About() {
                 patient-first philosophy come together to deliver extraordinary care.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button
+                <Link to='/book-appointment'
                   className="px-7 py-3.5 rounded-full text-white font-semibold text-sm bg-[#FCA311] transition-all duration-300 hover:scale-105"
                   style={{
                     // background: "linear-gradient(90deg, #06B6D4, #0891B2)",
@@ -214,10 +215,10 @@ export default function About() {
                   }}
                 >
                   Book Appointment
-                </button>
-                <button className="px-7 py-3.5 rounded-full text-cyan-400 font-semibold text-sm border border-cyan-700/40 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-300">
+                </Link>
+                <Link to='/specialities' className="px-7 py-3.5 rounded-full text-cyan-400 font-semibold text-sm border border-cyan-700/40 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-300">
                   Our Specialities →
-                </button>
+                </Link>
               </div>
             </Reveal>
           </div>
@@ -267,8 +268,8 @@ export default function About() {
                   boxShadow: "0 8px 40px rgba(0,0,0,0.4)",
                 }}
               >
-                <div className="text-2xl font-bold" style={{ color: "#FCA311" }}>NABH</div>
-                <div className="text-xs text-cyan-300/60 mt-0.5">Accredited</div>
+                <div className="text-2xl font-bold" style={{ color: "#FCA311" }}>Trusted</div>
+                <div className="text-xs text-cyan-300/60 mt-0.5">Care</div>
               </div>
             </div>
           </Reveal>
@@ -420,7 +421,7 @@ export default function About() {
                     >
                       <div
                         className="text-xs font-bold tracking-widest mb-1"
-                        style={{ color: "#06B6D4" }}
+                        style={{ color: "#FCA311" }}
                       >
                         {item.year}
                       </div>
@@ -442,11 +443,10 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           <Reveal className="text-center mb-14">
             <SectionLabel text="What We Stand For" />
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl  font-bold">
               Our Core{" "}
               <span
-                className="bg-clip-text text-transparent"
-                style={{ backgroundImage: "linear-gradient(90deg, #06B6D4, #22D3EE)" }}
+                className="bg-clip-text text-[#FCA311]"
               >
                 Values
               </span>
@@ -598,10 +598,8 @@ export default function About() {
                 <ul className="space-y-4">
                   {[
                     "24/7 Emergency & Trauma Care",
-                    "300+ Bed Capacity with Modern ICU",
-                    "Expert Panel of 150+ Doctors",
+                    "15+ Bed Capacity with Modern ICU",
                     "Affordable & Transparent Pricing",
-                    "NABH Accredited Quality Protocols",
                     "Dedicated Patient Counselling",
                   ].map((point, i) => (
                     <li key={i} className="flex items-center gap-3 text-cyan-200/70 text-sm">
@@ -609,7 +607,7 @@ export default function About() {
                         className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
                         style={{ background: "rgba(6,182,212,0.15)", border: "1px solid rgba(6,182,212,0.3)" }}
                       >
-                        <svg className="w-3 h-3 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="w-3 h-3 text-[#FCA311]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
@@ -630,12 +628,12 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div
-              className="rounded-3xl p-12 md:p-16 text-center relative overflow-hidden"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(6,182,212,0.08) 0%, rgba(8,145,178,0.04) 100%)",
-                border: "1px solid rgba(6,182,212,0.15)",
-              }}
+              className="rounded-3xl bg-white p-12 md:p-16 text-center relative overflow-hidden"
+              // style={{
+              //   background:
+              //     "linear-gradient(135deg, rgba(6,182,212,0.08) 0%, rgba(8,145,178,0.04) 100%)",
+              //   border: "1px solid rgba(6,182,212,0.15)",
+              // }}
             >
               <div
                 className="absolute inset-0 pointer-events-none"
@@ -648,15 +646,15 @@ export default function About() {
                 <p className="text-[#FCA311] text-xs font-semibold tracking-widest uppercase mb-3">
                   Get In Touch
                 </p>
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                <h2 className="text-4xl md:text-5xl font-bold text-blue-950 mb-4 leading-tight">
                   Your Health Is Our Priority
                 </h2>
-                <p className="text-cyan-200/50 text-base max-w-md mx-auto mb-10 leading-relaxed">
+                <p className="text-gray-700 text-base max-w-md mx-auto mb-10 leading-relaxed">
                   Schedule a consultation with our specialists today. We're here to guide you at
                   every step of your health journey.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <button
+                  <Link to='/book-appointment'
                     className="w-full sm:w-auto px-9 py-4 rounded-full bg-[#FCA311] text-blue-950 font-semibold text-sm transition-all duration-300 hover:scale-105"
                     style={{
                       // background: "linear-gradient(90deg, #06B6D4, #0891B2)",
@@ -664,10 +662,10 @@ export default function About() {
                     }}
                   >
                     Book Appointment
-                  </button>
-                  <button className="w-full sm:w-auto px-9 py-4 rounded-full text-[#FCA311] font-semibold text-sm border border-cyan-700/40 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-300">
-                    Call: +91 98765 43210
-                  </button>
+                  </Link>
+                  <a href="tel:9335399454" className="w-full sm:w-auto px-9 py-4 rounded-full text-[#FCA311] font-semibold text-sm border border-blue-900/40 hover:border-[#FCA311] hover:text-blue-950 transition-all duration-300">
+                    Call: +91 9335399454
+                  </a>
                 </div>
               </div>
             </div>

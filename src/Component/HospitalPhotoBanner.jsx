@@ -37,7 +37,7 @@ export default function HospitalPhotoBanner() {
         <h2 className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight mb-4 max-w-2xl">
           Caring for Prayagraj
           <br />
-          <span style={{ color: "#FCA311" }}>Since 1999.</span>
+          <span style={{ color: "#FCA311" }}>Since 2024.</span>
         </h2>
 
         {/* Subtext */}

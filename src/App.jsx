@@ -6,22 +6,26 @@ import Footer from './Component/Footer'
 import { Outlet } from 'react-router-dom'
 import WhatsAppButton from './Component/whatsappButton'
 import MobileActionBar from './Component/MobileActionBar'
+// import PreFooterCTA from './Component/PreFooterCTA'
+import HospitalPhotoBanner from './Component/HospitalPhotoBanner'
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-    {/* <Home/> */}
-    <NavigationBar/>
-    {/* <Home/> */}
-    {/* <AbhayJeevanHospital/> */}
-    <main id ='main-content'>
-<WhatsAppButton/>
-    <Outlet/>
-<MobileActionBar/>
-    </main>
-    <Footer/>
+      {/* <Home/> */}
+      <NavigationBar />
+      {/* <Home/> */}
+      {/* <AbhayJeevanHospital/> */}
+      <main id='main-content'>
+        <WhatsAppButton />
+        <Outlet />
+        <MobileActionBar />
+      </main>
+      {/* <PreFooterCTA/> */}
+      <HospitalPhotoBanner/>
+      <Footer />
     </>
   )
 }

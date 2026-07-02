@@ -1,11 +1,12 @@
 import React from "react";
 import LogoA from '../assets/LogoA.png'
+import { Link } from "react-router-dom";
 
 const NAV_LINKS = [
   "Home",
   "About",
   "Specialities",
-  "Our Doctors",
+  "Consultants",
   "Gallery",
 ];
 
@@ -62,12 +63,12 @@ const Footer = () => {
 
             <div className="space-y-2">
               {NAV_LINKS.map((link) => (
-                <button
+                <Link to ={link}
                   key={link}
                   className="block text-slate-400 hover:text-red-600 transition-colors duration-200 text-sm"
                 >
                   {link}
-                </button>
+                </Link>
               ))}
             </div>
           </div>

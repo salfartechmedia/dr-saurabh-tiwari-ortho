@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import AHHero from '../assets/AHHero.png'
 import DrAnjaliB from '../assets/AboutHome/DrAnjaliB.jpeg'
 import DrLalA from '../assets/AboutHome/DrLalA.jpeg'
+import { Link } from "react-router-dom";
 
 const stats = [
   { value: "3+", label: "Years of Excellence" },
@@ -141,7 +142,7 @@ export default function AboutSection() {
 
             {/* CTA buttons */}
             <div className="flex items-center gap-3">
-              <button
+              <Link to ='about'
                 className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300"
                 style={{ background: "#FCA311", color: "#172554" }}
                 onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 20px rgba(252,163,17,0.35)"; }}
@@ -151,7 +152,7 @@ export default function AboutSection() {
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="w-3.5 h-3.5">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </button>
+              </Link>
               <button
                 className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold border transition-all duration-300"
                 style={{ borderColor: "#172554", color: "#172554" }}
