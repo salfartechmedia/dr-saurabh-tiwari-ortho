@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import OT from '../assets/gallery/OT.jpeg'
+import ReceptionB from '../assets/gallery/ReceptionB.jpeg'
 export default function ContactForm() {
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
@@ -49,7 +50,7 @@ export default function ContactForm() {
             {/* Tall left photo */}
             <div className="flex-1 rounded-2xl overflow-hidden relative" style={{ minHeight: "320px" }}>
               <img
-                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&auto=format&fit=crop"
+                src={ReceptionB}
                 alt="Hospital corridor"
                 className="w-full h-full object-cover"
               />
@@ -65,7 +66,7 @@ export default function ContactForm() {
 
             {/* Right: stacked two photos */}
             <div className="flex flex-col gap-3 flex-1">
-              <div className="rounded-2xl overflow-hidden relative flex-1" style={{ minHeight: "150px" }}>
+              {/* <div className="rounded-2xl overflow-hidden relative flex-1" style={{ minHeight: "150px" }}>
                 <img
                   src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&auto=format&fit=crop"
                   alt="Doctor consulting"
@@ -78,11 +79,11 @@ export default function ContactForm() {
                 <div className="absolute bottom-3 left-3 right-3">
                   <p className="text-white text-xs font-semibold leading-snug">Expert Doctors</p>
                 </div>
-              </div>
+              </div> */}
 
               <div className="rounded-2xl overflow-hidden relative flex-1" style={{ minHeight: "150px" }}>
                 <img
-                  src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&auto=format&fit=crop"
+                  src={OT}
                   alt="Medical team"
                   className="w-full h-full object-cover"
                 />
@@ -100,7 +101,7 @@ export default function ContactForm() {
                 className="rounded-2xl flex flex-col items-center justify-center py-4 px-3 text-center"
                 style={{ background: "#0B1F3A" }}
               >
-                <span className="text-2xl font-black" style={{ color: "#FCA311" }}>25K+</span>
+                <span className="text-2xl font-black" style={{ color: "#FCA311" }}>10K+</span>
                 <span className="text-white/60 text-xs font-semibold uppercase tracking-wider mt-0.5">Happy Patients</span>
               </div>
             </div>
@@ -112,14 +113,15 @@ export default function ContactForm() {
               <span className="text-lg">📞</span>
               <div>
                 <p className="text-xs text-gray-400 font-semibold uppercase tracking-wide">Call Us</p>
-                <a href="tel:+917554001234" className="text-sm font-bold" style={{ color: "#0B1F3A" }}>+91 755-400-1234</a>
+                <a href="tel:+917554001234" className="text-sm font-bold" style={{ color: "#0B1F3A" }}>+91 9335399454</a>
               </div>
             </div>
             <div className="flex items-center gap-2.5 flex-1 rounded-xl px-4 py-3 border border-gray-100">
               <span className="text-lg">📍</span>
               <div>
                 <p className="text-xs text-gray-400 font-semibold uppercase tracking-wide">Location</p>
-                <p className="text-sm font-bold" style={{ color: "#0B1F3A" }}>Jhunsi, Prayagraj</p>
+                 
+                 <a href="https://maps.app.goo.gl/YLUbSP6AHAZbG5eT8" target="_blank" className="text-sm font-bold" style={{ color: "#0B1F3A" }}>Jhunsi, Prayagraj</a>
               </div>
             </div>
           </div>

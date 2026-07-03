@@ -313,7 +313,7 @@ export default function HeroSection() {
                   border: "1.5px solid rgba(252,163,17,0.45)",
                 }}
               >
-                Emergency 24x7 Available in our Hospital and 369 
+                Emergency 24x7
               </a>
             </div>
 

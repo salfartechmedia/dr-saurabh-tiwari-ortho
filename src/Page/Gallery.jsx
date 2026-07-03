@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import DrAnjaliC from '../assets/gallery/DrAnjaliC.jpeg'
 import AHOutA from '../assets/gallery/AHOutA.jpeg'
 import NICU from '../assets/gallery/NICU.jpeg'
+import { Link } from "react-router-dom";
 
 const galleryData = [
   {
@@ -235,7 +236,7 @@ export default function AbhayJeevanGallery() {
 
           <p className="text-cyan-200/60 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
             Explore our world-class infrastructure, advanced medical equipment,
-            and healing spaces at Abhay Jeevan Hospital, Bhopal.
+            and healing spaces at Abhay Jeevan Hospital, prayagraj.
           </p>
 
           {/* Stats Strip */}
@@ -493,17 +494,17 @@ export default function AbhayJeevanGallery() {
               Schedule a visit to Abhay Jeevan Hospital and see our facilities firsthand.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button
+              <Link to='/book-appointment'
                 className="px-8 bg-[#FCA311] py-3.5 rounded-full text-white font-semibold text-sm transition-all duration-300 hover:scale-105"
                 style={{
                   boxShadow: "0 0 30px rgba(6,182,212,0.3)",
                 }}
               >
                 Book Appointment
-              </button>
-              <button className="px-8 py-3.5 rounded-full text-[#FCA311] font-semibold text-sm border border-cyan-700/40 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-300">
+              </Link>
+              <a href="tel:+919335399454" className="px-8 py-3.5 rounded-full text-[#FCA311] font-semibold text-sm border border-cyan-700/40 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-300">
                 Contact Us
-              </button>
+              </a>
             </div>
           </div>
         </div>

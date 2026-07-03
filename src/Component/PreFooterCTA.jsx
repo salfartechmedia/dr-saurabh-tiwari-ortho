@@ -52,7 +52,7 @@ export default function PreFooterCTA() {
               className="text-xs font-bold text-[#0B1F3A] uppercase tracking-[0.2em]"
               // style={{ color: "#FCA311" }}
             >
-              Abhay Jeevan Hospital, Bhopal
+              Abhay Jeevan Hospital, Prayagraj
             </span>
           </div>
 

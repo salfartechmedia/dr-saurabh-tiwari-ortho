@@ -26,7 +26,7 @@ const features = [
         <path d="M9 12l2 2 4-4" /><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z" />
       </svg>
     ),
-    text: "NABH-accredited with international quality standards",
+    text: "Trusted Care with international quality standards",
   },
   {
     icon: (
@@ -153,14 +153,14 @@ export default function AboutSection() {
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </Link>
-              <button
+              <a href="tel:+919335399454"
                 className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold border transition-all duration-300"
                 style={{ borderColor: "#172554", color: "#172554" }}
                 onMouseEnter={e => { e.currentTarget.style.background = "#172554"; e.currentTarget.style.color = "#fff"; }}
                 onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#172554"; }}
               >
                 Contact Us
-              </button>
+              </a>
             </div>
           </div>
 

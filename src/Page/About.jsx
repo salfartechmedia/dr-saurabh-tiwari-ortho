@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import AHOutA from  '../assets/gallery/AHOutA.jpeg'
 import DrLal from '../assets/gallery/DrLal.jpeg'
 import DrAnjaliC from '../assets/gallery/DrAnjaliC.jpeg'
+import OT from '../assets/gallery/OT.jpeg'
 import { Link } from "react-router-dom";
 
 /* ─── DATA ─── */
@@ -90,16 +91,16 @@ const values = [
 const doctors = [
   {
     name: "Dr. Anjali Singh",
-    role: "Chairman & Chief Surgeon",
-    dept: "General & Laparoscopic Surgery",
-    exp: "30+ yrs",
+    role: "Director - Abhay Jeevan Hospital",
+    dept: "Gynecologist & Infertility Specialist",
+    exp: "10+ yrs",
     img: DrAnjaliC,
   },
   {
     name: "Dr. Lal Ratnakar Singh",
     role: "General Physician",
     dept: "Internal Medicine",
-    exp: "22+ yrs",
+    exp: "10+ yrs",
     img: DrLal,
   },
   
@@ -572,7 +573,7 @@ export default function About() {
               {/* Left image */}
               <div className="relative h-64 md:h-auto">
                 <img
-                  src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=800&q=80"
+                  src={OT}
                   alt="Advanced medical care"
                   className="w-full h-full object-cover"
                 />

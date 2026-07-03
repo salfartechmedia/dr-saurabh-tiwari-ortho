@@ -46,9 +46,9 @@ const Footer = () => {
             Abhay Jeevan Hospital is a trusted 15-bedded multi-specialty hospital dedicated to providing compassionate, high-quality healthcare. We blend cutting-edge technology with heartfelt care to deliver outcomes that truly matter—for patients, families, and communities across the region.
             </p>
 
-            <h4 className="text-[#FCA311] font-bold text-xl">
+            <a href="tel:+919335399454" className="text-[#FCA311] font-bold text-xl">
               📞 +91 93353 99454
-            </h4>
+            </a>
 
             <p className="text-slate-500 text-sm mt-1">
               24×7 Emergency Available
@@ -80,14 +80,29 @@ const Footer = () => {
             </h4>
 
             <div className="space-y-2">
-              {SERVICES.map((service) => (
+              {/* {SERVICES.map((service) => ( */}
                 <p
-                  key={service.title}
                   className="text-slate-400 text-sm"
                 >
-                  {service.title}
+                  <Link to='/specialities/gynecology'>
+                  Gynecology
+                  </Link>
                 </p>
-              ))}
+                <p
+                  className="text-slate-400 text-sm"
+                >
+                  <Link to='/specialities/infertility-and-ivf'>
+                  Infertility & IVF
+                  </Link>
+                </p>
+                <p
+                  className="text-slate-400 text-sm"
+                >
+                  <Link to='/specialities/general-medicine'>
+                  General Meidicine
+                  </Link>
+                </p>
+              {/* ))} */}
             </div>
           </div>
 
