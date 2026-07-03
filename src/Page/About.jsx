@@ -202,7 +202,7 @@ export default function About() {
                 </span>
               </h1>
               <p className="text-cyan-200/60 text-lg leading-relaxed mb-8 max-w-lg">
-                For over 25 years, Abhay Jeevan Hospital has stood as Bhopal's most trusted
+                For over 3 years, Abhay Jeevan Hospital has stood as Prayagraj's most trusted
                 multi-specialty hospital — where compassionate doctors, modern technology, and a
                 patient-first philosophy come together to deliver extraordinary care.
               </p>

@@ -21,11 +21,11 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="w-full bg-white py-20 px-4 overflow-hidden">
-      <div className="max-wxl mx-20 flex flex-col lg:flex-row gap-12 items-stretch">
+    <section className="w-full bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12 items-stretch">
 
         {/* ── LEFT: Puzzle Photo Grid ── */}
-        <div className="lg:w-[48%] flex flex-col gap-4">
+        <div className="w-full lg:w-[48%] flex flex-col gap-4">
 
           {/* Section Label */}
           <div className="flex items-center gap-3 mb-2">
@@ -44,7 +44,7 @@ export default function ContactForm() {
           </p>
 
           {/* Puzzle Grid */}
-          <div className="flex gap-3 flex-1" style={{ minHeight: "340px" }}>
+          <div className="flex flex-col sm:flex-row gap-3 flex-1" style={{ minHeight: "340px" }}>
 
             {/* Tall left photo */}
             <div className="flex-1 rounded-2xl overflow-hidden relative" style={{ minHeight: "320px" }}>
@@ -107,7 +107,7 @@ export default function ContactForm() {
           </div>
 
           {/* Contact quick info */}
-          <div className="flex gap-4 mt-2">
+          <div className="flex flex-col sm:flex-row gap-4 mt-2">
             <div className="flex items-center gap-2.5 flex-1 rounded-xl px-4 py-3 border border-gray-100">
               <span className="text-lg">📞</span>
               <div>
@@ -126,7 +126,7 @@ export default function ContactForm() {
         </div>
 
         {/* ── RIGHT: Contact Form ── */}
-        <div className="lg:w-[52%] flex">
+        <div className="w-full lg:w-[52%] flex">
           <div
             className="w-full rounded-3xl p-8 sm:p-10 flex flex-col justify-center"
             style={{ background: "#0B1F3A" }}

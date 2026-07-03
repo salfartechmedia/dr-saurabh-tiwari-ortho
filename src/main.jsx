@@ -9,7 +9,7 @@ import Home from './Component/Home.jsx'
 import Gallery from './Page/Gallery.jsx'
 import About from './Page/About.jsx'
 import OurSpecialities from './Page/OurSpecialities.jsx'
-import Consultants from './Page/Consultants.jsx'
+import Consultant from './Page/Consultant.jsx'
 import Contact from './Page/Contact.jsx'
 import Gynecology from './Page/Specialities/Gynecology.jsx'
 import InfertilityIVF from './Page/Specialities/InfertilityIVF.jsx'
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'consultants',
-        element: <Consultants/>
+        element: <Consultant/>
       },
       {
         path: 'contact',
