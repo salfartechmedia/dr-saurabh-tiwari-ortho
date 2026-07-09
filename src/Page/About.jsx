@@ -12,7 +12,7 @@ const stats = [
   { value: "6+", label: "Specialities", icon: "🔬" },
   { value: "24/7", label: "Emergency Care", icon: "🚑" },
   { value: "Trusted", label: "Care", icon: "🏆" },
-  { value: "Caringƒ", label: "Hand", icon: "🏆" },
+  { value: "Caring", label: "Hand", icon: "🏆" },
 ];
 
 const timeline = [
@@ -255,7 +255,7 @@ export default function About() {
                   boxShadow: "0 8px 40px rgba(0,0,0,0.4)",
                 }}
               >
-                <div className="text-3xl font-bold text-cyan-400">25+</div>
+                <div className="text-3xl font-bold text-cyan-400">3+</div>
                 <div className="text-xs text-cyan-300/60 mt-0.5">Years of Excellence</div>
               </div>
 
@@ -321,14 +321,14 @@ export default function About() {
               icon: "🎯",
               color: "#06B6D4",
               text:
-                "To provide accessible, compassionate, and technologically advanced healthcare to every individual — ensuring the highest standards of clinical outcomes while treating every patient with dignity and respect.",
+                "To provide quality, compassionate, and affordable healthcare services with a patient-first approach. We are committed to delivering safe, reliable, and personalized medical care through experienced doctors, modern facilities, and dedicated support for every patient.",
             },
             {
               label: "Our Vision",
               icon: "🌟",
               color: "#D4A017",
               text:
-                "To be Central India's most trusted and patient-centric hospital — a centre of excellence in medical education, research, and holistic healing that transforms lives and communities.",
+                "To become one of the most trusted healthcare providers, recognized for excellence in patient care, medical expertise, and compassionate service. We are committed to creating a healthier community by offering safe, reliable, and accessible healthcare for all.",
             },
           ].map((card, i) => (
             <Reveal key={i} delay={i * 120}>

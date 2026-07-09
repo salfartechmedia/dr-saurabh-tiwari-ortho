@@ -114,10 +114,11 @@ const galleryData = [
 const categories = ["All", ...new Set(galleryData.map((g) => g.category))];
 
 const statsData = [
-  { label: "Total Images", value: "150+" },
-  { label: "Departments", value: "20+" },
-  { label: "Years of Excellence", value: "25+" },
-  { label: "Patients Served", value: "1L+" },
+
+  { label: "Departments", value: "5+" },
+  { label: "Years of Excellence", value: "3+" },
+  { label: "Patients Served", value: "1000+" },
+  { label: "Rating at Google", value: "4.9" },
 ];
 
 export default function AbhayJeevanGallery() {
