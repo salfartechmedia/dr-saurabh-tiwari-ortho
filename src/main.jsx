@@ -33,10 +33,6 @@ const router = createBrowserRouter([
         element: <ContactForm/>
       },
       {
-        path: 'gallery',
-        element: <Gallery/>
-      },
-      {
         path: 'about',
         element: <About/>
       },

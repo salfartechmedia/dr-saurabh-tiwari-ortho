@@ -134,13 +134,13 @@ const Footer = () => {
               </div>
 
               <div>
-                <p className="text-slate-500 text-xs font-semibold">
-                  Sunday
-                </p>
 
                 <p className="text-red-600 font-bold">
-                  Emergency Only
+                  Emergency 24x7
                 </p>
+                {/* <p className="text-slate-500 text-xs font-semibold">
+                  24x7
+                </p> */}
               </div>
             </div>
 

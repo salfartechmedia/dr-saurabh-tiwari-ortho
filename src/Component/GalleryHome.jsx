@@ -9,6 +9,9 @@ import Reception from '../assets/gallery/Reception.jpeg'
 import ReceptionA from '../assets/gallery/ReceptionA.jpeg'
 import ReceptionB from '../assets/gallery/ReceptionB.jpeg'
 import OT from '../assets/gallery/OT.jpeg'
+import { ArrowRight, Images } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 const images = [DrAnjaliC, DrLalOPDA, DrAnjaliOPDA, AHOutA, Reception, ReceptionA, ReceptionB, OT];
 
@@ -111,6 +114,32 @@ export default function InfiniteGallerySlider() {
           animation-play-state: paused;
         }
       `}</style>
+      <Link to ='gallery' className="flex justify-center mt-12">
+        <a
+          href="/gallery"
+          className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-[#FCA311] px-8 py-4 font-semibold text-white shadow-xl transition-all duration-500 hover:scale-105 hover:bg-[#FCA311] hover:shadow-[0_15px_40px_rgba(252,163,17,0.35)]"
+        >
+          {/* Animated Circle */}
+          <span className="absolute -left-10 top-1/2 h-20 w-20 -translate-y-1/2 rounded-full bg-white/10 transition-all duration-700 group-hover:left-[110%]" />
+
+          {/* Icon */}
+          <Images
+            size={22}
+            className="relative z-10 transition-transform duration-500 group-hover:rotate-12"
+          />
+
+          {/* Text */}
+          <span className="relative z-10">
+            View All Images
+          </span>
+
+          {/* Arrow */}
+          <ArrowRight
+            size={22}
+            className="relative z-10 transition-all duration-500 group-hover:translate-x-2"
+          />
+        </a>
+      </Link>
     </section>
   );
 }

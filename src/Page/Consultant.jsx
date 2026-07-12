@@ -11,30 +11,30 @@ const doctors = [
     id: 1,
     name: "Dr. Anjali Singh",
     specialty: "Gynecologist & Infertility Specialist",
-    qualification: "MBBS, MS (Gold Medalist) FMAS, DNB, MNAMS, CIMP",
-    experience: "12 Years",
+    qualification: "MBBS, MS(Gold Medalist) FMAS, DNB, MNAMS, CIMP",
+    experience: "6 Years",
     timing: "Mon–Sat | 10:00 AM – 2:00 PM",
     emoji: DrAnjali,
     color: "#0B1F3A",
-    tagline: "Heart Care Specialist",
+    tagline: "Gynecologist & Infertility Specialist",
   },
   {
     id: 2,
     name: "Dr. Lal Ratnakar Singh",
     specialty: "General Physician",
     qualification: "MBBS, MD, ACPE, CPE (Gold Medalist)",
-    experience: "10 Years",
+    experience: "6 Years",
     timing: "Mon–Fri | 11:00 AM – 3:00 PM",
     emoji: DrLal,
     color: "#0B1F3A",
-    tagline: "Bone & Joint Expert",
+    tagline: "General Physician",
   },
   {
     id: 3,
     name: "Dr. S J Patel",
     specialty: "Pediatrician",
-    qualification: "MBBS, MS (OBG)",
-    experience: "20 Years",
+    qualification: "MBBS, DCH",
+    experience: "5 Years",
     timing: "Tue–Sun | 3:00 PM – 4:00 PM",
     emoji: Docemoji,
     color: "#0B1F3A",
@@ -45,18 +45,18 @@ const doctors = [
     name: "Dr. Raviraj Patil",
     specialty: "General Surgeon",
     qualification: "MBBS, MS",
-    experience: "16 Years",
+    experience: "7 Years",
     timing: "Mon–Sat | 12:00 PM – 4:00 PM",
     emoji: Docemoji,
     color: "#0B1F3A",
-    tagline: "Brain & Spine Specialist",
+    tagline: "General Surgeon",
   },
   {
     id: 5,
     name: "Dr. Pankaj Singh",
     specialty: "Plastic Surgeon",
     qualification: "MBBS, MS, MCh",
-    experience: "16 Years",
+    experience: "5 Years",
     timing: "Mon–Sat | 12:00 PM – 4:00 PM",
     emoji: Docemoji,
     color: "#0B1F3A",
@@ -198,7 +198,7 @@ export default function Consultant() {
 
   return (
     <div
-      className="min-h-screen bg-white py-14 md:py-20 overflow-hidden"
+      className="min-h-screen bg-[#0B1F3A] py-14 md:py-20 overflow-hidden"
       style={{
         fontFamily: "'Segoe UI', system-ui, sans-serif",
       }}
@@ -213,14 +213,14 @@ export default function Consultant() {
             OUR MEDICAL TEAM
           </span>
 
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0B1F3A]">
+          <h2 className="text-3xl md:text-5xl font-bold text-white">
             Meet Our
             <span className="text-[#FCA311]">
               {" "}Specialists
             </span>
           </h2>
 
-          <p className="text-gray-500 max-w-xl mx-auto mt-5 leading-7">
+          <p className="text-gray-300 max-w-xl mx-auto mt-5 leading-7">
             Dedicated doctors with years of experience,
             committed to providing compassionate and
             world-class healthcare for every patient.
@@ -233,7 +233,7 @@ export default function Consultant() {
         <div
           className="relative flex justify-center items-center w-full overflow-hidden"
           style={{
-            height: screenWidth < 640 ? 380 : 470,
+            height: screenWidth < 640 ? 580 : 670,
             perspective: "1200px",
           }}
           onMouseDown={onDragStart}
@@ -307,7 +307,7 @@ export default function Consultant() {
           </div>
 
           <Link
-            to='book-appointment'
+            to='/book-appointment'
             className="bg-[#0B1F3A] hover:bg-[#08172d] text-white text-sm font-semibold px-5 py-2 rounded-xl transition-all duration-300"
           >
             Book OPD
@@ -396,7 +396,7 @@ function DoctorCard({ doc, isActive, hovered }) {
   return (
 
     <div
-      className="relative w-full max-w-[320px] h-[350px] sm:h-[420px] mx-auto rounded-3xl overflow-hidden bg-white select-none"
+      className="relative w-full max-w-[320px] h-[600px] sm:h-[520px] mx-auto rounded-3xl overflow-hidden bg-white select-none"
       style={{
         boxShadow: isActive
           ? "0 32px 80px rgba(0,0,0,.18),0 4px 24px rgba(0,0,0,.10)"
@@ -535,8 +535,7 @@ function DoctorCard({ doc, isActive, hovered }) {
 
         {/* CTA */}
 
-        <a
-          href="tel:+919876543210"
+        <Link to ='/book-appointment'
           className="block w-full py-3 rounded-xl text-sm sm:text-base font-semibold text-center transition-all duration-300"
           style={{
             background: isActive ? doc.color : "transparent",
@@ -545,7 +544,7 @@ function DoctorCard({ doc, isActive, hovered }) {
           }}
         >
           {isActive ? "Book Appointment" : "View Profile"}
-        </a>
+        </Link>
 
       </div>
 

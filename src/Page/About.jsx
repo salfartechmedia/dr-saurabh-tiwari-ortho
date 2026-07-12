@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const stats = [
   { value: "3+", label: "Years of Service", icon: "🏥" },
   { value: "10,000+", label: "Patients Treated", icon: "🫀" },
-  { value: "6+", label: "Specialities", icon: "🔬" },
+  { value: "5+", label: "Specialities", icon: "🔬" },
   { value: "24/7", label: "Emergency Care", icon: "🚑" },
   { value: "Trusted", label: "Care", icon: "🏆" },
   { value: "Caring", label: "Hand", icon: "🏆" },

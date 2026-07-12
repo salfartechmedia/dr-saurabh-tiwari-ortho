@@ -333,7 +333,7 @@ export default function HeroSection() {
               <div className="flex items-center gap-6 sm:gap-10">
                 <StatCounter end={3} suffix="+" label="Years of Trust" />
                 <div className="stat-divider self-stretch" />
-                <StatCounter end={6} suffix="+" label="Expert Doctors" />
+                <StatCounter end={5} suffix="+" label="Expert Doctors" />
                 <div className="stat-divider self-stretch" />
                 <StatCounter end={10000} suffix="+" label="Lives Touched" />
                 <div className="stat-divider self-stretch hidden sm:block" />
@@ -357,7 +357,7 @@ export default function HeroSection() {
           style={{ animationDelay: "1.1s" }}
         >
           {[
-            { name: "Dr. Anjali Singh", spec: "Gynecologist & Laparoscopic Surgeon", emoji: DrAnjali},
+            { name: "Dr. Anjali Singh", spec: "Gynecologist & Infertility Specialist", emoji: DrAnjali},
             { name: "Dr. L.R. Singh", spec: "MD — General Medicine", emoji: DrLal},
           ].map((doc) => (
             <div

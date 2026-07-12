@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const stats = [
   { value: "3+", label: "Years of Excellence" },
   { value: "10K+", label: "Patients Treated" },
-  { value: "6+", label: "Specialists" },
+  { value: "5+", label: "Specialists" },
   { value: "24/7", label: "Emergency Care" },
 ];
 
@@ -107,7 +107,7 @@ export default function AboutSection() {
             {/* Body text */}
             <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-[420px]">
               Abhay Jeevan Hospital has been a beacon of trust and medical excellence
-              for over two decades. We blend cutting-edge technology with heartfelt
+              for over three years. We blend cutting-edge technology with heartfelt
               care to deliver outcomes that truly matter — for patients, families,
               and communities across the region.
             </p>

@@ -8,6 +8,7 @@ import HeroSection from './HeroSection'
 import AboutSection from './AboutSection'
 import PreFooterCTA from './PreFooterCTA'
 import HospitalPhotoBanner from './HospitalPhotoBanner'
+import Contact from './Contact'
 // import BreadCrumb from './BreadCrumb'
 
 // import AppBread from './Breadcrumb'
@@ -23,14 +24,15 @@ const Home = () => {
       <HeroSection />
       <AboutSection />
       <GalleryHome />
-      <Consultant />
       {/* <!-- Elfsight Google Reviews | Untitled Google Reviews --> */}
-        
+
       <div className='m-10'>
-      <script src="https://elfsightcdn.com/platform.js" async></script>
-      <div class="elfsight-app-4e6e246f-3a88-44d1-811f-94b962667e51" data-elfsight-app-lazy></div>
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-4e6e246f-3a88-44d1-811f-94b962667e51" data-elfsight-app-lazy></div>
       </div>
+      <Consultant />
       <PreFooterCTA />
+      <Contact />
       {/* <HospitalPhotoBanner/> */}
 
 

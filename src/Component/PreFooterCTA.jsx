@@ -15,10 +15,10 @@ export default function PreFooterCTA() {
           {/* Dark overlay at bottom for text legibility */}
           <div
             className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(to right, rgba(11,31,58,0.45) 0%, transparent 100%)",
-            }}
+            // style={{
+            //   background:
+            //     "linear-gradient(to right, rgba(11,31,58,0.45) 0%, transparent 100%)",
+            // }}
           />
           {/* Floating badge on photo */}
           <div className="absolute bottom-6 left-6">
