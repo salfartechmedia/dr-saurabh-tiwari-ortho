@@ -8,6 +8,7 @@ import WhatsAppButton from './Component/whatsappButton'
 import MobileActionBar from './Component/MobileActionBar'
 // import PreFooterCTA from './Component/PreFooterCTA'
 import HospitalPhotoBanner from './Component/HospitalPhotoBanner'
+import Breadcrumb from './Component/BreadCrumb'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
       {/* <AbhayJeevanHospital/> */}
       <main id='main-content'>
         <WhatsAppButton />
+        <Breadcrumb/>
         <Outlet />
         <MobileActionBar />
       </main>

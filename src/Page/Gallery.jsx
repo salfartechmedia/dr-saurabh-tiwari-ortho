@@ -193,13 +193,13 @@ export default function AbhayJeevanGallery() {
       style={{ backgound: "linear-gradient(135deg, #060F1E 0%, #0B1F3A 50%, #0D2647 100%)" }}
     >
       {/* ─── BREADCRUMB ─── */}
-      <div className="border-b border-cyan-900/40" style={{ background: "rgba(6,182,212,0.04)" }}>
+      {/* <div className="border-b border-cyan-900/40" style={{ background: "rgba(6,182,212,0.04)" }}>
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-sm">
           <span className="text-cyan-400/60">Home</span>
           <span className="text-cyan-700">/</span>
           <span className="text-cyan-300 font-medium">Gallery</span>
         </div>
-      </div>
+      </div> */}
 
       {/* ─── HERO SECTION ─── */}
       <section className="relative overflow-hidden md:py-20 px-4">

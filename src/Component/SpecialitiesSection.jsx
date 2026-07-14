@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import AHHero from "../assets/AHHero.png";
 import {
@@ -57,6 +57,38 @@ const specialties = [
 ];
 
 export default function SpecialtiesSection() {
+    /* ─── SCROLL REVEAL HOOK ─── */
+    function useReveal() {
+        const ref = useRef(null);
+        const [visible, setVisible] = useState(false);
+        useEffect(() => {
+            const obs = new IntersectionObserver(
+                ([entry]) => { if (entry.isIntersecting) setVisible(true); },
+                { threshold: 0.12 }
+            );
+            if (ref.current) obs.observe(ref.current);
+            return () => obs.disconnect();
+        }, []);
+        return [ref, visible];
+    }
+
+    /* ─── REVEAL WRAPPER ─── */
+    function Reveal({ children, delay = 0, className = "" }) {
+        const [ref, visible] = useReveal();
+        return (
+            <div
+                ref={ref}
+                className={className}
+                style={{
+                    opacity: visible ? 1 : 0,
+                    transform: visible ? "translateY(0)" : "translateY(32px)",
+                    transition: `opacity 0.65s ease ${delay}ms, transform 0.65s ease ${delay}ms`,
+                }}
+            >
+                {children}
+            </div>
+        );
+    }
     return (
 
         <section className="py-24 bg-[#0B1F3A]"
@@ -68,27 +100,30 @@ export default function SpecialtiesSection() {
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Heading */}
+                <Reveal>
 
-                <div className="text-center max-w-3xl mx-auto">
 
-                    <span className="inline-block bg-[#FCA311]/10 text-[#FCA311] px-5 py-2 rounded-full font-semibold">
-                        Our Specialties
-                    </span>
+                    <div className="text-center max-w-3xl mx-auto">
 
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mt-6 leading-tight">
-                        Specialized Healthcare Services
-                    </h2>
+                        <span className="inline-block bg-[#FCA311]/10 text-[#FCA311] px-5 py-2 rounded-full font-semibold">
+                            Our Specialties
+                        </span>
 
-                    <div className="w-24 h-1 bg-[#FCA311] mx-auto rounded-full mt-5"></div>
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mt-6 leading-tight">
+                            Specialized Healthcare Services
+                        </h2>
 
-                    <p className="text-gray-400 text-lg leading-8 mt-8">
-                        Our experienced specialists provide compassionate care using modern
-                        medical technology, evidence-based treatment, and a patient-first
-                        approach to ensure the best healthcare outcomes.
-                    </p>
+                        <div className="w-24 h-1 bg-[#FCA311] mx-auto rounded-full mt-5"></div>
 
-                </div>
+                        <p className="text-gray-400 text-lg leading-8 mt-8">
+                            Our experienced specialists provide compassionate care using modern
+                            medical technology, evidence-based treatment, and a patient-first
+                            approach to ensure the best healthcare outcomes.
+                        </p>
 
+                    </div>
+
+                </Reveal>
                 {/* Cards */}
 
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-20">
@@ -98,67 +133,69 @@ export default function SpecialtiesSection() {
                         const Icon = item.icon;
 
                         return (
+                            <Reveal>
 
-                            <div
-                                key={index}
-                                className="group relative bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500"
-                            >
-                                <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#FCA311]/20 rounded-full"></div>
+                                <div
+                                    key={index}
+                                    className="group relative bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500"
+                                >
+                                    <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#FCA311]/20 rounded-full"></div>
 
-                                <div className="absolute -bottom-20 -left-20 w-56 h-56 bg-[#FCA311]/10 rounded-full"></div>
-                                {/* Top Border */}
+                                    <div className="absolute -bottom-20 -left-20 w-56 h-56 bg-[#FCA311]/10 rounded-full"></div>
+                                    {/* Top Border */}
 
-                                <div className="h-2 bg-[#FCA311] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                                    <div className="h-2 bg-[#FCA311] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
 
-                                <div className="p-8">
+                                    <div className="p-8">
 
-                                    {/* Icon */}
+                                        {/* Icon */}
 
-                                    <div className="w-20 h-20 rounded-3xl bg-[#0B1F3A] group-hover:bg-[#FCA311] flex items-center justify-center transition-all duration-500">
+                                        <div className="w-20 h-20 rounded-3xl bg-[#0B1F3A] group-hover:bg-[#FCA311] flex items-center justify-center transition-all duration-500">
 
-                                        <Icon
-                                            size={38}
-                                            className="text-white"
-                                        />
+                                            <Icon
+                                                size={38}
+                                                className="text-white"
+                                            />
+
+                                        </div>
+
+                                        {/* Title */}
+
+                                        <h3 className="text-2xl font-bold text-[#0B1F3A] mt-8 group-hover:text-[#FCA311] transition-colors">
+
+                                            {item.title}
+
+                                        </h3>
+
+                                        {/* Description */}
+
+                                        <p className="text-gray-600 leading-8 mt-5">
+
+                                            {item.description}
+
+                                        </p>
+
+                                        {/* Button */}
+
+                                        <Link
+                                            to={item.path}
+                                            className="inline-flex items-center gap-3 mt-8 font-semibold text-[#0B1F3A] group-hover:text-[#FCA311] transition-colors"
+                                        >
+
+                                            Explore Department
+
+                                            <ArrowRight
+                                                size={20}
+                                                className="group-hover:translate-x-2 transition-transform duration-300"
+                                            />
+
+                                        </Link>
 
                                     </div>
 
-                                    {/* Title */}
-
-                                    <h3 className="text-2xl font-bold text-[#0B1F3A] mt-8 group-hover:text-[#FCA311] transition-colors">
-
-                                        {item.title}
-
-                                    </h3>
-
-                                    {/* Description */}
-
-                                    <p className="text-gray-600 leading-8 mt-5">
-
-                                        {item.description}
-
-                                    </p>
-
-                                    {/* Button */}
-
-                                    <Link
-                                        to={item.path}
-                                        className="inline-flex items-center gap-3 mt-8 font-semibold text-[#0B1F3A] group-hover:text-[#FCA311] transition-colors"
-                                    >
-
-                                        Explore Department
-
-                                        <ArrowRight
-                                            size={20}
-                                            className="group-hover:translate-x-2 transition-transform duration-300"
-                                        />
-
-                                    </Link>
-
                                 </div>
 
-                            </div>
-
+                            </Reveal>
                         );
 
                     })}
@@ -180,6 +217,7 @@ export default function SpecialtiesSection() {
                         <div className="relative z-10 grid lg:grid-cols-2 gap-10 items-center">
 
                             {/* Left Content */}
+<Reveal>
 
                             <div>
 
@@ -201,69 +239,78 @@ export default function SpecialtiesSection() {
                                 </p>
 
                             </div>
+</Reveal>
 
                             {/* Right Content */}
 
                             <div className="flex flex-col gap-6">
+                                <Reveal>
 
-                                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
 
-                                    <h4 className="text-[#FCA311] text-xl font-bold">
-                                        ✔ Experienced Specialists
-                                    </h4>
+                                        <h4 className="text-[#FCA311] text-xl font-bold">
+                                            ✔ Experienced Specialists
+                                        </h4>
 
-                                    <p className="text-gray-300 mt-2 leading-7">
-                                        Highly qualified doctors with years of clinical experience
-                                        across multiple specialties.
-                                    </p>
+                                        <p className="text-gray-300 mt-2 leading-7">
+                                            Highly qualified doctors with years of clinical experience
+                                            across multiple specialties.
+                                        </p>
 
-                                </div>
+                                    </div>
+                                </Reveal>
+                                <Reveal>
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
 
-                                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
 
-                                    <h4 className="text-[#FCA311] text-xl font-bold">
-                                        ✔ Advanced Healthcare
-                                    </h4>
+                                        <h4 className="text-[#FCA311] text-xl font-bold">
+                                            ✔ Advanced Healthcare
+                                        </h4>
 
-                                    <p className="text-gray-300 mt-2 leading-7">
-                                        Modern medical equipment, advanced diagnostics, and
-                                        evidence-based treatments for better outcomes.
-                                    </p>
+                                        <p className="text-gray-300 mt-2 leading-7">
+                                            Modern medical equipment, advanced diagnostics, and
+                                            evidence-based treatments for better outcomes.
+                                        </p>
 
-                                </div>
+                                    </div>
+                                </Reveal>
+                                <Reveal>
 
-                                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
 
-                                    <h4 className="text-[#FCA311] text-xl font-bold">
-                                        ✔ Compassionate Care
-                                    </h4>
+                                        <h4 className="text-[#FCA311] text-xl font-bold">
+                                            ✔ Compassionate Care
+                                        </h4>
 
-                                    <p className="text-gray-300 mt-2 leading-7">
-                                        Personalized treatment with empathy, transparency, and a
-                                        strong commitment to patient well-being.
-                                    </p>
+                                        <p className="text-gray-300 mt-2 leading-7">
+                                            Personalized treatment with empathy, transparency, and a
+                                            strong commitment to patient well-being.
+                                        </p>
 
-                                </div>
+                                    </div>
+                                </Reveal>
 
                                 {/* Buttons */}
+                                <Reveal>
 
-                                <div className="flex flex-wrap gap-5 pt-4">
+                                    <div className="flex flex-wrap gap-5 pt-4">
 
-                                    <Link
-                                        to="/appointment"
-                                        className="bg-[#FCA311] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-white transition-all duration-300 shadow-lg"
-                                    >
-                                        Book Appointment
-                                    </Link>
+                                        <Link
+                                            to="/appointment"
+                                            className="bg-[#FCA311] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-white transition-all duration-300 shadow-lg"
+                                        >
+                                            Book Appointment
+                                        </Link>
 
-                                    <Link
-                                        to="/contact"
-                                        className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#0B1F3A] transition-all duration-300"
-                                    >
-                                        Contact Us
-                                    </Link>
+                                        <Link
+                                            to="/contact"
+                                            className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#0B1F3A] transition-all duration-300"
+                                        >
+                                            Contact Us
+                                        </Link>
 
-                                </div>
+                                    </div>
+                                </Reveal>
 
                             </div>
 

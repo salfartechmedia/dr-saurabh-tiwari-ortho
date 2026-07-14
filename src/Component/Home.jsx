@@ -10,7 +10,7 @@ import PreFooterCTA from './PreFooterCTA'
 import HospitalPhotoBanner from './HospitalPhotoBanner'
 import Contact from './Contact'
 import SpecialtiesSection from './SpecialitiesSection'
-// import BreadCrumb from './BreadCrumb'
+import BreadCrumb from './BreadCrumb'
 
 // import AppBread from './Breadcrumb'
 
@@ -33,9 +33,11 @@ const Home = () => {
       </div>
       <SpecialtiesSection/>
       <Consultant />
+
       {/* <!-- Elfsight Instagram Feed | Untitled Instagram Feed --> */}
       <script src="https://elfsightcdn.com/platform.js" async></script>
       <div class="elfsight-app-c27b289f-8d73-4408-b356-aad31a1cc6db" data-elfsight-app-lazy></div>
+
       <PreFooterCTA />
       <Contact />
       {/* <HospitalPhotoBanner/> */}

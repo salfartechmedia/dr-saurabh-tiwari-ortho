@@ -120,8 +120,8 @@ export default function ContactForm() {
               <span className="text-lg">📍</span>
               <div>
                 <p className="text-xs text-gray-400 font-semibold uppercase tracking-wide">Location</p>
-                 
-                 <a href="https://maps.app.goo.gl/YLUbSP6AHAZbG5eT8" target="_blank" className="text-sm font-bold" style={{ color: "#0B1F3A" }}>Jhunsi, Prayagraj</a>
+
+                <a href="https://maps.app.goo.gl/YLUbSP6AHAZbG5eT8" target="_blank" className="text-sm font-bold" style={{ color: "#0B1F3A" }}>Jhunsi, Prayagraj</a>
               </div>
             </div>
           </div>
@@ -207,6 +207,63 @@ export default function ContactForm() {
                   onBlur={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.1)")}
                 />
               </div>
+
+              {/* Doctor Selection */}
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-bold uppercase tracking-widest text-white/50">
+                  Select Doctor
+                </label>
+                <select
+                  name="doctor"
+                  required
+                  defaultValue=""
+                  className="w-full rounded-xl px-4 py-3.5 text-sm font-medium text-white outline-none transition-all duration-200"
+                  style={{
+                    background: "rgba(255,255,255,0.06)",
+                    border: "1px solid rgba(255,255,255,0.1)",
+                  }}
+                  onFocus={(e) => (e.target.style.borderColor = "#FCA311")}
+                  onBlur={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.1)")}
+                >
+                  <option value="" disabled style={{ color: "#000" }}>
+                    Select Doctor
+                  </option>
+                  <option value="Dr. Lal Ratnakar Singh" style={{ color: "#000" }}>
+                    Dr. Lal Ratnakar Singh
+                  </option>
+                  <option value="Dr. Anjali Singh" style={{ color: "#000" }}>
+                    Dr. Anjali Singh
+                  </option>
+                  <option value="Dr. Amit Kumar" style={{ color: "#000" }}>
+                    Dr. Amit Kumar
+                  </option>
+                  <option value="Dr. Priya Sharma" style={{ color: "#000" }}>
+                    Dr. Priya Sharma
+                  </option>
+                </select>
+              </div>
+
+
+              {/* Appointment Date */}
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-bold uppercase tracking-widest text-white/50">
+                  Appointment Date
+                </label>
+                <input
+                  type="date"
+                  name="appointment_date"
+                  required
+                  className="w-full rounded-xl px-4 py-3.5 text-sm font-medium text-white outline-none transition-all duration-200"
+                  style={{
+                    background: "rgba(255,255,255,0.06)",
+                    border: "1px solid rgba(255,255,255,0.1)",
+                    colorScheme: "dark",
+                  }}
+                  onFocus={(e) => (e.target.style.borderColor = "#FCA311")}
+                  onBlur={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.1)")}
+                />
+              </div>
+
 
               {/* Message */}
               <div className="flex flex-col gap-1.5">

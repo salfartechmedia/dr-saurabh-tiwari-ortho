@@ -161,7 +161,7 @@ export default function About() {
     >
 
       {/* ── BREADCRUMB ── */}
-      <div
+      {/* <div
         className="border-b border-cyan-900/40"
         style={{ background: "rgba(6,182,212,0.04)" }}
       >
@@ -170,7 +170,7 @@ export default function About() {
           <span className="text-cyan-700">/</span>
           <span className="text-cyan-300 font-medium">About Us</span>
         </div>
-      </div>
+      </div> */}
 
       {/* ════════════════════════════════════
           HERO
