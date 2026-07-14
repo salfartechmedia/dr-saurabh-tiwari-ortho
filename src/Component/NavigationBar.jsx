@@ -27,11 +27,11 @@ const NavigationBar = () => {
         },
         {
             name: "Plastic Surgery",
-            path: "/specialities/plastic-surgery",
+            path: "/specialities/plastic-and-reconstructive-surgery",
         },
         {
             name: "Pediatrics ",
-            path: "/specialities/Pediatrics ",
+            path: "/specialities/Pediatrics",
         },
     ];
 
@@ -105,7 +105,7 @@ const NavigationBar = () => {
                             </button>
 
                             {specialityOpen && (
-                                <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50">
+                                <div className="absolute top-full left-0 mt-0 w-72 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50">
                                     {specialities.map((item) => (
                                         <Link
                                             key={item.path}

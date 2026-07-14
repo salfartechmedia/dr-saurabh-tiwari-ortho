@@ -218,6 +218,157 @@ export default function Gynecology() {
 
         </div>
 
+        {/* Doctor Section */}
+
+<div className="mt-24">
+
+  <div className="text-center mb-14">
+
+    <span className="text-[#FCA311] font-semibold uppercase tracking-wider">
+      Meet Our Specialist
+    </span>
+
+    <h3 className="text-4xl font-bold text-[#0B1F3A] mt-3">
+      Obstetrics & Gynecology Specialist
+    </h3>
+
+    <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
+      Our experienced Obstetrician & Gynecologist is committed to providing
+      compassionate, comprehensive, and personalized healthcare for women at
+      every stage of life, from adolescence to pregnancy and menopause.
+    </p>
+
+  </div>
+
+  <div className="max-w-6xl mx-auto bg-white rounded-[32px] shadow-2xl border border-gray-100 overflow-hidden">
+
+    <div className="grid lg:grid-cols-2">
+
+      {/* Doctor Image */}
+
+      <div className="relative h-[420px] lg:h-auto bg-gray-100">
+
+        <img
+          src="/doctor.jpg"
+          alt="Obs & Gynecology Specialist"
+          className="w-full h-full object-cover"
+        />
+
+        <div className="absolute top-6 left-6">
+
+          <span className="bg-[#FCA311] text-[#0B1F3A] font-semibold px-5 py-2 rounded-full shadow-lg">
+            Senior Consultant
+          </span>
+
+        </div>
+
+      </div>
+
+      {/* Doctor Details */}
+
+      <div className="p-10 lg:p-12 flex flex-col justify-center">
+
+        <span className="text-[#FCA311] font-semibold uppercase tracking-wider">
+          Obstetrics & Gynecology Specialist
+        </span>
+
+        <h3 className="text-4xl font-bold text-[#0B1F3A] mt-3">
+          Dr. Doctor Name
+        </h3>
+
+        <p className="text-xl text-gray-600 font-medium mt-2">
+          MBBS, MS (Obstetrics & Gynecology)
+        </p>
+
+        <div className="grid sm:grid-cols-2 gap-5 mt-8">
+
+          <div className="bg-[#F8FAFC] rounded-2xl p-5">
+
+            <p className="text-sm text-gray-500">
+              Experience
+            </p>
+
+            <h4 className="text-2xl font-bold text-[#0B1F3A] mt-1">
+              15+ Years
+            </h4>
+
+          </div>
+
+          <div className="bg-[#F8FAFC] rounded-2xl p-5">
+
+            <p className="text-sm text-gray-500">
+              Deliveries & Procedures
+            </p>
+
+            <h4 className="text-2xl font-bold text-[#0B1F3A] mt-1">
+              3000+
+            </h4>
+
+          </div>
+
+        </div>
+
+        <p className="text-gray-600 leading-8 mt-8">
+          Dr. Doctor Name specializes in comprehensive women's healthcare,
+          including high-risk pregnancy management, normal and cesarean
+          deliveries, infertility evaluation, menstrual disorders,
+          gynecological surgeries, menopause care, and preventive women's
+          health services. She is dedicated to providing safe, compassionate,
+          and evidence-based care for every patient.
+        </p>
+
+        {/* Expertise */}
+
+        <div className="flex flex-wrap gap-3 mt-8">
+
+          {[
+            "High-Risk Pregnancy",
+            "Normal Delivery",
+            "C-Section",
+            "Infertility Care",
+            "PCOS Treatment",
+            "Gynecological Surgery",
+            "Menopause Care",
+            "Women's Wellness",
+          ].map((item) => (
+
+            <span
+              key={item}
+              className="bg-[#0B1F3A]/10 text-[#0B1F3A] px-4 py-2 rounded-full font-medium"
+            >
+              {item}
+            </span>
+
+          ))}
+
+        </div>
+
+        {/* Buttons */}
+
+        <div className="flex flex-wrap gap-5 mt-10">
+
+          <button className="bg-[#FCA311] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
+
+            Book Appointment
+
+          </button>
+
+          <button className="border-2 border-[#0B1F3A] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
+
+            View Profile
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
       </div>
     </section>
   );

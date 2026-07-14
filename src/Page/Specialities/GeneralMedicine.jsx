@@ -171,11 +171,10 @@ export default function GeneralMedicine() {
           </div>
 
         </div>
-                {/* Why Choose Us */}
+        {/* Why Choose Us */}
 
         <div className="mt-24 grid lg:grid-cols-2 gap-14 items-center">
 
-          {/* Left Content */}
 
           <div>
 
@@ -221,7 +220,6 @@ export default function GeneralMedicine() {
 
           </div>
 
-          {/* Right Side */}
 
           <div className="bg-[#0B1F3A] rounded-3xl p-10 md:p-12 text-white shadow-2xl">
 
@@ -254,6 +252,158 @@ export default function GeneralMedicine() {
             <button className="mt-10 bg-[#FCA311] text-[#0B1F3A] font-bold px-8 py-4 rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg">
               Book Appointment
             </button>
+
+          </div>
+
+        </div>
+
+        {/* Doctor Section */}
+
+        <div className="mt-24">
+
+          <div className="text-center mb-14">
+
+            <span className="text-[#FCA311] font-semibold uppercase tracking-wider">
+              Meet Our Specialist
+            </span>
+
+            <h3 className="text-4xl font-bold text-[#0B1F3A] mt-3">
+              General Physician
+            </h3>
+
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
+              Our experienced General Physician provides comprehensive healthcare,
+              accurate diagnosis, preventive care, and personalized treatment for
+              patients of all age groups, helping them maintain a healthier life.
+            </p>
+
+          </div>
+
+          <div className="max-w-6xl mx-auto bg-white rounded-[32px] shadow-2xl border border-gray-100 overflow-hidden">
+
+            <div className="grid lg:grid-cols-2">
+
+              {/* Doctor Image */}
+
+              <div className="relative h-[420px] lg:h-auto bg-gray-100">
+
+                <img
+                  src="/doctor.jpg"
+                  alt="General Physician"
+                  className="w-full h-full object-cover"
+                />
+
+                <div className="absolute top-6 left-6">
+
+                  <span className="bg-[#FCA311] text-[#0B1F3A] font-semibold px-5 py-2 rounded-full shadow-lg">
+                    Senior Consultant
+                  </span>
+
+                </div>
+
+              </div>
+
+              {/* Doctor Details */}
+
+              <div className="p-10 lg:p-12 flex flex-col justify-center">
+
+                <span className="text-[#FCA311] font-semibold uppercase tracking-wider">
+                  General Medicine Specialist
+                </span>
+
+                <h3 className="text-4xl font-bold text-[#0B1F3A] mt-3">
+                  Dr. Doctor Name
+                </h3>
+
+                <p className="text-xl text-gray-600 font-medium mt-2">
+                  MBBS, MD (General Medicine)
+                </p>
+
+                <div className="grid sm:grid-cols-2 gap-5 mt-8">
+
+                  <div className="bg-[#F8FAFC] rounded-2xl p-5">
+
+                    <p className="text-sm text-gray-500">
+                      Experience
+                    </p>
+
+                    <h4 className="text-2xl font-bold text-[#0B1F3A] mt-1">
+                      15+ Years
+                    </h4>
+
+                  </div>
+
+                  <div className="bg-[#F8FAFC] rounded-2xl p-5">
+
+                    <p className="text-sm text-gray-500">
+                      Patients Treated
+                    </p>
+
+                    <h4 className="text-2xl font-bold text-[#0B1F3A] mt-1">
+                      20,000+
+                    </h4>
+
+                  </div>
+
+                </div>
+
+                <p className="text-gray-600 leading-8 mt-8">
+                  Dr. Doctor Name is an experienced General Physician specializing in
+                  the diagnosis, treatment, and prevention of a wide range of acute
+                  and chronic medical conditions. With a patient-centered approach,
+                  the doctor provides comprehensive care for diabetes, hypertension,
+                  thyroid disorders, infections, respiratory illnesses, digestive
+                  problems, and lifestyle-related diseases while promoting preventive
+                  healthcare and long-term wellness.
+                </p>
+
+                {/* Expertise */}
+
+                <div className="flex flex-wrap gap-3 mt-8">
+
+                  {[
+                    "General Consultation",
+                    "Diabetes Care",
+                    "Hypertension",
+                    "Thyroid Disorders",
+                    "Fever Treatment",
+                    "Respiratory Diseases",
+                    "Preventive Health",
+                    "Lifestyle Disorders",
+                  ].map((item) => (
+
+                    <span
+                      key={item}
+                      className="bg-[#0B1F3A]/10 text-[#0B1F3A] px-4 py-2 rounded-full font-medium"
+                    >
+                      {item}
+                    </span>
+
+                  ))}
+
+                </div>
+
+                {/* Buttons */}
+
+                <div className="flex flex-wrap gap-5 mt-10">
+
+                  <button className="bg-[#FCA311] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
+
+                    Book Appointment
+
+                  </button>
+
+                  <button className="border-2 border-[#0B1F3A] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
+
+                    View Profile
+
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
 
           </div>
 

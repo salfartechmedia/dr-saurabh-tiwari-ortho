@@ -172,7 +172,7 @@ export default function InfertilityDepartment() {
           </div>
 
         </div>
-                {/* Why Choose Us */}
+        {/* Why Choose Us */}
 
         <div className="mt-24 grid lg:grid-cols-2 gap-14 items-center">
 
@@ -259,6 +259,157 @@ export default function InfertilityDepartment() {
           </div>
 
         </div>
+
+        {/* Doctor Section */}
+
+<div className="mt-24">
+
+  <div className="text-center mb-14">
+
+    <span className="text-[#FCA311] font-semibold uppercase tracking-wider">
+      Meet Our Fertility Expert
+    </span>
+
+    <h3 className="text-4xl font-bold text-[#0B1F3A] mt-3">
+      Infertility & IVF Specialist
+    </h3>
+
+    <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
+      Our experienced Infertility & IVF Specialist provides compassionate,
+      personalized fertility care using advanced reproductive technology to
+      help couples achieve their dream of becoming parents.
+    </p>
+
+  </div>
+
+  <div className="max-w-6xl mx-auto bg-white rounded-[32px] shadow-2xl border border-gray-100 overflow-hidden">
+
+    <div className="grid lg:grid-cols-2">
+
+      {/* Doctor Image */}
+
+      <div className="relative h-[420px] lg:h-auto bg-gray-100">
+
+        <img
+          src="/doctor.jpg"
+          alt="Infertility & IVF Specialist"
+          className="w-full h-full object-cover"
+        />
+
+        <div className="absolute top-6 left-6">
+
+          <span className="bg-[#FCA311] text-[#0B1F3A] font-semibold px-5 py-2 rounded-full shadow-lg">
+            Senior IVF Consultant
+          </span>
+
+        </div>
+
+      </div>
+
+      {/* Doctor Details */}
+
+      <div className="p-10 lg:p-12 flex flex-col justify-center">
+
+        <span className="text-[#FCA311] font-semibold uppercase tracking-wider">
+          Fertility & Reproductive Medicine
+        </span>
+
+        <h3 className="text-4xl font-bold text-[#0B1F3A] mt-3">
+          Dr. Doctor Name
+        </h3>
+
+        <p className="text-xl text-gray-600 font-medium mt-2">
+          MBBS, MS (Obs & Gynecology), Fellowship in Reproductive Medicine & IVF
+        </p>
+
+        <div className="grid sm:grid-cols-2 gap-5 mt-8">
+
+          <div className="bg-[#F8FAFC] rounded-2xl p-5">
+
+            <p className="text-sm text-gray-500">
+              Experience
+            </p>
+
+            <h4 className="text-2xl font-bold text-[#0B1F3A] mt-1">
+              12+ Years
+            </h4>
+
+          </div>
+
+          <div className="bg-[#F8FAFC] rounded-2xl p-5">
+
+            <p className="text-sm text-gray-500">
+              Successful Fertility Cases
+            </p>
+
+            <h4 className="text-2xl font-bold text-[#0B1F3A] mt-1">
+              2000+
+            </h4>
+
+          </div>
+
+        </div>
+
+        <p className="text-gray-600 leading-8 mt-8">
+          Dr. Doctor Name specializes in infertility evaluation, IVF, IUI,
+          ICSI, fertility preservation, recurrent pregnancy loss, male and
+          female infertility treatment, hormonal disorders, and personalized
+          fertility planning. With advanced reproductive expertise and a
+          compassionate approach, the doctor supports couples throughout every
+          step of their fertility journey.
+        </p>
+
+        {/* Expertise */}
+
+        <div className="flex flex-wrap gap-3 mt-8">
+
+          {[
+            "IVF",
+            "IUI",
+            "ICSI",
+            "Male Infertility",
+            "Female Infertility",
+            "Fertility Counseling",
+            "PCOS Management",
+            "Recurrent Pregnancy Loss",
+          ].map((item) => (
+
+            <span
+              key={item}
+              className="bg-[#0B1F3A]/10 text-[#0B1F3A] px-4 py-2 rounded-full font-medium"
+            >
+              {item}
+            </span>
+
+          ))}
+
+        </div>
+
+        {/* Buttons */}
+
+        <div className="flex flex-wrap gap-5 mt-10">
+
+          <button className="bg-[#FCA311] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
+
+            Book Appointment
+
+          </button>
+
+          <button className="border-2 border-[#0B1F3A] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
+
+            View Profile
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
       </div>
     </section>

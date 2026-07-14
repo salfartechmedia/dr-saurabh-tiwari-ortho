@@ -14,7 +14,7 @@ import Contact from './Page/Contact.jsx'
 import Gynecology from './Page/Specialities/Gynecology.jsx'
 import InfertilityIVF from './Page/Specialities/InfertilityIVF.jsx'
 import GeneralMedicine from './Page/Specialities/GeneralMedicine.jsx'
-import Paediiatrics from './Page/Specialities/Paediiatrics.jsx'
+import Paediatrics from './Page/Specialities/Paediatrics.jsx'
 import GeneralSurgery from './Page/Specialities/GeneralSurgery.jsx'
 import PlasticAndReconstructiveSurgery from './Page/Specialities/PlasticAndReconstructiveSurgery.jsx'
 import ContactForm from './Page/ContactForm.jsx'
@@ -65,8 +65,8 @@ const router = createBrowserRouter([
         element: <GeneralMedicine/>
       },
       {
-        path: 'specialities/pardiatrics',
-        element: <Paediiatrics/>
+        path: 'specialities/pediatrics',
+        element: <Paediatrics/>
       },
       {
         path: 'specialities/general-surgery',
