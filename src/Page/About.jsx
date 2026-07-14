@@ -93,14 +93,14 @@ const doctors = [
     name: "Dr. Anjali Singh",
     role: "Director - Abhay Jeevan Hospital",
     dept: "Gynecologist & Infertility Specialist",
-    exp: "10+ yrs",
+    exp: "5+ yrs",
     img: DrAnjaliC,
   },
   {
     name: "Dr. Lal Ratnakar Singh",
     role: "General Physician",
     dept: "Internal Medicine",
-    exp: "10+ yrs",
+    exp: "5+ yrs",
     img: DrLal,
   },
   

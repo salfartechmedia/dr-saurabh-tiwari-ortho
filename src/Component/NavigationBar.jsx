@@ -18,8 +18,20 @@ const NavigationBar = () => {
             path: "/specialities/infertility-and-ivf",
         },
         {
-            name: "Gynecology",
+            name: "Obstetrician & Gynecology",
             path: "/specialities/gynecology",
+        },
+        {
+            name: "General Surgery",
+            path: "/specialities/general-surgery",
+        },
+        {
+            name: "Plastic Surgery",
+            path: "/specialities/plastic-surgery",
+        },
+        {
+            name: "Pediatrics ",
+            path: "/specialities/Pediatrics ",
         },
     ];
 
