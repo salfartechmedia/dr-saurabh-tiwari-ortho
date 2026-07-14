@@ -11,6 +11,8 @@ import {
   MessageCircle,
   CheckCircle2,
 } from "lucide-react";
+import DrAnjali from "../../assets/Consultants/DrAnjali.jpeg";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -291,7 +293,7 @@ export default function InfertilityDepartment() {
       <div className="relative h-[420px] lg:h-auto bg-gray-100">
 
         <img
-          src="/doctor.jpg"
+          src={DrAnjali}
           alt="Infertility & IVF Specialist"
           className="w-full h-full object-cover"
         />
@@ -315,11 +317,11 @@ export default function InfertilityDepartment() {
         </span>
 
         <h3 className="text-4xl font-bold text-[#0B1F3A] mt-3">
-          Dr. Doctor Name
+          Dr. Anjali Singh
         </h3>
 
         <p className="text-xl text-gray-600 font-medium mt-2">
-          MBBS, MS (Obs & Gynecology), Fellowship in Reproductive Medicine & IVF
+          MBBS, MS (Gold Medalist), FMAS, DNB, MNAMS, CIMP
         </p>
 
         <div className="grid sm:grid-cols-2 gap-5 mt-8">
@@ -331,7 +333,7 @@ export default function InfertilityDepartment() {
             </p>
 
             <h4 className="text-2xl font-bold text-[#0B1F3A] mt-1">
-              12+ Years
+              6+ Years
             </h4>
 
           </div>
@@ -389,17 +391,17 @@ export default function InfertilityDepartment() {
 
         <div className="flex flex-wrap gap-5 mt-10">
 
-          <button className="bg-[#FCA311] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
+          <Link to='/book-appointment' className="bg-[#FCA311] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
 
             Book Appointment
 
-          </button>
+          </Link>
 
-          <button className="border-2 border-[#0B1F3A] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
+          {/* <button className="border-2 border-[#0B1F3A] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
 
             View Profile
 
-          </button>
+          </button> */}
 
         </div>
 

@@ -11,6 +11,8 @@ import {
   Stethoscope,
   CheckCircle2,
 } from "lucide-react";
+import Docemoji from "../../assets/Consultants/Docemoji.jpeg";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -289,7 +291,7 @@ export default function PlasticAndReconstructiveSurgery() {
       <div className="relative h-[420px] lg:h-auto bg-gray-100">
 
         <img
-          src="/doctor.jpg"
+          src={Docemoji}
           alt="Plastic Surgeon"
           className="w-full h-full object-cover"
         />
@@ -384,11 +386,11 @@ export default function PlasticAndReconstructiveSurgery() {
 
         <div className="flex flex-wrap gap-5 mt-10">
 
-          <button className="bg-[#FCA311] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
+          <Link to='/book-appointment' className="bg-[#FCA311] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
 
             Book Appointment
 
-          </button>
+          </Link>
 
           {/* <button className="border-2 border-[#0B1F3A] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
 

@@ -73,16 +73,16 @@ const doctors = [
 
 export default function Consultants() {
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-24">
+    <section className="bg-[#0B1F3A]  bg-whit py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
 
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center justify-center rounded-full bg-[#FCA311]/10 px-4 py-2 text-sm font-semibold text-[#FCA311]">
+          <span className="inline-flex items-center justify-center rounded-full bg-[#FCA311]/10  px-4 py-2 text-sm font-semibold text-[#FCA311]">
             OUR CONSULTANTS
           </span>
 
-          <h2 className="mt-5 text-3xl font-bold leading-tight text-[#0B1F3A] sm:text-4xl lg:text-5xl">
+          <h2 className="mt-5 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
             Meet Our Expert Consultants
           </h2>
 
@@ -185,20 +185,20 @@ export default function Consultants() {
 
                 <div className="flex flex-col gap-3 pt-4 sm:flex-row">
                   <Link
-                    to={`/consultants/${doctor.id}`}
+                    to='/book-appointment'
                     className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#0B1F3A] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#FCA311] hover:text-[#0B1F3A]"
                   >
                     Know More
                     <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
 
-                  <a
+                  {/* <a
                     href="tel:+919999999999"
                     className="inline-flex items-center justify-center rounded-xl border-2 border-[#FCA311] px-5 py-3 text-sm font-semibold text-[#0B1F3A] transition-all duration-300 hover:bg-[#FCA311]"
                   >
                     <FaCalendarAlt className="mr-2" />
                     Book
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

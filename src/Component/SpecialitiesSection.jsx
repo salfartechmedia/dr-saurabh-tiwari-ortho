@@ -296,18 +296,18 @@ export default function SpecialtiesSection() {
                                     <div className="flex flex-wrap gap-5 pt-4">
 
                                         <Link
-                                            to="/appointment"
+                                            to="tel:+919335399454"
                                             className="bg-[#FCA311] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-white transition-all duration-300 shadow-lg"
                                         >
                                             Book Appointment
                                         </Link>
 
-                                        <Link
-                                            to="/contact"
+                                        <a
+                                            href="tel:+91"
                                             className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#0B1F3A] transition-all duration-300"
                                         >
                                             Contact Us
-                                        </Link>
+                                        </a>
 
                                     </div>
                                 </Reveal>

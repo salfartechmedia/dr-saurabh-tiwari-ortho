@@ -25,20 +25,24 @@ const Home = () => {
       <HeroSection />
       <AboutSection />
       <GalleryHome />
-      {/* <!-- Elfsight Google Reviews | Untitled Google Reviews --> */}
 
+      {/* <!-- Elfsight Instagram Feed | Untitled Instagram Feed --> */}
+      <div className='m-10'>
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-c27b289f-8d73-4408-b356-aad31a1cc6db" data-elfsight-app-lazy></div>
+      </div>
+      <SpecialtiesSection />
+      <Consultant />
+
+
+
+      {/* <!-- Elfsight Google Reviews | Untitled Google Reviews --> */}
       <div className='m-10'>
         <script src="https://elfsightcdn.com/platform.js" async></script>
         <div class="elfsight-app-4e6e246f-3a88-44d1-811f-94b962667e51" data-elfsight-app-lazy></div>
       </div>
-      <SpecialtiesSection/>
-      <Consultant />
 
-      {/* <!-- Elfsight Instagram Feed | Untitled Instagram Feed --> */}
-      <script src="https://elfsightcdn.com/platform.js" async></script>
-      <div class="elfsight-app-c27b289f-8d73-4408-b356-aad31a1cc6db" data-elfsight-app-lazy></div>
-
-      <PreFooterCTA />
+      {/* <PreFooterCTA /> */}
       <Contact />
       {/* <HospitalPhotoBanner/> */}
 

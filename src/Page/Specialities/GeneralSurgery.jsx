@@ -11,6 +11,8 @@ import {
   Bandage,
   CheckCircle2,
 } from "lucide-react";
+import Docemoji from "../../assets/Consultants/Docemoji.jpeg";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -289,7 +291,7 @@ export default function GeneralSurgery() {
               <div className="relative h-[420px] lg:h-auto bg-gray-100">
 
                 <img
-                  src="/doctor.jpg"
+                  src={Docemoji}
                   alt="General Surgery Specialist"
                   className="w-full h-full object-cover"
                 />
@@ -313,7 +315,7 @@ export default function GeneralSurgery() {
                 </span>
 
                 <h3 className="text-4xl font-bold text-[#0B1F3A] mt-3">
-                  Dr. Doctor Name
+                  Dr. Raviraj Patil
                 </h3>
 
                 <p className="text-xl text-gray-600 font-medium mt-2">
@@ -329,7 +331,7 @@ export default function GeneralSurgery() {
                     </p>
 
                     <h4 className="text-2xl font-bold text-[#0B1F3A] mt-1">
-                      18+ Years
+                      10+ Years
                     </h4>
 
                   </div>
@@ -388,17 +390,11 @@ export default function GeneralSurgery() {
 
                 <div className="flex flex-wrap gap-5 mt-10">
 
-                  <button className="bg-[#FCA311] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
+                  <Link to='/book-appointment' className="bg-[#FCA311] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
 
                     Book Appointment
 
-                  </button>
-
-                  <button className="border-2 border-[#0B1F3A] text-[#0B1F3A] px-8 py-4 rounded-full font-bold hover:bg-[#0B1F3A] hover:text-white transition-all duration-300">
-
-                    View Profile
-
-                  </button>
+                  </Link>
 
                 </div>
 

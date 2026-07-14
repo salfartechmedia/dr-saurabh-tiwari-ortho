@@ -19,7 +19,7 @@ const NavigationBar = () => {
         },
         {
             name: "Obstetrician & Gynecology",
-            path: "/specialities/gynecology",
+            path: "/specialities/obstetrics-gynecology",
         },
         {
             name: "General Surgery",

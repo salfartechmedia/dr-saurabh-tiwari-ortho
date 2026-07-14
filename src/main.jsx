@@ -53,7 +53,7 @@ const router = createBrowserRouter([
         element: <Contact/>
       },
       {
-        path: 'specialities/gynecology',
+        path: 'specialities/obstetrics-gynecology',
         element: <Gynecology/>
       },
       {
