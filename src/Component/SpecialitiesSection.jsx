@@ -217,29 +217,29 @@ export default function SpecialtiesSection() {
                         <div className="relative z-10 grid lg:grid-cols-2 gap-10 items-center">
 
                             {/* Left Content */}
-<Reveal>
+                            <Reveal>
 
-                            <div>
+                                <div>
 
-                                <span className="inline-block bg-[#FCA311]/20 text-[#FCA311] px-5 py-2 rounded-full font-semibold">
-                                    Expert Medical Care
-                                </span>
+                                    <span className="inline-block bg-[#FCA311]/20 text-[#FCA311] px-5 py-2 rounded-full font-semibold">
+                                        Expert Medical Care
+                                    </span>
 
-                                <h3 className="text-4xl md:text-5xl font-bold text-white mt-6 leading-tight">
-                                    Your Health Deserves the Best Specialists
-                                </h3>
+                                    <h3 className="text-4xl md:text-5xl font-bold text-white mt-6 leading-tight">
+                                        Your Health Deserves the Best Specialists
+                                    </h3>
 
-                                <p className="text-gray-300 text-lg leading-8 mt-6">
-                                    At <strong>Abhay Jeevan Hospital</strong>, our experienced
-                                    doctors, modern infrastructure, and patient-centered approach
-                                    ensure comprehensive healthcare for every stage of life. From
-                                    routine consultations to advanced treatments, we are committed
-                                    to delivering quality medical care with compassion and
-                                    excellence.
-                                </p>
+                                    <p className="text-gray-300 text-lg leading-8 mt-6">
+                                        At <strong>Abhay Jeevan Hospital</strong>, our experienced
+                                        doctors, modern infrastructure, and patient-centered approach
+                                        ensure comprehensive healthcare for every stage of life. From
+                                        routine consultations to advanced treatments, we are committed
+                                        to delivering quality medical care with compassion and
+                                        excellence.
+                                    </p>
 
-                            </div>
-</Reveal>
+                                </div>
+                            </Reveal>
 
                             {/* Right Content */}
 

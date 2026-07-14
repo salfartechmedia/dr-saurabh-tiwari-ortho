@@ -21,12 +21,12 @@ function App() {
       {/* <AbhayJeevanHospital/> */}
       <main id='main-content'>
         <WhatsAppButton />
-        <Breadcrumb/>
+        <Breadcrumb />
         <Outlet />
         <MobileActionBar />
       </main>
       {/* <PreFooterCTA/> */}
-      <HospitalPhotoBanner/>
+      <HospitalPhotoBanner />
       <Footer />
     </>
   )

@@ -70,7 +70,7 @@ export default function InfiniteGallerySlider() {
 
       {/* First Row */}
       <div className="relative flex overflow-hidden">
-        <Reveal>
+        {/* <Reveal> */}
 
         <div className="slider-track flex gap-5">
           {[...images, ...images].map((image, index) => (
@@ -88,7 +88,7 @@ export default function InfiniteGallerySlider() {
             </div>
           ))}
         </div>
-          </Reveal>
+          {/* </Reveal> */}
       </div>
 
       {/* Second Row */}
