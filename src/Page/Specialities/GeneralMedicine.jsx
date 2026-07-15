@@ -251,9 +251,6 @@ export default function GeneralMedicine() {
               healthcare with professionalism, compassion, and excellence.
             </p>
 
-            <button className="mt-10 bg-[#FCA311] text-[#0B1F3A] font-bold px-8 py-4 rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg">
-              Book Appointment
-            </button>
 
           </div>
 

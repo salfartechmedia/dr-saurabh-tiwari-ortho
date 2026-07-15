@@ -221,7 +221,7 @@ export default function Consultants() {
                       to='/book-appointment'
                       className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#0B1F3A] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#FCA311] hover:text-[#0B1F3A]"
                     >
-                      Know More
+                      Book Now
                       <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
 

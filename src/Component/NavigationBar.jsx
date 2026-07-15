@@ -245,11 +245,11 @@ const NavigationBar = () => {
                         </Link>
 
                         <div className="mt-5 bg-gray-50 border border-cyan-200 rounded-xl p-4">
-                            <p className="text-xs font-bold text-blue-900">
+                            <p className="text-xs font-bold text-blue-950">
                                 24×7 Emergency
                             </p>
 
-                            <p className="text-lg font-extrabold text-red-700">
+                            <p className="text-lg font-extrabold text-red-800">
                                 📞 +91 93353 99454
                             </p>
                         </div>
@@ -257,7 +257,7 @@ const NavigationBar = () => {
                         <Link
                             to="/book-appointment"
                             onClick={() => setMenuOpen(false)}
-                            className="mt-4 w-full bg-blue-900 text-white py-3 rounded-xl font-semibold text-center"
+                            className="mt-4 w-full bg-blue-950 text-white py-3 rounded-xl font-semibold text-center"
                         >
                             Book Appointment
                         </Link>

@@ -199,7 +199,7 @@ export default function AbhayJeevanGallery() {
     >
 
       {/* ─── HERO SECTION ─── */}
-      <section className="relative overflow-hidden md:py-20 px-4">
+      <section className="relative overflow-hidden md:py-20 py-10 md:px-4">
         {/* Ambient glow orbs */}
         <div
           className="absolute -top-32 -left-32 w-96 h-96 rounded-full blur-3xl opacity-10 pointer-events-none"
@@ -210,12 +210,12 @@ export default function AbhayJeevanGallery() {
           style={{ background: "radial-gradient(circle, #0891B2, transparent)" }}
         />
 
-        <div className="max-w-7xl mx-auto bg-blue-950 rounded-2xl text-center relative z-10">
+        <div className="max-w-7xl mx-auto bg-blue-950 md:rounded-2xl px-2 text-center relative z-10">
           {/* Eyebrow tag */}
           <div className="inline-flex items-center gap-2 mb-6">
             <div className="w-8 h-px bg-cyan-500" />
             <span className="text-[#FCA311] text-xs font-semibold tracking-widest uppercase">
-              Our Facilitieskkkkkkkkk
+              Our Facilities
             </span>
             <div className="w-8 h-px bg-cyan-500" />
           </div>

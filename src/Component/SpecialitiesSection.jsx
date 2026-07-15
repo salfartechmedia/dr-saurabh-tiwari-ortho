@@ -82,7 +82,7 @@ export default function SpecialtiesSection() {
                 style={{
                     opacity: visible ? 1 : 0,
                     transform: visible ? "translateY(0)" : "translateY(32px)",
-                    transition: `opacity 0.65s ease ${delay}ms, transform 0.65s ease ${delay}ms`,
+                    transition: `opacity 0.65s ease ${delay}ms, transform 1s ease ${delay}ms`,
                 }}
             >
                 {children}
