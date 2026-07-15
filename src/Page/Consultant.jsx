@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   FaArrowRight,
@@ -72,6 +72,37 @@ const doctors = [
 ];
 
 export default function Consultants() {
+  function useReveal() {
+    const ref = useRef(null);
+    const [visible, setVisible] = useState(false);
+    useEffect(() => {
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setVisible(true); },
+        { threshold: 0.12 }
+      );
+      if (ref.current) obs.observe(ref.current);
+      return () => obs.disconnect();
+    }, []);
+    return [ref, visible];
+  }
+
+  /* ─── REVEAL WRAPPER ─── */
+  function Reveal({ children, delay = 0, className = "" }) {
+    const [ref, visible] = useReveal();
+    return (
+      <div
+        ref={ref}
+        className={className}
+        style={{
+          opacity: visible ? 1 : 0,
+          transform: visible ? "translateY(0)" : "translateY(62px)",
+          transition: `opacity 0.65s ease ${delay}ms, transform 1s ease ${delay}ms`,
+        }}
+      >
+        {children}
+      </div>
+    );
+  }
   return (
     <section className="bg-[#0B1F3A]  bg-whit py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -103,119 +134,125 @@ export default function Consultants() {
               key={doctor.id}
               className="group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-lg transition-all duration-500 hover:-translate-y-3 hover:border-[#FCA311]/40 hover:shadow-2xl"
             >
-              {/* Image */}
+              <Reveal>
 
-              <div className="relative overflow-hidden">
-                <img
-                  src={doctor.emoji}
-                  alt={doctor.name}
-                  className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-110 sm:h-80"
-                />
+                {/* Image */}
 
-                <div className="absolute left-4 top-4 rounded-full bg-[#0B1F3A] px-4 py-2 text-sm font-semibold text-white shadow-lg">
-                  {doctor.experience}
-                </div>
+                <div className="relative overflow-hidden">
+                  <img
+                    src={doctor.emoji}
+                    alt={doctor.name}
+                    className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-110 sm:h-80"
+                  />
 
-                <div className="absolute bottom-4 left-4 rounded-full bg-[#FCA311] px-4 py-2 text-xs font-semibold text-[#0B1F3A] shadow-lg">
-                  {doctor.tagline}
-                </div>
-              </div>
-
-              {/* Content */}
-
-              <div className="space-y-5 p-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-[#0B1F3A]">
-                    {doctor.name}
-                  </h3>
-
-                  <p className="mt-2 flex items-center gap-2 text-sm font-medium text-[#FCA311]">
-                    <FaStethoscope />
-                    {doctor.specialty}
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 rounded-full bg-[#0B1F3A]/10 p-2 text-[#0B1F3A]">
-                    <FaGraduationCap />
+                  <div className="absolute left-4 top-4 rounded-full bg-[#0B1F3A] px-4 py-2 text-sm font-semibold text-white shadow-lg">
+                    {doctor.experience}
                   </div>
 
-                  <div>
-                    <h4 className="font-semibold text-[#0B1F3A]">
-                      Qualification
-                    </h4>
+                  <div className="absolute bottom-4 left-4 rounded-full bg-[#FCA311] px-4 py-2 text-xs font-semibold text-[#0B1F3A] shadow-lg">
+                    {doctor.tagline}
+                  </div>
+                </div>
 
-                    <p className="mt-1 text-sm leading-6 text-gray-600">
-                      {doctor.qualification}
+                {/* Content */}
+
+                <div className="space-y-5 p-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-[#0B1F3A]">
+                      {doctor.name}
+                    </h3>
+
+                    <p className="mt-2 flex items-center gap-2 text-sm font-medium text-[#FCA311]">
+                      <FaStethoscope />
+                      {doctor.specialty}
                     </p>
                   </div>
-                </div>
 
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 rounded-full bg-[#FCA311]/20 p-2 text-[#FCA311]">
-                    <FaAward />
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1 rounded-full bg-[#0B1F3A]/10 p-2 text-[#0B1F3A]">
+                      <FaGraduationCap />
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold text-[#0B1F3A]">
+                        Qualification
+                      </h4>
+
+                      <p className="mt-1 text-sm leading-6 text-gray-600">
+                        {doctor.qualification}
+                      </p>
+                    </div>
                   </div>
 
-                  <div>
-                    <h4 className="font-semibold text-[#0B1F3A]">
-                      Experience
-                    </h4>
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1 rounded-full bg-[#FCA311]/20 p-2 text-[#FCA311]">
+                      <FaAward />
+                    </div>
 
-                    <p className="mt-1 text-sm text-gray-600">
-                      {doctor.experience} Experience
-                    </p>
+                    <div>
+                      <h4 className="font-semibold text-[#0B1F3A]">
+                        Experience
+                      </h4>
+
+                      <p className="mt-1 text-sm text-gray-600">
+                        {doctor.experience} Experience
+                      </p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 rounded-full bg-[#0B1F3A]/10 p-2 text-[#0B1F3A]">
-                    <FaClock />
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1 rounded-full bg-[#0B1F3A]/10 p-2 text-[#0B1F3A]">
+                      <FaClock />
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold text-[#0B1F3A]">
+                        OPD Timing
+                      </h4>
+
+                      <p className="mt-1 text-sm text-gray-600">
+                        {doctor.timing}
+                      </p>
+                    </div>
                   </div>
 
-                  <div>
-                    <h4 className="font-semibold text-[#0B1F3A]">
-                      OPD Timing
-                    </h4>
+                  <div className="flex flex-col gap-3 pt-4 sm:flex-row">
+                    <Link
+                      to='/book-appointment'
+                      className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#0B1F3A] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#FCA311] hover:text-[#0B1F3A]"
+                    >
+                      Know More
+                      <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
 
-                    <p className="mt-1 text-sm text-gray-600">
-                      {doctor.timing}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-3 pt-4 sm:flex-row">
-                  <Link
-                    to='/book-appointment'
-                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#0B1F3A] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#FCA311] hover:text-[#0B1F3A]"
-                  >
-                    Know More
-                    <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-                  </Link>
-
-                  {/* <a
+                    {/* <a
                     href="tel:+919999999999"
                     className="inline-flex items-center justify-center rounded-xl border-2 border-[#FCA311] px-5 py-3 text-sm font-semibold text-[#0B1F3A] transition-all duration-300 hover:bg-[#FCA311]"
-                  >
+                    >
                     <FaCalendarAlt className="mr-2" />
                     Book
-                  </a> */}
+                    </a> */}
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             </div>
           ))}
         </div>
 
-                {/* Bottom CTA */}
+        {/* Bottom CTA */}
 
         <div className="mt-14 flex justify-center">
-          <Link
-            to="/consultants"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#0B1F3A] px-8 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#FCA311] hover:text-[#0B1F3A] hover:shadow-xl"
-          >
-            View All Consultants
+          <Reveal>
 
-            <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+            <Link
+              to="/consultants"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#0B1F3A] px-8 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#FCA311] hover:text-[#0B1F3A] hover:shadow-xl"
+            >
+              View All Consultants
+
+              <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </Reveal>
         </div>
       </div>
     </section>

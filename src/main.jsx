@@ -18,6 +18,7 @@ import Paediatrics from './Page/Specialities/Paediatrics.jsx'
 import GeneralSurgery from './Page/Specialities/GeneralSurgery.jsx'
 import PlasticAndReconstructiveSurgery from './Page/Specialities/PlasticAndReconstructiveSurgery.jsx'
 import ContactForm from './Page/ContactForm.jsx'
+import AbhayJeevanGallery from './Page/AbhayJeevanGallery.jsx'
 // import { BrowserRouter } from 'react-router-dom'
 const router = createBrowserRouter([
   {
@@ -36,9 +37,13 @@ const router = createBrowserRouter([
         path: 'about',
         element: <About/>
       },
+      // {
+      //   path: 'gallery',
+      //   element: <Gallery/>
+      // },
       {
         path: 'gallery',
-        element: <Gallery/>
+        element: <AbhayJeevanGallery/>
       },
       {
         path: 'specialities',

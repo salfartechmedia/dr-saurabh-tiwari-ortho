@@ -1,112 +1,117 @@
 import { useState, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
 import DrAnjaliC from '../assets/gallery/DrAnjaliC.jpeg'
 import AHOutA from '../assets/gallery/AHOutA.jpeg'
 import NICU from '../assets/gallery/NICU.jpeg'
-import { Link } from "react-router-dom";
+import OPD from '../assets/gallery/OPD.jpeg'
+import DrLalOPD from '../assets/gallery/DrLalOPD.jpeg'
+import DrAnjaliOPD from '../assets/gallery/DrAnjaliOPD.jpeg'
+import DrAnjaliOPDA from '../assets/gallery/DrAnjaliOPDA.jpeg'
+import OperationTheatre from '../assets/gallery/OperationTheatre.jpeg'
+import ReceptionD from '../assets/gallery/ReceptionD.jpeg'
+import ReceptionB from '../assets/gallery/ReceptionB.jpeg'
+import ReceptionA from '../assets/gallery/ReceptionA.jpeg'
+import AHOut from '../assets/gallery/AHOut.jpeg'
+import HospitalInterior from '../assets/gallery/HospitalInterior.jpeg'
+import NICU2 from '../assets/gallery/NICU2.jpeg'
 
 const galleryData = [
   {
     id: 1,
-    category: "Infrastructure",
-    title: "Main OPD Building",
-    desc: "State-of-the-art outpatient department with modern facilities",
+    category: "Dr Anjali Singh",
+    title: "Dr Anjali Singh",
     img: DrAnjaliC,
     size: "large",
   },
   {
     id: 2,
-    category: "Operation Theatre",
-    title: "Advanced OT Suite",
-    desc: "Fully equipped modular operation theatre",
+    category: "Hospital Building",
+    title: "Abhay Jeevan Hospital",
     img: AHOutA,
     size: "small",
   },
   {
     id: 3,
-    category: "ICU",
-    title: "Intensive Care Unit",
-    desc: "24/7 monitored critical care beds",
-    img: DrAnjaliC,
+    category: "Hospital Interior",
+    title: "Reception Area",
+    img: ReceptionA,
     size: "small",
   },
   {
     id: 4,
-    category: "Laboratory",
-    title: "Diagnostic Laboratory",
-    desc: "Automated lab with rapid result processing",
-    img: DrAnjaliC,
+    category: "Hospital Interior",
+    title: "OPD",
+    img: OPD,
     size: "medium",
   },
   {
     id: 5,
-    category: "Infrastructure",
-    title: "Patient Reception",
-    desc: "Welcoming reception with 24-hour helpdesk",
-    img: DrAnjaliC,
+    category: "OPD",
+    title: "Dr Lal Ratnakar Singh",
+    img: DrLalOPD,
     size: "medium",
   },
   {
     id: 6,
-    category: "Radiology",
-    title: "MRI Scan Centre",
-    desc: "3 Tesla MRI for precise diagnostics",
-    img: DrAnjaliC,
+    category: "OPD",
+    title: "Dr Anjali Singh",
+    img: DrAnjaliOPD,
     size: "large",
   },
   {
     id: 7,
-    category: "Pharmacy",
-    title: "In-House Pharmacy",
-    desc: "Round-the-clock dispensing services",
-    img: DrAnjaliC,
+    category: "OPD",
+    title: "Dr Anjali Singh",
+    img: DrAnjaliOPDA,
     size: "small",
   },
   {
     id: 8,
-    category: "Operation Theatre",
-    title: "Laparoscopic Suite",
-    desc: "Minimally invasive surgical procedures",
-    img: DrAnjaliC,
+    category: "Hospital Interior",
+    title: "Reception",
+    img: ReceptionD,
     size: "small",
   },
   {
     id: 9,
     category: "ICU",
-    title: "Neonatal ICU",
-    desc: "Specialized care for newborns",
+    title: "Neonatal Care Unit",
     img: NICU,
     size: "medium",
   },
   {
     id: 10,
-    category: "Infrastructure",
-    title: "Waiting Lounge",
-    desc: "Comfortable, air-conditioned patient waiting area",
-    img: DrAnjaliC,
+    category: "OT",
+    title: "Modular OT",
+    img: OperationTheatre,
     size: "medium",
   },
   {
     id: 11,
-    category: "Laboratory",
-    title: "Pathology Department",
-    desc: "Histopathology and cytology services",
-    img: DrAnjaliC,
+    category: "Hospital Interior",
+    title: "Hospital Reception",
+    img: ReceptionB,
     size: "small",
   },
   {
     id: 12,
-    category: "Radiology",
-    title: "CT Scan Unit",
-    desc: "128-slice CT for detailed imaging",
-    img: DrAnjaliC,
+    category: "Hospital Building",
+    title: "Abhay Jeevan Hospital",
+    img: AHOut,
     size: "large",
   },
   {
-    id: 12,
-    category: "Other",
-    title: "CT Scan Unit",
-    desc: "128-slice CT for detailed imaging",
-    img: AHOutA,
+    id: 13,
+    category: "Hospital Interior",
+    title: "Hospital Lobby",
+    img: HospitalInterior,
+    size: "large",
+  },
+  {
+    id: 14,
+    category: "ICU",
+    title: "NICU",
+    img: NICU2,
     size: "large",
   },
 ];
@@ -210,7 +215,7 @@ export default function AbhayJeevanGallery() {
           <div className="inline-flex items-center gap-2 mb-6">
             <div className="w-8 h-px bg-cyan-500" />
             <span className="text-[#FCA311] text-xs font-semibold tracking-widest uppercase">
-              Our Facilities
+              Our Facilitieskkkkkkkkk
             </span>
             <div className="w-8 h-px bg-cyan-500" />
           </div>
@@ -298,6 +303,8 @@ export default function AbhayJeevanGallery() {
               }}
               onClick={() => setLightbox(item)}
             >
+              {/* Card thumbnail: always cropped into a horizontal (video) frame,
+                  regardless of whether the original image is portrait or landscape */}
               <div className="aspect-video overflow-hidden">
                 <img
                   src={item.img}
@@ -360,9 +367,9 @@ export default function AbhayJeevanGallery() {
                   {item.title}
                 </h3>
 
-                <p className="text-cyan-300/60 text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {/* <p className="text-cyan-300/60 text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {item.desc}
-                </p>
+                </p> */}
               </div>
             </div>
           ))}
@@ -384,11 +391,15 @@ export default function AbhayJeevanGallery() {
             {/* Top cyan line */}
             <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
 
-            <div className="aspect-video bg-black">
+            {/* Full-size image area: no forced aspect ratio anymore.
+                The image keeps its ORIGINAL aspect ratio (portrait or landscape),
+                is never cropped (object-contain), and is capped at 75vh so tall
+                portrait images don't overflow the viewport. Letterboxed on black. */}
+            <div className="bg-black flex items-center justify-center max-h-[75vh]">
               <img
                 src={lightbox.img}
                 alt={lightbox.title}
-                className="w-full h-full object-cover"
+                className="max-w-full max-h-[75vh] w-auto h-auto object-contain"
               />
             </div>
 
@@ -402,7 +413,7 @@ export default function AbhayJeevanGallery() {
                   {lightbox.category}
                 </span>
                 <h2 className="text-white text-2xl font-bold mt-1">{lightbox.title}</h2>
-                <p className="text-cyan-300/50 text-sm mt-2">{lightbox.desc}</p>
+                {/* <p className="text-cyan-300/50 text-sm mt-2">{lightbox.desc}</p> */}
               </div>
 
               {/* Nav buttons */}
