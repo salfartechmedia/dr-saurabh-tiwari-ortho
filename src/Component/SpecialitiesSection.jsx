@@ -81,7 +81,7 @@ export default function SpecialtiesSection() {
                 className={className}
                 style={{
                     opacity: visible ? 1 : 0,
-                    transform: visible ? "translateY(0)" : "translateY(32px)",
+                    transform: visible ? "translateY(0)" : "translateY(62px)",
                     transition: `opacity 0.65s ease ${delay}ms, transform 1s ease ${delay}ms`,
                 }}
             >

@@ -108,7 +108,9 @@ export default function Consultants() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
 
+          <Reveal>
         <div className="mx-auto max-w-3xl text-center">
+
           <span className="inline-flex items-center justify-center rounded-full bg-[#FCA311]/10  px-4 py-2 text-sm font-semibold text-[#FCA311]">
             OUR CONSULTANTS
           </span>
@@ -125,6 +127,7 @@ export default function Consultants() {
             multiple medical specialties.
           </p>
         </div>
+          </Reveal>
 
         {/* Cards */}
 
