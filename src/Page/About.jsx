@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import AHOutA from  '../assets/gallery/AHOutA.jpeg'
 import DrLal from '../assets/gallery/DrLal.jpeg'
-import DrSaurabhPhoto from '../assets/DrSaurabhPhoto.png'
 import DrAnjaliC from '../assets/gallery/DrAnjaliC.jpeg'
 import OT from '../assets/gallery/OT.jpeg'
 import { Link } from "react-router-dom";
