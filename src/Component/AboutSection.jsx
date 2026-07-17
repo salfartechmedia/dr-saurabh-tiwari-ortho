@@ -3,6 +3,7 @@ import AHHero from '../assets/AHHero.png'
 import DrAnjaliB from '../assets/AboutHome/DrAnjaliB.jpeg'
 import DrLalA from '../assets/AboutHome/DrLalA.jpeg'
 import { Link } from "react-router-dom";
+import DrSaurabhPhoto from '../assets/DrSaurabhPhoto.png'
 
 const stats = [
   { value: "3+", label: "Years of Excellence" },
@@ -278,7 +279,7 @@ export default function AboutSection() {
                   }}
                 >
                   <img
-                    src={DrAnjaliB}
+                    src={DrSaurabhPhoto}
                     alt="Patient Care"
                     className="w-full h-full object-cover"
                     style={{ transform: "rotate(-3.5deg) scale(1.08)" }}
@@ -312,7 +313,7 @@ export default function AboutSection() {
                   }}
                 >
                   <img
-                    src={DrLalA}
+                    src={DrSaurabhPhoto}
                     alt="Expert Team"
                     className="w-full h-full object-cover"
                     style={{ transform: "rotate(-6deg) scale(1.12)" }}

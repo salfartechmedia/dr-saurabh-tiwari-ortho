@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import LogoAH from "../assets/LogoAH.png";
+// import LogoAH from "../assets/LogoAH.png";
+import SaurabhLogo from "../assets/SaurabhLogo.png";
+
 
 const NavigationBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -61,17 +63,17 @@ const NavigationBar = () => {
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-3">
                         <img
-                            src={LogoAH}
+                            src={SaurabhLogo}
                             className="w-11 h-11"
                             alt="Hospital Logo"
                         />
 
                         <div>
-                            <h2 className="text-lg font-extrabold text-[#082c77] underline leading-none">
-                                Abhay Jeevan Hospital
+                            <h2 className="text-2xl font-extrabold  text-[#082c77] underline leading-none">
+                                Dr Saurabh Tiwari
                             </h2>
 
-                            <p className="text-[10px] tracking-widest font-semibold text-[#FCA311] mt-1">
+                            <p className="text-[10px] tracking-widest font-semibold text-green-500 mt-1">
                                 24×7 EMERGENCY · MULTISPECIALTY
                             </p>
                         </div>

@@ -4,7 +4,8 @@ import DrAnjaliC from '../assets/DrAnjaliC.jpeg'
 import DrLalOPD from '../assets/DrLalOPD.png'
 import DrAnjali from '../assets/Consultants/DrAnjali.jpeg'
 // import DrAnjaliCverticle from '../assets/DrAnjaliCverticle.jpeg'
-import DrAnjaliCverticle from '../assets/DrAnjaliCverticle.jpg'
+// import DrAnjaliCverticle from '../assets/DrAnjaliCverticle.jpg'
+import HeroBG from '../assets/HeroBG.png'
 import DrLal from '../assets/Consultants/DrLal.jpeg'
 import { Link } from "react-router-dom";
 
@@ -25,7 +26,7 @@ function EcgLine() {
             600,18 620,18 630,4 640,32 650,2 662,34 672,18 800,18
           "
           fill="none"
-          stroke="#FCA311"
+          stroke="#172554"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -33,7 +34,7 @@ function EcgLine() {
             strokeDasharray: 1400,
             strokeDashoffset: 1400,
             animation: "drawEcg 2.4s ease forwards 0.6s",
-            filter: "drop-shadow(0 0 5px #FCA311) drop-shadow(0 0 2px #FCA311)",
+            // filter: "drop-shadow(0 0 5px #172554) drop-shadow(0 0 2px #172554)",
           }}
         />
       </svg>
@@ -156,14 +157,15 @@ export default function HeroSection() {
           <img
             // src={AHHero}
             // src={DrAnjaliC}
-            src={DrAnjaliCverticle}
+            src={HeroBG}
+            // src={DrAnjaliCverticle}
             // src={DrLalOPD}
             alt="Abhay Jeevan Hospital"
             className="w-full md:hidden h-full object-cover object-center"
           />
           <img
             // src={AHHero}
-            src={DrAnjaliC}
+            src={HeroBG}
             // src={DrAnjaliCverticle}
             // src={DrLalOPD}
             alt="Abhay Jeevan Hospital"
@@ -172,13 +174,13 @@ export default function HeroSection() {
         </div>
 
         {/* ── Overlay: dark navy from left, fades to show photo on right ── */}
-        <div
+        {/* <div
           className="absolute inset-0"
           style={{
             background:
               "linear-gradient(100deg, rgba(3,10,30,0.97) 0%, rgba(3,10,30,0.93) 35%, rgba(3,10,30,0.72) 58%, rgba(3,10,30,0.28) 100%)",
           }}
-        />
+        /> */}
         {/* Bottom darkening so content stays readable on mobile */}
         <div
           className="absolute inset-0"
@@ -215,21 +217,21 @@ export default function HeroSection() {
                   className="w-2 h-2 rounded-full bg-cyan-400"
                   style={{ animation: "pulse-dot 1.8s ease-in-out infinite" }}
                 />
-                <span className="text-[#FCA311] text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase">
-                  Abhay Jeevan Hospital • Prayagraj
+                <span className="text-blue-950 text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase">
+                  Orthopedic Surgeon • Prayagraj
                 </span>
               </span>
               {/* Gold accreditation badge */}
-              {/* <span
+              <span
                 className="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold"
                 style={{
-                  background: "rgba(212,160,23,0.1)",
-                  border: "1px solid rgba(212,160,23,0.45)",
-                  color: "#D4A017",
+                
+                  border: "1px solid #172554/20",
+                  color: "#172554",
                 }}
               >
                 ✦ NABH Accredited
-              </span> */}
+              </span>
             </div>
 
             {/* Main Headline */}
@@ -238,10 +240,10 @@ export default function HeroSection() {
               style={{ animationDelay: "0.22s" }}
             >
               <h1
-                className="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.2rem] font-black text-white leading-[1.08] tracking-tight"
+                className="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.2rem] font-black text-blue-950 leading-[1.08] tracking-tight"
               >
                 Your Health,{" "}
-                <span className="text-[#FCA311]"
+                <span className="text-green-500"
                   style={{
                     background:
                       "linear-gradient(90deg, #06B6D4, #38bdf8, #7dd3fc)",
@@ -267,10 +269,10 @@ export default function HeroSection() {
 
             {/* Sub-copy */}
             <p
-              className="hero-fade-up text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl"
+              className="hero-fade-up text-blue-950 text-base sm:text-lg leading-relaxed max-w-xl"
               style={{ animationDelay: "0.52s" }}
             >
-              Prayagraj’s trusted multi-specialty hospital, delivering comprehensive healthcare through experienced doctors, advanced operation theatres, and round-the-clock emergency services.
+              Trusted Orthopedic Care in Prayagraj, providing advanced bone, joint, spine, and sports injury treatment through expert surgical care, minimally invasive techniques, robotic joint replacement, and comprehensive rehabilitation for every patient.
             </p>
 
             {/* Trust badges — mobile wraps */}
@@ -304,13 +306,13 @@ export default function HeroSection() {
               className="hero-fade-up flex flex-wrap gap-3 sm:gap-4"
               style={{ animationDelay: "0.74s" }}
             >
-              <Link to='book-appointment' className="bg-[#FCA311] px-7 sm:px-9 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base shadow-lg">
+              <Link to='book-appointment' className="bg-blue-950 px-7 sm:px-9 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base shadow-lg">
                 Book Your Appointment
               </Link>
               <a href="tel:+919876543210"
-                className="btn-ghost px-7 sm:px-9 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base"
+                className="btn-ghost px-7 sm:px-9 py-3.5 rounded-xl text-blue-950 font-bold text-sm sm:text-base"
                 style={{
-                  border: "1.5px solid rgba(252,163,17,0.45)",
+                  border: "1.5px solid #172554",
                 }}
               >
                 Emergency 24x7
@@ -339,7 +341,7 @@ export default function HeroSection() {
                 <div className="stat-divider self-stretch hidden sm:block" />
                 <div className="hidden sm:flex flex-col items-center text-center">
                   <span className="text-3xl sm:text-4xl font-black text-white leading-none">
-                    24<span className="text-[#FCA311]">/7</span>
+                    24<span className="text-blue-950">/7</span>
                   </span>
                   <span className="text-slate-400 text-xs sm:text-sm mt-1 font-medium tracking-wide">
                     Emergency
@@ -352,7 +354,7 @@ export default function HeroSection() {
         </div>
 
         {/* ── Doctors floating card — bottom-right (desktop only) ── */}
-        <div
+        {/* <div
           className="hidden lg:flex absolute bottom-10 right-10 flex-col gap-2.5 hero-fade-up"
           style={{ animationDelay: "1.1s" }}
         >
@@ -377,7 +379,6 @@ export default function HeroSection() {
               />
               
                
-              {/* </div> */}
               <div>
                 <div className="text-white text-sm font-bold leading-tight">
                   {doc.name}
@@ -388,7 +389,7 @@ export default function HeroSection() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
       </section>
     </>
