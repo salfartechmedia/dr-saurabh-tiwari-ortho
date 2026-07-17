@@ -11,29 +11,29 @@ const NavigationBar = () => {
 
     const specialities = [
         {
-            name: "General Medicine",
+            name: "Total Nee Replacement",
             path: "/specialities/general-medicine",
         },
         {
-            name: "Infertility & IVF",
+            name: "Hip Replacement and Fracture",
             path: "/specialities/infertility-and-ivf",
         },
-        {
-            name: "Obstetrician & Gynecology",
-            path: "/specialities/obstetrics-gynecology",
-        },
-        {
-            name: "General Surgery",
-            path: "/specialities/general-surgery",
-        },
-        {
-            name: "Plastic Surgery",
-            path: "/specialities/plastic-and-reconstructive-surgery",
-        },
-        {
-            name: "Pediatrics ",
-            path: "/specialities/Pediatrics",
-        },
+        // {
+        //     name: "Obstetrician & Gynecology",
+        //     path: "/specialities/obstetrics-gynecology",
+        // },
+        // {
+        //     name: "General Surgery",
+        //     path: "/specialities/general-surgery",
+        // },
+        // {
+        //     name: "Plastic Surgery",
+        //     path: "/specialities/plastic-and-reconstructive-surgery",
+        // },
+        // {
+        //     name: "Pediatrics ",
+        //     path: "/specialities/Pediatrics",
+        // },
     ];
 
     useEffect(() => {
@@ -143,7 +143,7 @@ const NavigationBar = () => {
                             </p>
 
                             <a href="tel:+919876543210" className="text-sm font-extrabold text-[#082c77]">
-                                📞 +91 93353 99454
+                                📞 +91 7983437886
                             </a>
                         </div>
 

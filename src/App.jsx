@@ -26,7 +26,7 @@ function App() {
         <MobileActionBar />
       </main>
       {/* <PreFooterCTA/> */}
-      <HospitalPhotoBanner />
+      {/* <HospitalPhotoBanner /> */}
       <Footer />
     </>
   )

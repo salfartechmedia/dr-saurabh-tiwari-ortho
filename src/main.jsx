@@ -29,58 +29,54 @@ const router = createBrowserRouter([
         path: '',
         element: <Home/>
       },
-      {
-        path: 'book-appointment',
-        element: <ContactForm/>
-      },
-      {
-        path: 'about',
-        element: <About/>
-      },
+      // {
+      //   path: 'book-appointment',
+      //   element: <ContactForm/>
+      // },
+      // {
+      //   path: 'about',
+      //   element: <About/>
+      // },
       // {
       //   path: 'gallery',
-      //   element: <Gallery/>
+      //   element: <AbhayJeevanGallery/>
       // },
-      {
-        path: 'gallery',
-        element: <AbhayJeevanGallery/>
-      },
-      {
-        path: 'specialities',
-        element: <OurSpecialities/>
-      },
-      {
-        path: 'consultants',
-        element: <Consultant/>
-      },
-      {
-        path: 'contact',
-        element: <Contact/>
-      },
-      {
-        path: 'specialities/obstetrics-gynecology',
-        element: <Gynecology/>
-      },
-      {
-        path: 'specialities/infertility-and-ivf',
-        element: <InfertilityIVF/>
-      },
-      {
-        path: 'specialities/general-medicine',
-        element: <GeneralMedicine/>
-      },
-      {
-        path: 'specialities/pediatrics',
-        element: <Paediatrics/>
-      },
-      {
-        path: 'specialities/general-surgery',
-        element: <GeneralSurgery/>
-      },
-      {
-        path: 'specialities/plastic-and-reconstructive-surgery',
-        element: <PlasticAndReconstructiveSurgery/>
-      },
+      // {
+      //   path: 'specialities',
+      //   element: <OurSpecialities/>
+      // },
+      // {
+      //   path: 'consultants',
+      //   element: <Consultant/>
+      // },
+      // {
+      //   path: 'contact',
+      //   element: <Contact/>
+      // },
+      // {
+      //   path: 'specialities/obstetrics-gynecology',
+      //   element: <Gynecology/>
+      // },
+      // {
+      //   path: 'specialities/infertility-and-ivf',
+      //   element: <InfertilityIVF/>
+      // },
+      // {
+      //   path: 'specialities/general-medicine',
+      //   element: <GeneralMedicine/>
+      // },
+      // {
+      //   path: 'specialities/pediatrics',
+      //   element: <Paediatrics/>
+      // },
+      // {
+      //   path: 'specialities/general-surgery',
+      //   element: <GeneralSurgery/>
+      // },
+      // {
+      //   path: 'specialities/plastic-and-reconstructive-surgery',
+      //   element: <PlasticAndReconstructiveSurgery/>
+      // },
     ]
   }
 ])

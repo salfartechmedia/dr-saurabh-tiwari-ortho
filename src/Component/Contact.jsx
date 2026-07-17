@@ -59,7 +59,7 @@ export default function Contact() {
             </h2>
 
             <p className="text-gray-600 mt-5 max-w-3xl">
-              Visit Abhay Jeevan Hospital for quality healthcare. Find our
+              Visit Jeevan Jyoti Hospital for quality healthcare. Find our
               location, contact details, and clinic timings below.
             </p>
 
@@ -77,7 +77,7 @@ export default function Contact() {
               <div className="rounded-3xl overflow-hidden shadow-xl border">
 
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.268953150553!2d81.91205959999999!3d25.4292703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39854b0017005259%3A0x5c504563f065cb07!2s%E2%9C%85Abhay%20Jeevan%20Hospital%20-%20Best%20Hospital%20in%20Allahabad%20I%20Best%20Gynecologist%20in%20Prayagraj%20I%20Best%20Diabetes%20Doctor%20in%20Allahabad!5e0!3m2!1sen!2sin!4v1783881520328!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/place/Dr.+Saurabh+Tiwari+%E2%80%93+Orthopedic+Surgeon+%7C+Jeevan+Jyoti+Hospital,+Prayagraj/@25.4363057,81.8466297,17z/data=!3m1!4b1!4m6!3m5!1s0x3985356429a9b1c1:0x277b4de2774fb785!8m2!3d25.4363057!4d81.8466297!16s%2Fg%2F11zk6nylb9?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
                   className="w-full h-[500px]"
                   loading="lazy"
                   allowFullScreen
@@ -99,11 +99,11 @@ export default function Contact() {
                   <div>
 
                     <h4 className="text-white text-xl font-semibold">
-                      Abhay Jeevan Hospital
+                      Jeevan Jyoti Hospital
                     </h4>
 
                     <p className="text-white/80 mt-2 leading-7">
-                      Yojna-3, Jhusi, Jhusi Kohna, Uttar Pradesh 211019
+                      Bai ka Bagh, prayagraj
                     </p>
 
                   </div>
@@ -111,7 +111,7 @@ export default function Contact() {
                 </div>
 
                 <a
-                  href="https://maps.google.com"
+                  href="https://maps.app.goo.gl/k3aK3Vujvvvc58PH6"
                   target="_blank"
                   className="inline-flex items-center gap-2 mt-6 bg-[#FCA311] text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 duration-300"
                 >
@@ -149,7 +149,7 @@ export default function Contact() {
                     </h5>
 
                     <p className="text-gray-600 mt-2">
-                      Yojna-3, Jhusi, Jhusi Kohna, Uttar Pradesh 211019
+                      Jeevan Jyoti Hospial, Bai ka Bagh, prayagraj - 211003
                     </p>
 
                   </div>
@@ -180,7 +180,7 @@ export default function Contact() {
                   </h5>
 
                   <p className="text-gray-600 mt-2">
-                    +91 9335399454
+                    +91 7983437886
                   </p>
 
                 </div>
@@ -259,22 +259,22 @@ export default function Contact() {
           <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
 
             <a
-              href="tel:+919876543210"
+              href="tel:+917983437886"
               className="bg-[#0B1F3A] text-white rounded-xl py-4 text-center font-semibold hover:bg-[#FCA311] duration-300"
             >
-              Call Hospital
+              Call Now
             </a>
 
             <a
-              href="mailto:info@abhayjeevanhospital.com"
+              href="mailto:drsaurabhtiwari1994@gmail.com"
               className="border-2 border-[#0B1F3A] text-[#0B1F3A] rounded-xl py-4 text-center font-semibold hover:bg-[#0B1F3A] hover:text-white duration-300"
             >
               Email
             </a>
 
             <a
-              href="https://wa.me/919335399454"
-              className="bg-[#FCA311] text-white rounded-xl py-4 text-center font-semibold hover:bg-[#0B1F3A] duration-300"
+              href="https://wa.me/917983437886"
+              className="bg-green-500 text-white rounded-xl py-4 text-center font-semibold hover:bg-[#0B1F3A] duration-300"
             >
               WhatsApp
             </a>

@@ -1,5 +1,5 @@
 import React from "react";
-import LogoA from '../assets/LogoA.png'
+import DrSaurabhLogo from '../assets/DrSaurabhLogo.png'
 import { Link } from "react-router-dom";
 
 const NAV_LINKS = [
@@ -28,26 +28,26 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                 <img src={LogoA} className="w-11 h-11 flex items-center justify-center text-xl " alt="" />
+                 <img src={DrSaurabhLogo} className="w-11 h-11 flex items-center justify-center text-xl " alt="" />
               </div>
 
               <div>
                 <h3 className="text-white font-bold text-lg">
-                  Abhay Jeevan Hospital
+                  Dr Saurabh Tiwari
                 </h3>
 
-                <p className="text-[#FCA311] text-[10px] tracking-widest font-semibold">
-                  Prayagraj · UTTAR PRADESH
+                <p className="text-green-500 text-[10px] tracking-widest font-semibold">
+                  Orthopedic Surgeon
                 </p>
               </div>
             </div>
 
             <p className="text-slate-400 text-sm leading-7 mb-4">
-            Abhay Jeevan Hospital is a trusted 15-bedded multi-specialty hospital dedicated to providing compassionate, high-quality healthcare. We blend cutting-edge technology with heartfelt care to deliver outcomes that truly matter—for patients, families, and communities across the region.
+            Dr. Saurabh Tiwari is a dedicated Orthopedic Surgeon specializing in the diagnosis and treatment of bone, joint, and spine disorders. With expertise in fracture care, joint replacement, arthroscopy, and sports injuries, he is committed to providing advanced orthopedic solutions with compassionate, patient-centered care to help individuals regain mobility and lead pain-free lives.
             </p>
 
-            <a href="tel:+919335399454" className="text-[#FCA311] font-bold text-xl">
-              📞 +91 93353 99454
+            <a href="tel:+919335399454" className="text-green-500 font-bold text-xl">
+              📞 +91 7983437886
             </a>
 
             <p className="text-slate-500 text-sm mt-1">
@@ -118,7 +118,7 @@ const Footer = () => {
                   Monday – Saturday
                 </p>
 
-                <p className="text-[#FCA311] font-bold">
+                <p className="text-green-500 font-bold">
                   9:00 AM – 2:00 PM
                 </p>
               </div>
@@ -128,7 +128,7 @@ const Footer = () => {
                   Monday – Saturday
                 </p>
 
-                <p className="text-[#FCA311] font-bold">
+                <p className="text-green-500 font-bold">
                   5:00 PM – 8:00 PM
                 </p>
               </div>
@@ -149,8 +149,8 @@ const Footer = () => {
               Location
               </p>
 
-              <a href="https://maps.app.goo.gl/YLUbSP6AHAZbG5eT8" target="_blank" className="text-cyan text-white text-sm">
-                Yojna-3, Jhusi, Jhusi Kohna, Uttar Pradesh 211019
+              <a href="https://maps.app.goo.gl/89PeiziiyqMBSX4D8" target="_blank" className="text-cyan text-white text-sm">
+                Jeevan Jyoti hospital, Bai ka Bagh, Prayagraj - 211003
               </a>
             </div>
           </div>
@@ -159,7 +159,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-[#FCA311]/50 pt-5 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-slate-500 text-sm text-center md:text-left">
-            © 2026 Abhay Jeevan Hospital. All Rights Reserved.
+            © 2026 Dr Saurabh Tiwari. All Rights Reserved.
           </p>
 
           {/* <p className="text-slate-500 text-sm text-center md:text-right">
