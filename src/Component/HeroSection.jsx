@@ -2,10 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import AHHero from '../assets/AHHero.png'
 import DrAnjaliC from '../assets/DrAnjaliC.jpeg'
 import DrLalOPD from '../assets/DrLalOPD.png'
+import DrSaurabhHero from '../assets/DrSaurabhHero.png'
 import DrAnjali from '../assets/Consultants/DrAnjali.jpeg'
 // import DrAnjaliCverticle from '../assets/DrAnjaliCverticle.jpeg'
 import DrAnjaliCverticle from '../assets/DrAnjaliCverticle.jpg'
 import DrLal from '../assets/Consultants/DrLal.jpeg'
+import DrSaurabhPhoto from '../assets/DrSaurabhPhoto.png'
 import { Link } from "react-router-dom";
 
 /* ─── Animated ECG / heartbeat line (SVG) ───────────────────────────── */
@@ -156,14 +158,14 @@ export default function HeroSection() {
           <img
             // src={AHHero}
             // src={DrAnjaliC}
-            src={DrAnjaliCverticle}
+            src={DrSaurabhHero}
             // src={DrLalOPD}
             alt="Abhay Jeevan Hospital"
             className="w-full md:hidden h-full object-cover object-center"
           />
           <img
             // src={AHHero}
-            src={DrAnjaliC}
+            src={DrSaurabhHero}
             // src={DrAnjaliCverticle}
             // src={DrLalOPD}
             alt="Abhay Jeevan Hospital"
@@ -172,13 +174,13 @@ export default function HeroSection() {
         </div>
 
         {/* ── Overlay: dark navy from left, fades to show photo on right ── */}
-        <div
+        {/* <div
           className="absolute inset-0"
           style={{
             background:
               "linear-gradient(100deg, rgba(3,10,30,0.97) 0%, rgba(3,10,30,0.93) 35%, rgba(3,10,30,0.72) 58%, rgba(3,10,30,0.28) 100%)",
           }}
-        />
+        /> */}
         {/* Bottom darkening so content stays readable on mobile */}
         <div
           className="absolute inset-0"
@@ -215,8 +217,8 @@ export default function HeroSection() {
                   className="w-2 h-2 rounded-full bg-cyan-400"
                   style={{ animation: "pulse-dot 1.8s ease-in-out infinite" }}
                 />
-                <span className="text-[#FCA311] text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase">
-                  Abhay Jeevan Hospital • Prayagraj
+                <span className="Text-blue-950 text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase">
+                  Dr Saurabh Tiwari Orthopedic Surgeon
                 </span>
               </span>
               {/* Gold accreditation badge */}
@@ -238,15 +240,15 @@ export default function HeroSection() {
               style={{ animationDelay: "0.22s" }}
             >
               <h1
-                className="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.2rem] font-black text-white leading-[1.08] tracking-tight"
+                className="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.2rem] font-black text-blue-950 leading-[1.08] tracking-tight"
               >
                 Your Health,{" "}
-                <span className="text-[#FCA311]"
+                <span className="text-green-500"
                   style={{
                     background:
                       "linear-gradient(90deg, #06B6D4, #38bdf8, #7dd3fc)",
                     WebkitBackgroundClip: "text",
-                    
+
                     backgroundClip: "text",
                   }}
                 >
@@ -258,16 +260,16 @@ export default function HeroSection() {
             </div>
 
             {/* ECG Signature Line */}
-            <div
-              className="hero-fade-up"
+            {/* <div
+              className="hero-fade-up "
               style={{ animationDelay: "0.38s" }}
             >
               <EcgLine />
-            </div>
+            </div> */}
 
             {/* Sub-copy */}
             <p
-              className="hero-fade-up text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl"
+              className="hero-fade-up text-blue-950 text-base sm:text-lg leading-relaxed max-w-xl"
               style={{ animationDelay: "0.52s" }}
             >
               Prayagraj’s trusted multi-specialty hospital, delivering comprehensive healthcare through experienced doctors, advanced operation theatres, and round-the-clock emergency services.
@@ -304,7 +306,7 @@ export default function HeroSection() {
               className="hero-fade-up flex flex-wrap gap-3 sm:gap-4"
               style={{ animationDelay: "0.74s" }}
             >
-              <Link to='book-appointment' className="bg-[#FCA311] px-7 sm:px-9 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base shadow-lg">
+              <Link to='book-appointment' className="bg-blue-950 px-7 sm:px-9 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base shadow-lg">
                 Book Your Appointment
               </Link>
               <a href="tel:+919876543210"
@@ -339,7 +341,7 @@ export default function HeroSection() {
                 <div className="stat-divider self-stretch hidden sm:block" />
                 <div className="hidden sm:flex flex-col items-center text-center">
                   <span className="text-3xl sm:text-4xl font-black text-white leading-none">
-                    24<span className="text-[#FCA311]">/7</span>
+                    24<span className="text-blue-950">/7</span>
                   </span>
                   <span className="text-slate-400 text-xs sm:text-sm mt-1 font-medium tracking-wide">
                     Emergency
@@ -350,46 +352,9 @@ export default function HeroSection() {
 
           </div>
         </div>
-
-        {/* ── Doctors floating card — bottom-right (desktop only) ── */}
-        <div
-          className="hidden lg:flex absolute bottom-10 right-10 flex-col gap-2.5 hero-fade-up"
-          style={{ animationDelay: "1.1s" }}
-        >
-          {[
-            { name: "Dr. Anjali Singh", spec: "Gynecologist & Infertility Specialist", emoji: DrAnjali},
-            { name: "Dr. L.R. Singh", spec: "MD — General Medicine", emoji: DrLal},
-          ].map((doc) => (
-            <div
-              key={doc.name}
-              className="flex items-center gap-3 px-4 py-3 rounded-2xl"
-              style={{
-                background: "rgba(3,10,30,0.6)",
-                backdropFilter: "blur(16px)",
-                border: "1px solid rgba(252,163,17,0.2)",
-              }}
-            >
-              <img src= {doc.emoji}
-                className="w-9 h-9 rounded-full flex items-center justify-center text-lg flex-shrink-0"
-                style={{
-                  background: "linear-gradient(135deg,#06B6D4,#0369a1)",
-                }}
-              />
-              
-               
-              {/* </div> */}
-              <div>
-                <div className="text-white text-sm font-bold leading-tight">
-                  {doc.name}
-                </div>
-                <div className="text-[#FCA311]/80 text-xs leading-tight mt-0.5">
-                  {doc.spec}
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="w-11/12 z-50 mx-10">
+          <img src={DrSaurabhPhoto} alt="" />
         </div>
-
       </section>
     </>
   );

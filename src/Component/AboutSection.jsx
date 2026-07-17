@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import AHHero from '../assets/AHHero.png'
 import DrAnjaliB from '../assets/AboutHome/DrAnjaliB.jpeg'
+import DrSaurabhLogo from '../assets/DrSaurabhLogo.png'
 import DrLalA from '../assets/AboutHome/DrLalA.jpeg'
+import DrSaurabhPhoto from '../assets/DrSaurabhPhoto.png'
 import { Link } from "react-router-dom";
 
 const stats = [
@@ -18,7 +20,7 @@ const features = [
         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
       </svg>
     ),
-    text: "Round-the-clock critical care & emergency support",
+    text: "Comprehensive care for bone, joint & spine disorders",
   },
   {
     icon: (
@@ -26,7 +28,7 @@ const features = [
         <path d="M9 12l2 2 4-4" /><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z" />
       </svg>
     ),
-    text: "Trusted Care with international quality standards",
+    text: "Comprehensive care for bone, joint & spine disorders",
   },
   {
     icon: (
@@ -34,7 +36,7 @@ const features = [
         <rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" />
       </svg>
     ),
-    text: "State-of-the-art diagnostics & surgical technology",
+    text: "Comprehensive care for bone, joint & spine disorders",
   },
 ];
 
@@ -111,12 +113,10 @@ export default function AboutSection() {
               {/* Eyebrow */}
               <div className="flex items-center gap-3 mb-5">
                 <span
-                  className="inline-block w-8 h-0.5 rounded-full"
-                  style={{ background: "#FCA311" }}
+                  className="inline-block w-8 h-0.5 rounded-full text-blue-950"
                 />
                 <span
-                  className="text-xs font-bold tracking-[0.18em] uppercase"
-                  style={{ color: "#FCA311" }}
+                  className="text-xs font-bold tracking-[0.18em] uppercase text-blue-950"
                 >
                   About Us
                 </span>
@@ -127,24 +127,21 @@ export default function AboutSection() {
                 className="font-extrabold leading-tight mb-4"
                 style={{ fontSize: "clamp(1.8rem, 3vw, 2.6rem)", color: "#172554" }}
               >
-                Healing Lives with
+                Dedicated to Restoring
                 <br />
-                <span style={{ color: "#FCA311" }}>Compassion</span> & Expertise
+                <span className="text-green-500">Compassion</span> Mobility &
               </h2>
 
               {/* Divider */}
               <div className="flex items-center gap-2 mb-5">
                 <div className="h-px flex-1 max-w-[48px]" style={{ background: "#172554", opacity: 0.15 }} />
-                <div className="w-2 h-2 rounded-full" style={{ background: "#FCA311" }} />
+                <div className="w-2 h-2 rounded-full text-green-500" />
                 <div className="h-px flex-1 max-w-[48px]" style={{ background: "#172554", opacity: 0.15 }} />
               </div>
 
               {/* Body text */}
               <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-[420px]">
-                Abhay Jeevan Hospital has been a beacon of trust and medical excellence
-                for over three years. We blend cutting-edge technology with heartfelt
-                care to deliver outcomes that truly matter — for patients, families,
-                and communities across the region.
+                Dr. Saurabh Tiwari is a highly dedicated Orthopedic Surgeon committed to providing advanced diagnosis, treatment, and surgical care for bone, joint, and spine disorders. With extensive clinical experience and a patient-first approach, he combines modern orthopedic techniques with compassionate care to help patients regain mobility, relieve pain, and return to an active lifestyle. Every treatment plan is personalized to ensure the best possible outcomes and long-term recovery.
               </p>
 
               {/* Feature list */}
@@ -169,7 +166,7 @@ export default function AboutSection() {
               >
                 {stats.map((s, i) => (
                   <div key={i} className="text-center">
-                    <div className="font-extrabold text-xl" style={{ color: "#FCA311" }}>{s.value}</div>
+                    <div className="font-extrabold text-xl text-green-500">{s.value}</div>
                     <div className="text-blue-200 text-[10px] leading-tight mt-0.5">{s.label}</div>
                   </div>
                 ))}
@@ -178,8 +175,7 @@ export default function AboutSection() {
               {/* CTA buttons */}
               <div className="flex items-center gap-3">
                 <Link to='about'
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300"
-                  style={{ background: "#FCA311", color: "#172554" }}
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 bg-blue-950 text-white"
                   onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 20px rgba(252,163,17,0.35)"; }}
                   onMouseLeave={e => { e.currentTarget.style.transform = "none"; e.currentTarget.style.boxShadow = "none"; }}
                 >
@@ -245,7 +241,7 @@ export default function AboutSection() {
                   }}
                 >
                   <img
-                    src={AHHero}
+                    src={DrSaurabhPhoto}
                     alt="Advanced Surgery"
                     className="w-full h-full object-cover"
                     style={{ transform: "rotate(4deg) scale(1.08)" }}
@@ -278,7 +274,7 @@ export default function AboutSection() {
                   }}
                 >
                   <img
-                    src={DrAnjaliB}
+                    src={DrSaurabhLogo}
                     alt="Patient Care"
                     className="w-full h-full object-cover"
                     style={{ transform: "rotate(-3.5deg) scale(1.08)" }}
@@ -312,7 +308,7 @@ export default function AboutSection() {
                   }}
                 >
                   <img
-                    src={DrLalA}
+                    src={DrSaurabhPhoto}
                     alt="Expert Team"
                     className="w-full h-full object-cover"
                     style={{ transform: "rotate(-6deg) scale(1.12)" }}

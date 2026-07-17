@@ -9,11 +9,12 @@ import Reception from '../assets/gallery/Reception.jpeg'
 import ReceptionA from '../assets/gallery/ReceptionA.jpeg'
 import ReceptionB from '../assets/gallery/ReceptionB.jpeg'
 import OT from '../assets/gallery/OT.jpeg'
+import DrSaurabhLogo from '../assets//DrSaurabhLogo.png'
 import { ArrowRight, Images } from "lucide-react";
 import { Link } from "react-router-dom";
 
 
-const images = [DrAnjaliC, DrLalOPDA, DrAnjaliOPDA, AHOutA, Reception, ReceptionA, ReceptionB, OT];
+const images = [DrSaurabhLogo, DrSaurabhLogo, DrSaurabhLogo, DrSaurabhLogo, DrSaurabhLogo, DrSaurabhLogo, DrSaurabhLogo, DrSaurabhLogo];
 
 export default function InfiniteGallerySlider() {
   function useReveal() {
