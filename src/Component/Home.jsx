@@ -11,6 +11,7 @@ import HospitalPhotoBanner from './HospitalPhotoBanner'
 import Contact from './Contact'
 import SpecialtiesSection from './SpecialitiesSection'
 import BreadCrumb from './BreadCrumb'
+import AppointmentCTA from './AppointmentCTA'
 
 // import AppBread from './Breadcrumb'
 
@@ -31,7 +32,7 @@ const Home = () => {
 
 
 
-
+<AppointmentCTA/>
       {/* <PreFooterCTA /> */}
       <Contact />
       {/* <HospitalPhotoBanner/> */}
