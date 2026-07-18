@@ -2,7 +2,7 @@
 import React from "react";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "919335399454"; // apna number country code ke saath daalo (bina + ke)
+  const phoneNumber = "917983437886"; // apna number country code ke saath daalo (bina + ke)
   const message = "Hi! Mujhe aapki services ke baare me jaankari chahiye.";
 
   const handleClick = () => {

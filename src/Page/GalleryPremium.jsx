@@ -1,587 +1,327 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import React, { useState } from 'react';
 
-/* ─── DATA ──────────────────────────────────────────────── */
-const CATS = ["All","OPD","Operation Theatre","ICU","Wards","Diagnostics","Emergency","Reception"];
+// Apni images import karo
+// import img1 from '../assets/gallery/1.jpg';
+// import img2 from '../assets/gallery/2.jpg';
+// import img3 from '../assets/gallery/3.jpg';
+// import img4 from '../assets/gallery/4.jpg';
+// import img5 from '../assets/gallery/5.jpg';
+// import img6 from '../assets/gallery/6.jpg';
+// import img7 from '../assets/gallery/7.jpg';
+// import img8 from '../assets/gallery/8.jpg';
+import DrSaurabhPhoto from "../assets/DrSaurabhPhoto.png"
 
-const PHOTOS = [
-  { id:1,  cat:"Reception",          title:"Grand Entrance Lobby",       sub:"Where healing begins",                    url:"https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1400&q=90", th:"https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80" },
-  { id:2,  cat:"Operation Theatre",  title:"Surgical Suite A",           sub:"Laminar-flow OT, fully sterile",          url:"https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1400&q=90", th:"https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&q=80" },
-  { id:3,  cat:"ICU",                title:"Critical Care Unit",         sub:"24 × 7 multi-parameter monitoring",       url:"https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=1400&q=90", th:"https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=600&q=80" },
-  { id:4,  cat:"Diagnostics",        title:"Pathology Laboratory",       sub:"NABL-accredited precision diagnostics",   url:"https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1400&q=90", th:"https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600&q=80" },
-  { id:5,  cat:"Wards",              title:"Private Suite",              sub:"Comfort-first recovery rooms",            url:"https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1400&q=90", th:"https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=600&q=80" },
-  { id:6,  cat:"OPD",                title:"Outpatient Hall",            sub:"Specialist clinics, every day",           url:"https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=1400&q=90", th:"https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=600&q=80" },
-  { id:7,  cat:"Emergency",          title:"Trauma & Emergency",         sub:"Rapid-response team, always ready",       url:"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1400&q=90", th:"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80" },
-  { id:8,  cat:"Diagnostics",        title:"MRI & Radiology",            sub:"1.5T MRI · 128-slice CT · Digital X-ray", url:"https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1400&q=90", th:"https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&q=80" },
-  { id:9,  cat:"Wards",              title:"General Ward",               sub:"Round-the-clock nursing care",            url:"https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=1400&q=90", th:"https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=600&q=80" },
-  { id:10, cat:"OPD",                title:"Consultation Room",          sub:"Private, unhurried specialist time",      url:"https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=1400&q=90", th:"https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=600&q=80" },
-  { id:11, cat:"ICU",                title:"Neonatal ICU",               sub:"Specialised care for fragile lives",      url:"https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=1400&q=90", th:"https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=600&q=80" },
-  { id:12, cat:"Reception",          title:"Patient Waiting Lounge",     sub:"Calm, comfortable, reassuring",           url:"https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1400&q=90", th:"https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&q=80" },
+const galleryImages = [
+  {
+    id: 1,
+    src: DrSaurabhPhoto,
+    category: 'Surgery',
+    title: 'Knee Replacement Surgery',
+  },
+  {
+    id: 2,
+    src: DrSaurabhPhoto,
+    category: 'Hospital',
+    title: 'Modern Orthopedic Facility',
+  },
+  {
+    id: 3,
+    src: DrSaurabhPhoto,
+    category: 'Patients',
+    title: 'Post Surgery Recovery',
+  },
+  {
+    id: 4,
+    src: DrSaurabhPhoto,
+    category: 'Surgery',
+    title: 'Advanced Joint Procedure',
+  },
+  {
+    id: 5,
+    src: DrSaurabhPhoto,
+    category: 'Events',
+    title: 'Medical Awareness Camp',
+  },
+  {
+    id: 6,
+    src: DrSaurabhPhoto,
+    category: 'Hospital',
+    title: 'Operation Theatre',
+  },
+  {
+    id: 7,
+    src: DrSaurabhPhoto,
+    category: 'Patients',
+    title: 'Successful Recovery',
+  },
+  {
+    id: 8,
+    src: DrSaurabhPhoto,
+    category: 'Awards',
+    title: 'Professional Recognition',
+  },
 ];
 
-const CAT_COLOR = {
-  "Reception":         "#0369A1",
-  "Operation Theatre": "#7C3AED",
-  "ICU":               "#DC2626",
-  "Wards":             "#0D9488",
-  "Diagnostics":       "#0891B2",
-  "Emergency":         "#EA580C",
-  "OPD":               "#16A34A",
-};
+const categories = ['All', 'Surgery', 'Hospital', 'Patients', 'Events', 'Awards'];
 
-/* ─── SCROLL-REVEAL HOOK ─────────────────────────────────── */
-function useReveal() {
-  const ref = useRef(null);
-  const [on, setOn] = useState(false);
-  useEffect(() => {
-    const ob = new IntersectionObserver(([e]) => { if (e.isIntersecting) setOn(true); }, { threshold: 0.08 });
-    if (ref.current) ob.observe(ref.current);
-    return () => ob.disconnect();
-  }, []);
-  return [ref, on];
-}
+export default function GalleryPremium() {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [lightboxImage, setLightboxImage] = useState(null);
 
-/* ─── CARD ───────────────────────────────────────────────── */
-function Card({ photo, index, onOpen }) {
-  const [ref, on] = useReveal();
-  const [hov, setHov] = useState(false);
-  const [loaded, setLoaded] = useState(false);
-  const color = CAT_COLOR[photo.cat] || "#334155";
+  const filteredImages =
+    selectedCategory === 'All'
+      ? galleryImages
+      : galleryImages.filter((img) => img.category === selectedCategory);
 
   return (
-    <div
-      ref={ref}
-      onClick={() => onOpen(photo)}
-      onMouseEnter={() => setHov(true)}
-      onMouseLeave={() => setHov(false)}
-      style={{
-        opacity: on ? 1 : 0,
-        transform: on ? "translateY(0)" : "translateY(28px)",
-        transition: `opacity .5s ease ${index * 55}ms, transform .5s ease ${index * 55}ms`,
-        cursor: "pointer",
-        borderRadius: 20,
-        overflow: "hidden",
-        position: "relative",
-        boxShadow: hov
-          ? "0 20px 48px rgba(11,31,58,.22), 0 2px 8px rgba(11,31,58,.10)"
-          : "0 4px 16px rgba(11,31,58,.08)",
-        transition: `opacity .5s ease ${index * 55}ms, transform .5s ease ${index * 55}ms, box-shadow .3s ease`,
-      }}
-    >
-      {/* skeleton */}
-      {!loaded && <div style={{ background: "linear-gradient(135deg,#e2e8f0,#f1f5f9)", minHeight: 220, width: "100%" }} />}
+    <div className='min-h-screen bg-white'>
+      {/* HERO SECTION */}
+      <section className='relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 py-20'>
+        <div className='absolute inset-0 bg-black/10'></div>
 
-      <img
-        src={photo.th}
-        alt={photo.title}
-        onLoad={() => setLoaded(true)}
-        loading="lazy"
-        style={{
-          display: loaded ? "block" : "none",
-          width: "100%",
-          objectFit: "cover",
-          transform: hov ? "scale(1.07)" : "scale(1)",
-          transition: "transform .55s cubic-bezier(.25,.46,.45,.94)",
-        }}
-      />
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6'>
+            <div className='w-2 h-2 bg-blue-300 rounded-full animate-pulse'></div>
+            <span className='text-blue-100 text-sm font-medium'>Orthopedic Excellence</span>
+          </div>
 
-      {/* dark scrim */}
-      <div style={{
-        position:"absolute", inset:0,
-        background: "linear-gradient(to top, rgba(11,31,58,.88) 0%, rgba(11,31,58,.25) 45%, transparent 70%)",
-        opacity: hov ? 1 : 0.7,
-        transition: "opacity .35s",
-      }} />
+          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+            Gallery of Care
+            <span className='block text-blue-300'>& Recovery</span>
+          </h1>
 
-      {/* top-left category pill */}
-      <div style={{
-        position:"absolute", top:14, left:14,
-        background: color, color:"#fff",
-        fontSize:10, fontWeight:800, letterSpacing:"0.12em",
-        padding:"4px 10px", borderRadius:99, textTransform:"uppercase",
-        boxShadow:"0 2px 8px rgba(0,0,0,.25)",
-      }}>
-        {photo.cat}
-      </div>
+          <p className='text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed'>
+            Explore moments from surgeries, patient recoveries, hospital facilities,
+            and the compassionate orthopedic care provided by Dr. Saurabh Tiwari.
+          </p>
 
-      {/* top-right zoom */}
-      <div style={{
-        position:"absolute", top:14, right:14,
-        width:34, height:34, borderRadius:"50%",
-        background:"rgba(255,255,255,.15)",
-        backdropFilter:"blur(6px)",
-        border:"1px solid rgba(255,255,255,.25)",
-        display:"flex", alignItems:"center", justifyContent:"center",
-        opacity: hov ? 1 : 0,
-        transform: hov ? "scale(1)" : "scale(.8)",
-        transition:"opacity .25s, transform .25s",
-      }}>
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
-        </svg>
-      </div>
-
-      {/* bottom info */}
-      <div style={{
-        position:"absolute", bottom:0, left:0, right:0, padding:"18px 18px 16px",
-        transform: hov ? "translateY(0)" : "translateY(6px)",
-        transition:"transform .3s ease",
-      }}>
-        <p style={{ color:"#fff", fontWeight:800, fontSize:15, lineHeight:1.25, margin:0 }}>{photo.title}</p>
-        <p style={{
-          color:"rgba(200,220,255,.75)", fontSize:12, marginTop:4, lineHeight:1.4,
-          opacity: hov ? 1 : 0, transform: hov ? "translateY(0)" : "translateY(4px)",
-          transition:"opacity .3s .05s, transform .3s .05s",
-        }}>{photo.sub}</p>
-      </div>
-    </div>
-  );
-}
-
-/* ─── LIGHTBOX ───────────────────────────────────────────── */
-function Lightbox({ photo, index, total, onPrev, onNext, onClose, slideshow, onToggleSlide }) {
-  const [loaded, setLoaded] = useState(false);
-  const color = CAT_COLOR[photo.cat] || "#334155";
-
-  return (
-    <div
-      style={{
-        position:"fixed", inset:0, zIndex:999,
-        background:"rgba(4,8,18,.97)",
-        display:"flex", flexDirection:"column",
-        backdropFilter:"blur(12px)",
-      }}
-      onClick={onClose}
-    >
-      {/* TOP BAR */}
-      <div
-        onClick={e => e.stopPropagation()}
-        style={{
-          display:"flex", alignItems:"center", justifyContent:"space-between",
-          padding:"14px 24px", borderBottom:"1px solid rgba(255,255,255,.08)",
-          flexShrink:0,
-        }}
-      >
-        <div style={{ display:"flex", alignItems:"center", gap:12 }}>
-          <span style={{ background:color, color:"#fff", fontSize:10, fontWeight:800, padding:"4px 10px", borderRadius:99, letterSpacing:"0.12em", textTransform:"uppercase" }}>
-            {photo.cat}
-          </span>
-          <div>
-            <p style={{ color:"#fff", fontWeight:800, fontSize:16, margin:0 }}>{photo.title}</p>
-            <p style={{ color:"rgba(148,180,220,.7)", fontSize:12, margin:"2px 0 0" }}>{photo.sub}</p>
+          <div className='mt-8 flex flex-wrap justify-center gap-6 text-white/90'>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-blue-300'>500+</div>
+              <div className='text-sm'>Successful Procedures</div>
+            </div>
+            <div className='w-px bg-white/20 hidden sm:block'></div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-blue-300'>1000+</div>
+              <div className='text-sm'>Patients Treated</div>
+            </div>
+            <div className='w-px bg-white/20 hidden sm:block'></div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-blue-300'>24/7</div>
+              <div className='text-sm'>Emergency Support</div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div style={{ display:"flex", alignItems:"center", gap:10 }}>
-          {/* Slideshow toggle */}
-          <button
-            onClick={onToggleSlide}
-            style={{
-              display:"flex", alignItems:"center", gap:6,
-              padding:"7px 14px", borderRadius:99, border:"none",
-              background: slideshow ? "#DC2626" : "rgba(255,255,255,.1)",
-              color:"#fff", fontWeight:700, fontSize:12, cursor:"pointer",
-              transition:"background .2s",
-            }}
-          >
-            {slideshow
-              ? <><span style={{fontSize:14}}>⏸</span> Pause</>
-              : <><span style={{fontSize:14}}>▶</span> Slideshow</>
-            }
-          </button>
-
-          <span style={{ color:"rgba(255,255,255,.3)", fontSize:13, fontFamily:"monospace" }}>
-            {String(index+1).padStart(2,"0")} / {String(total).padStart(2,"0")}
-          </span>
-
-          <button
-            onClick={onClose}
-            style={{
-              width:36, height:36, borderRadius:"50%",
-              border:"1px solid rgba(255,255,255,.15)",
-              background:"rgba(255,255,255,.06)",
-              color:"rgba(255,255,255,.7)", fontSize:20, lineHeight:1,
-              display:"flex", alignItems:"center", justifyContent:"center",
-              cursor:"pointer",
-            }}
-          >×</button>
+      {/* FILTER SECTION */}
+      <section className='sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4'>
+          <div className='flex flex-wrap items-center justify-center gap-3'>
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`
+                  px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300
+                  ${
+                    selectedCategory === category
+                      ? 'bg-blue-950 text-white shadow-lg scale-105'
+                      : 'bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-900 hover:scale-105'
+                  }
+                `}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* IMAGE AREA */}
-      <div
-        style={{ flex:1, position:"relative", display:"flex", alignItems:"center", justifyContent:"center", overflow:"hidden", padding:"0 80px" }}
-        onClick={e => e.stopPropagation()}
-      >
-        {/* Blurred bg */}
-        <div style={{
-          position:"absolute", inset:0, zIndex:0,
-          backgroundImage:`url(${photo.th})`,
-          backgroundSize:"cover", backgroundPosition:"center",
-          filter:"blur(40px) brightness(0.15)",
-        }} />
+      {/* GALLERY SECTION */}
+      <section className='py-12 md:py-16'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          {/* Section Header */}
+          <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between mb-10 gap-4'>
+            <div>
+              <h2 className='text-3xl font-bold text-gray-900 mb-2'>
+                Photo Gallery
+              </h2>
+              <p className='text-gray-600'>
+                {filteredImages.length} photos in {selectedCategory === 'All' ? 'all categories' : selectedCategory}
+              </p>
+            </div>
 
-        {/* Prev */}
-        <button
-          onClick={onPrev}
-          style={{
-            position:"absolute", left:16, zIndex:2,
-            width:48, height:48, borderRadius:"50%",
-            border:"1px solid rgba(255,255,255,.15)",
-            background:"rgba(255,255,255,.06)",
-            color:"#fff", fontSize:22, cursor:"pointer",
-            display:"flex", alignItems:"center", justifyContent:"center",
-            backdropFilter:"blur(6px)",
-          }}
-        >‹</button>
+            <div className='flex items-center gap-2 text-sm text-gray-500'>
+              <div className='w-2 h-2 bg-green-500 rounded-full'></div>
+              <span>Original image quality preserved</span>
+            </div>
+          </div>
 
-        {/* Image */}
-        <div style={{ position:"relative", zIndex:1, maxWidth:900, width:"100%" }}>
-          {!loaded && (
-            <div style={{
-              position:"absolute", inset:0, background:"rgba(255,255,255,.04)",
-              borderRadius:16, display:"flex", alignItems:"center", justifyContent:"center", minHeight:320,
-            }}>
-              <div style={{
-                width:40, height:40, borderRadius:"50%",
-                border:"2px solid rgba(255,255,255,.15)",
-                borderTopColor:"rgba(255,255,255,.7)",
-                animation:"spin 0.8s linear infinite",
-              }} />
-              <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
+          {/* MASONRY GALLERY */}
+          <div className='columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6'>
+            {filteredImages.map((image) => (
+              <div
+                key={image.id}
+                className='break-inside-avoid group cursor-pointer'
+                onClick={() => setLightboxImage(image)}
+              >
+                <div className='relative overflow-hidden rounded-3xl bg-white shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100'>
+                  {/* Image - Original aspect ratio preserved */}
+                  <img
+                    src={image.src}
+                    alt={image.title}
+                    className='w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105'
+                    loading='lazy'
+                  />
+
+                  {/* Overlay */}
+                  <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end'>
+                    <div className='p-5 text-white w-full'>
+                      <div className='flex items-center justify-between mb-2'>
+                        <span className='inline-block px-3 py-1 bg-blue-500/90 backdrop-blur-sm rounded-full text-xs font-semibold'>
+                          {image.category}
+                        </span>
+                        <div className='w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center'>
+                          <svg
+                            className='w-5 h-5'
+                            fill='none'
+                            stroke='currentColor'
+                            viewBox='0 0 24 24'
+                          >
+                            <path
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                              strokeWidth={2}
+                              d='M15 10l4.553-4.553a2.121 2.121 0 00-3-3L12 7m3 3l-6 6m6-6L9 4m0 12l-4.553 4.553a2.121 2.121 0 003 3L12 17'
+                            />
+                          </svg>
+                        </div>
+                      </div>
+
+                      <h3 className='font-semibold text-lg leading-tight'>
+                        {image.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* Subtle shine effect */}
+                  <div className='absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500'>
+                    <div className='absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-white/20 to-transparent rotate-12 transform group-hover:translate-x-full group-hover:translate-y-full transition-transform duration-1000'></div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Empty State */}
+          {filteredImages.length === 0 && (
+            <div className='text-center py-20'>
+              <div className='w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6'>
+                <svg
+                  className='w-12 h-12 text-gray-400'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={1.5}
+                    d='M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14'
+                  />
+                </svg>
+              </div>
+              <h3 className='text-xl font-semibold text-gray-900 mb-2'>
+                No photos found
+              </h3>
+              <p className='text-gray-600'>
+                Try selecting a different category.
+              </p>
             </div>
           )}
-          <img
-            key={photo.id}
-            src={photo.url}
-            alt={photo.title}
-            onLoad={() => setLoaded(true)}
-            style={{
-              width:"100%", height:"auto",
-              maxHeight:"calc(100vh - 240px)",
-              objectFit:"contain",
-              borderRadius:16,
-              boxShadow:"0 32px 80px rgba(0,0,0,.6)",
-              opacity: loaded ? 1 : 0,
-              transition:"opacity .4s ease",
-              display:"block",
-            }}
-          />
         </div>
+      </section>
 
-        {/* Next */}
-        <button
-          onClick={onNext}
-          style={{
-            position:"absolute", right:16, zIndex:2,
-            width:48, height:48, borderRadius:"50%",
-            border:"1px solid rgba(255,255,255,.15)",
-            background:"rgba(255,255,255,.06)",
-            color:"#fff", fontSize:22, cursor:"pointer",
-            display:"flex", alignItems:"center", justifyContent:"center",
-            backdropFilter:"blur(6px)",
-          }}
-        >›</button>
-      </div>
-
-      {/* FILMSTRIP */}
-      <div
-        onClick={e => e.stopPropagation()}
-        style={{
-          flexShrink:0,
-          borderTop:"1px solid rgba(255,255,255,.08)",
-          background:"rgba(5,12,28,.85)",
-          padding:"10px 16px 14px",
-          display:"flex", gap:8, justifyContent:"center",
-          overflowX:"auto",
-        }}
-        className="hide-scroll"
-      >
-        <style>{`.hide-scroll::-webkit-scrollbar{display:none}`}</style>
-        {/* caption */}
-        <div style={{ width:"100%", textAlign:"center", position:"absolute", paddingBottom:2 }}>
-          <p style={{ color:"rgba(180,210,255,.55)", fontSize:11, margin:0 }}>{photo.sub}</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/* ─── MAIN ───────────────────────────────────────────────── */
-export default function GalleryPremium() {
-  const [activeCat, setActiveCat] = useState("All");
-  const [search, setSearch]       = useState("");
-  const [active, setActive]       = useState(null); // { photo, index }
-  const [slideshow, setSlideshow] = useState(false);
-  const timerRef = useRef(null);
-
-  const filtered = PHOTOS.filter(p => {
-    const mc = activeCat === "All" || p.cat === activeCat;
-    const ms = !search || p.title.toLowerCase().includes(search.toLowerCase()) || p.cat.toLowerCase().includes(search.toLowerCase());
-    return mc && ms;
-  });
-
-  const open  = (photo) => { setActive({ photo, index: filtered.indexOf(photo) }); setSlideshow(false); };
-  const close = useCallback(() => { setActive(null); setSlideshow(false); clearInterval(timerRef.current); }, []);
-
-  const prev = useCallback(() => {
-    setActive(a => {
-      const ni = (a.index - 1 + filtered.length) % filtered.length;
-      return { photo: filtered[ni], index: ni };
-    });
-  }, [filtered]);
-
-  const next = useCallback(() => {
-    setActive(a => {
-      const ni = (a.index + 1) % filtered.length;
-      return { photo: filtered[ni], index: ni };
-    });
-  }, [filtered]);
-
-  // keyboard
-  useEffect(() => {
-    if (!active) return;
-    const h = e => { if (e.key==="ArrowRight") next(); if (e.key==="ArrowLeft") prev(); if (e.key==="Escape") close(); };
-    window.addEventListener("keydown", h);
-    return () => window.removeEventListener("keydown", h);
-  }, [active, next, prev, close]);
-
-  // slideshow
-  useEffect(() => {
-    clearInterval(timerRef.current);
-    if (slideshow && active) timerRef.current = setInterval(next, 3500);
-    return () => clearInterval(timerRef.current);
-  }, [slideshow, active, next]);
-
-  const featuredPhoto = PHOTOS[0];
-
-  return (
-    <div style={{ minHeight:"100vh", background:"#F7FAFC", fontFamily:"'Inter', system-ui, sans-serif" }}>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700;800&display=swap');
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        .cat-pill { border: none; cursor: pointer; transition: all .2s; }
-        .cat-pill:hover { transform: translateY(-1px); }
-      `}</style>
-
-      {/* ══════════ HERO ══════════ */}
-      <div style={{ position:"relative", overflow:"hidden", minHeight:520 }}>
-        {/* Full-bleed blurred bg from real photo */}
-        <div style={{
-          position:"absolute", inset:0, zIndex:0,
-          backgroundImage:`url(${featuredPhoto.url})`,
-          backgroundSize:"cover", backgroundPosition:"center 30%",
-          filter:"brightness(0.28) saturate(1.2)",
-        }} />
-        {/* Navy overlay gradient */}
-        <div style={{
-          position:"absolute", inset:0, zIndex:1,
-          background:"linear-gradient(135deg, rgba(11,31,58,.82) 0%, rgba(3,50,80,.6) 100%)",
-        }} />
-        {/* Teal glow bottom */}
-        <div style={{
-          position:"absolute", bottom:0, left:0, right:0, zIndex:2, height:200,
-          background:"linear-gradient(to top, #F7FAFC, transparent)",
-        }} />
-        {/* Top accent line */}
-        <div style={{ position:"absolute", top:0, left:0, right:0, zIndex:10, height:3, background:"linear-gradient(90deg,#00B4D8,#0077B6,#00B4D8)" }} />
-
-        <div style={{ position:"relative", zIndex:5, maxWidth:1100, margin:"0 auto", padding:"60px 24px 80px", display:"flex", gap:40, alignItems:"center", flexWrap:"wrap" }}>
-          {/* Left text */}
-          <div style={{ flex:"1 1 340px" }}>
-            <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:20 }}>
-              <div style={{ width:28, height:2, background:"#00B4D8" }} />
-              <span style={{ color:"#00B4D8", fontSize:11, fontWeight:700, letterSpacing:"0.18em", textTransform:"uppercase" }}>Visual Tour</span>
+      {/* QUOTE SECTION */}
+      <section className='py-16 bg-gray-50'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='text-6xl text-blue-200 mb-6'>“</div>
+          <blockquote className='text-2xl md:text-3xl font-light text-gray-800 leading-relaxed mb-8'>
+            Every patient’s recovery is a story of hope, resilience, and dedicated orthopedic care.
+          </blockquote>
+          <div className='flex items-center justify-center gap-4'>
+            <div className='w-16 h-16 bg-blue-950 rounded-full flex items-center justify-center'>
+              <span className='text-white font-bold text-xl'>ST</span>
             </div>
-            <h1 style={{ fontFamily:"'Playfair Display', serif", fontStyle:"italic", fontWeight:700, fontSize:"clamp(36px,5vw,60px)", lineHeight:1.1, color:"#fff", marginBottom:20 }}>
-              Our Facilities<br />&amp; Infrastructure
-            </h1>
-            <p style={{ color:"rgba(180,215,255,.7)", fontSize:16, lineHeight:1.7, maxWidth:380, marginBottom:32 }}>
-              A curated look inside every department — built around patient comfort, clinical precision, and compassionate care.
-            </p>
-            {/* Stats row */}
-            <div style={{ display:"flex", gap:28, flexWrap:"wrap" }}>
-              {[["500+","Beds"],["12","OT Suites"],["48","ICU Beds"],["24/7","Emergency"]].map(([v,l]) => (
-                <div key={l}>
-                  <p style={{ color:"#fff", fontWeight:800, fontSize:26, lineHeight:1 }}>{v}</p>
-                  <p style={{ color:"rgba(150,195,230,.65)", fontSize:11, letterSpacing:"0.1em", textTransform:"uppercase", marginTop:3 }}>{l}</p>
-                </div>
-              ))}
+            <div className='text-left'>
+              <div className='font-bold text-gray-900'>Dr. Saurabh Tiwari</div>
+              <div className='text-blue-700'>Orthopedic & Joint Replacement Surgeon</div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Right — mini bento preview */}
-          <div style={{ flex:"1 1 320px", display:"grid", gridTemplateColumns:"1fr 1fr", gridTemplateRows:"160px 100px", gap:10 }}>
-            {PHOTOS.slice(0,4).map((p,i) => (
-              <div
-                key={p.id}
-                onClick={() => open(p)}
-                style={{
-                  gridColumn: i===0 ? "1/2" : undefined,
-                  gridRow:    i===0 ? "1/3" : undefined,
-                  borderRadius:14, overflow:"hidden", position:"relative", cursor:"pointer",
-                  boxShadow:"0 8px 24px rgba(0,0,0,.4)",
-                }}
-              >
-                <img src={p.th} alt={p.title} style={{ width:"100%", height:"100%", objectFit:"cover", transition:"transform .4s", display:"block" }} />
-                <div style={{ position:"absolute", inset:0, background:"linear-gradient(to top,rgba(11,31,58,.7),transparent)", display:"flex", alignItems:"flex-end", padding:10 }}>
-                  <span style={{ color:"#fff", fontSize:11, fontWeight:700, lineHeight:1.2 }}>{p.title}</span>
-                </div>
-              </div>
-            ))}
+      {/* CTA SECTION */}
+      <section className='py-16 bg-blue-950'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
+            Need Orthopedic Consultation?
+          </h2>
+          <p className='text-blue-100 text-lg mb-8 max-w-2xl mx-auto'>
+            Get expert diagnosis and advanced treatment for joint pain, fractures,
+            sports injuries, spine disorders, and joint replacement procedures.
+          </p>
+
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <button className='bg-white text-blue-950 px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg'>
+              Book Appointment
+            </button>
+
+            <button className='border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white hover:text-blue-950 transition-all duration-300 hover:scale-105'>
+              Call Now
+            </button>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* ══════════ STICKY CONTROLS ══════════ */}
-      <div style={{
-        position:"sticky", top:0, zIndex:40,
-        background:"rgba(247,250,252,.92)",
-        backdropFilter:"blur(14px)",
-        borderBottom:"1px solid rgba(11,31,58,.08)",
-        boxShadow:"0 2px 16px rgba(11,31,58,.06)",
-      }}>
-        <div style={{ maxWidth:1100, margin:"0 auto", padding:"12px 20px", display:"flex", gap:12, alignItems:"center", flexWrap:"wrap" }}>
-
-          {/* Search */}
-          <div style={{ position:"relative", flexShrink:0 }}>
-            <svg style={{ position:"absolute", left:11, top:"50%", transform:"translateY(-50%)", opacity:.45 }} width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+      {/* LIGHTBOX */}
+      {lightboxImage && (
+        <div
+          className='fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4'
+          onClick={() => setLightboxImage(null)}
+        >
+          {/* Close Button */}
+          <button
+            className='absolute top-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors duration-200 z-10'
+            onClick={() => setLightboxImage(null)}
+          >
+            <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M6 18L18 6M6 6l12 12' />
             </svg>
-            <input
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              placeholder="Search…"
-              style={{
-                paddingLeft:34, paddingRight:14, paddingTop:8, paddingBottom:8,
-                border:"1.5px solid rgba(11,31,58,.12)",
-                borderRadius:99, fontSize:13, color:"#0B1F3A",
-                background:"#fff", outline:"none", width:160,
-                fontFamily:"inherit",
-              }}
+          </button>
+
+          {/* Image Container */}
+          <div
+            className='relative max-w-6xl max-h-[90vh] w-full flex flex-col items-center'
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={lightboxImage.src}
+              alt={lightboxImage.title}
+              className='max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl'
             />
-          </div>
 
-          {/* Category pills */}
-          <div style={{ display:"flex", gap:6, overflowX:"auto", flex:1 }} className="hide-scroll">
-            {CATS.map(cat => {
-              const count = cat==="All" ? PHOTOS.length : PHOTOS.filter(p=>p.cat===cat).length;
-              const on = activeCat === cat;
-              const col = CAT_COLOR[cat] || "#0B1F3A";
-              return (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCat(cat)}
-                  className="cat-pill"
-                  style={{
-                    flexShrink:0, display:"flex", alignItems:"center", gap:5,
-                    padding:"6px 13px", borderRadius:99,
-                    fontSize:12, fontWeight:700,
-                    background: on ? col : "#fff",
-                    color: on ? "#fff" : "#64748b",
-                    border: `1.5px solid ${on ? col : "rgba(11,31,58,.12)"}`,
-                    boxShadow: on ? `0 4px 12px ${col}44` : "none",
-                    fontFamily:"inherit",
-                  }}
-                >
-                  {cat}
-                  <span style={{
-                    fontSize:10, fontWeight:800, padding:"2px 5px", borderRadius:99,
-                    background: on ? "rgba(255,255,255,.25)" : "rgba(11,31,58,.06)",
-                    color: on ? "#fff" : "#94a3b8",
-                  }}>{count}</span>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Photo count badge */}
-          <span style={{ flexShrink:0, fontSize:12, color:"#94a3b8", fontWeight:600 }}>
-            {filtered.length} photos
-          </span>
-        </div>
-      </div>
-
-      {/* ══════════ MASONRY GRID ══════════ */}
-      <div style={{ maxWidth:1100, margin:"0 auto", padding:"36px 20px 60px" }}>
-        {filtered.length > 0 ? (
-          <div style={{ columns:"1", columnGap:16 }} className="masonry-cols">
-            <style>{`
-              @media(min-width:640px){ .masonry-cols{ columns:2 !important } }
-              @media(min-width:1024px){ .masonry-cols{ columns:3 !important } }
-              .masonry-item{ break-inside:avoid; margin-bottom:16px; }
-            `}</style>
-            {filtered.map((photo, idx) => (
-              <div key={photo.id} className="masonry-item">
-                <Card photo={photo} index={idx} onOpen={open} />
+            {/* Image Info */}
+            <div className='mt-6 text-center text-white'>
+              <div className='inline-block px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-3'>
+                {lightboxImage.category}
               </div>
-            ))}
+              <h3 className='text-2xl font-bold mb-2'>{lightboxImage.title}</h3>
+              <p className='text-gray-300'>Dr. Saurabh Tiwari Orthopedic Gallery</p>
+            </div>
           </div>
-        ) : (
-          <div style={{ textAlign:"center", padding:"80px 20px" }}>
-            <div style={{ fontSize:48, marginBottom:16 }}>📷</div>
-            <p style={{ color:"#64748b", fontSize:17, fontWeight:600 }}>No photos found</p>
-            <p style={{ color:"#94a3b8", fontSize:14, marginTop:6 }}>Try a different filter or search term.</p>
-            <button
-              onClick={() => { setActiveCat("All"); setSearch(""); }}
-              style={{
-                marginTop:20, padding:"10px 24px", borderRadius:99,
-                background:"#0B1F3A", color:"#fff", border:"none",
-                fontSize:14, fontWeight:700, cursor:"pointer", fontFamily:"inherit",
-              }}
-            >Reset</button>
-          </div>
-        )}
-      </div>
-
-      {/* ══════════ CTA STRIP ══════════ */}
-      <div style={{
-        background:"linear-gradient(135deg,#0B1F3A 0%,#0c3460 100%)",
-        padding:"56px 24px", textAlign:"center",
-      }}>
-        <p style={{ color:"rgba(148,180,220,.7)", fontSize:12, fontWeight:700, letterSpacing:"0.18em", textTransform:"uppercase", marginBottom:12 }}>
-          Experience it in person
-        </p>
-        <h2 style={{ fontFamily:"'Playfair Display',serif", fontStyle:"italic", color:"#fff", fontSize:"clamp(26px,4vw,40px)", marginBottom:10 }}>
-          Visit Our Hospital
-        </h2>
-        <p style={{ color:"rgba(180,215,255,.6)", fontSize:15, maxWidth:420, margin:"0 auto 32px" }}>
-          Our team is here to guide you through every step of your care journey.
-        </p>
-        <div style={{ display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap" }}>
-          <button style={{
-            padding:"14px 32px", borderRadius:99,
-            background:"#DC2626", color:"#fff", border:"none",
-            fontSize:15, fontWeight:800, cursor:"pointer", fontFamily:"inherit",
-            boxShadow:"0 8px 24px rgba(220,38,38,.4)",
-          }}>Book Appointment</button>
-          <button style={{
-            padding:"14px 32px", borderRadius:99,
-            background:"rgba(255,255,255,.1)", color:"#fff",
-            border:"1px solid rgba(255,255,255,.2)",
-            fontSize:15, fontWeight:700, cursor:"pointer", fontFamily:"inherit",
-          }}>Get Directions →</button>
         </div>
-      </div>
-
-      {/* FOOTER */}
-      <div style={{ background:"#060D1A", padding:"16px 24px", textAlign:"center" }}>
-        <p style={{ color:"rgba(100,140,180,.6)", fontSize:13 }}>
-          Designed &amp; Developed by <span style={{ color:"#fff", fontWeight:800 }}>Salfartech</span>
-        </p>
-      </div>
-
-      {/* ══════════ LIGHTBOX ══════════ */}
-      {active && (
-        <Lightbox
-          photo={active.photo}
-          index={active.index}
-          total={filtered.length}
-          onPrev={prev}
-          onNext={next}
-          onClose={close}
-          slideshow={slideshow}
-          onToggleSlide={() => setSlideshow(s => !s)}
-        />
       )}
     </div>
   );

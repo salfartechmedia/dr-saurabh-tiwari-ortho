@@ -19,6 +19,7 @@ import GeneralSurgery from './Page/Specialities/GeneralSurgery.jsx'
 import PlasticAndReconstructiveSurgery from './Page/Specialities/PlasticAndReconstructiveSurgery.jsx'
 import ContactForm from './Page/ContactForm.jsx'
 import AbhayJeevanGallery from './Page/AbhayJeevanGallery.jsx'
+import GalleryPremium from './Page/GalleryPremium.jsx'
 // import { BrowserRouter } from 'react-router-dom'
 const router = createBrowserRouter([
   {
@@ -33,14 +34,14 @@ const router = createBrowserRouter([
       //   path: 'book-appointment',
       //   element: <ContactForm/>
       // },
-      // {
-      //   path: 'about',
-      //   element: <About/>
-      // },
-      // {
-      //   path: 'gallery',
-      //   element: <AbhayJeevanGallery/>
-      // },
+      {
+        path: 'about',
+        element: <About/>
+      },
+      {
+        path: 'gallery',
+        element: <GalleryPremium/>
+      }
       // {
       //   path: 'specialities',
       //   element: <OurSpecialities/>

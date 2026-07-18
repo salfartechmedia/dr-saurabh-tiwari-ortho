@@ -84,22 +84,29 @@ const Footer = () => {
                 <p
                   className="text-slate-400 text-sm"
                 >
-                  <Link to='/specialities/gynecology'>
-                  Gynecology
+                  <Link to='/specialities/joint-replacement'>
+                  Joint Replacement
                   </Link>
                 </p>
                 <p
                   className="text-slate-400 text-sm"
                 >
-                  <Link to='/specialities/infertility-and-ivf'>
-                  Infertility & IVF
+                  <Link to='/specialities/trauma-and-fracture-care'>
+                 Trauma & Fracture Care
                   </Link>
                 </p>
                 <p
                   className="text-slate-400 text-sm"
                 >
-                  <Link to='/specialities/general-medicine'>
-                  General Meidicine
+                  <Link to='/specialities/spine-care'>
+                  Spine Care
+                  </Link>
+                </p>
+                <p
+                  className="text-slate-400 text-sm"
+                >
+                  <Link to='/specialities/arthroscopy'>
+                  Arthroscopy
                   </Link>
                 </p>
               {/* ))} */}

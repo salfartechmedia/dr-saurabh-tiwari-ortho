@@ -34,7 +34,7 @@ export default function Breadcrumb() {
 
           <Link
             to="/"
-            className="flex items-center gap-1 text-white/70 hover:text-[#FCA311] transition"
+            className="flex items-center gap-1 text-white/70 hover:text-white transition"
           >
             <Home size={16} />
             Home
@@ -52,7 +52,7 @@ export default function Breadcrumb() {
                 />
 
                 {isLast ? (
-                  <span className="font-semibold text-[#FCA311]">
+                  <span className="font-semibold text-green-500">
                     {formatName(value)}
                   </span>
                 ) : (

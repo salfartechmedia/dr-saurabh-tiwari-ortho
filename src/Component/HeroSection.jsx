@@ -79,7 +79,7 @@ function StatCounter({ end, suffix, label }) {
         style={{ fontVariantNumeric: "tabular-nums" }}
       >
         {count}
-        <span className="text-[#FCA311]">{suffix}</span>
+        <span className="text-green-500">{suffix}</span>
       </span>
       <span className="text-slate-400 text-xs sm:text-sm mt-1 font-medium tracking-wide">
         {label}
@@ -312,7 +312,7 @@ export default function HeroSection() {
               <a href="tel:+919876543210"
                 className="btn-ghost px-7 sm:px-9 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base"
                 style={{
-                  border: "1.5px solid rgba(252,163,17,0.45)",
+                  border: "1.5px solid #172554",
                 }}
               >
                 Emergency 24x7
@@ -329,7 +329,7 @@ export default function HeroSection() {
                 className="mb-6 h-px"
                 style={{
                   background:
-                    "linear-gradient(90deg, rgba(252,163,27,0.5) 0%, rgba(252,163,17,0.08) 100%)",
+                    "linear-gradient(90deg, #172554 0%, rgba(252,163,17,0.08) 100%)",
                 }}
               />
               <div className="flex items-center gap-6 sm:gap-10">
@@ -341,7 +341,7 @@ export default function HeroSection() {
                 <div className="stat-divider self-stretch hidden sm:block" />
                 <div className="hidden sm:flex flex-col items-center text-center">
                   <span className="text-3xl sm:text-4xl font-black text-white leading-none">
-                    24<span className="text-blue-950">/7</span>
+                    24<span className="text-green-500">/7</span>
                   </span>
                   <span className="text-slate-400 text-xs sm:text-sm mt-1 font-medium tracking-wide">
                     Emergency
