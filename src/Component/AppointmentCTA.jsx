@@ -63,7 +63,7 @@ export default function AppointmentCTA() {
               <div>
 
                 <h3 className="text-3xl font-bold text-slate-800">
-                  0532 262 8888
+                  7983437886
                 </h3>
 
                 <p className="mt-2 text-slate-500">

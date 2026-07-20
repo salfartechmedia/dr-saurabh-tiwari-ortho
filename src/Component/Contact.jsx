@@ -75,14 +75,24 @@ export default function Contact() {
 
 
               <div className="rounded-3xl overflow-hidden shadow-xl border">
-
+{/* 
                 <iframe
                   src="https://www.google.com/maps/place/Dr.+Saurabh+Tiwari+%E2%80%93+Orthopedic+Surgeon+%7C+Jeevan+Jyoti+Hospital,+Prayagraj/@25.4363057,81.8466297,17z/data=!3m1!4b1!4m6!3m5!1s0x3985356429a9b1c1:0x277b4de2774fb785!8m2!3d25.4363057!4d81.8466297!16s%2Fg%2F11zk6nylb9?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
                   className="w-full h-[500px]"
                   loading="lazy"
                   allowFullScreen
                   referrerPolicy="strict-origin-when-cross-origin"
-                ></iframe>
+                ></iframe> */}
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.058558876537!2d81.8466297!3d25.4363057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3985356429a9b1c1%3A0x277b4de2774fb785!2sDr.%20Saurabh%20Tiwari%20%E2%80%93%20Orthopedic%20Surgeon%20%7C%20Jeevan%20Jyoti%20Hospital%2C%20Prayagraj!5e0!3m2!1sen!2sin!4v1784572233871!5m2!1sen!2sin"
+                // width="600"
+                // height="450"
+                className="w-full h-[500px]"
+                // style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
 
               </div>
 
