@@ -32,7 +32,7 @@ const Home = () => {
 
 
 
-<AppointmentCTA/>
+      <AppointmentCTA />
       {/* <PreFooterCTA /> */}
       <Contact />
       {/* <HospitalPhotoBanner/> */}
