@@ -12,28 +12,36 @@ const NavigationBar = () => {
     const specialities = [
         {
             name: "Total Nee Replacement",
-            path: "/specialities/general-medicine",
+            path: "/specialities/knee-replacement",
         },
         {
-            name: "Hip Replacement and Fracture",
-            path: "/specialities/infertility-and-ivf",
+            name: "Hip Replacement",
+            path: "/specialities/hip-replacement",
         },
-        // {
-        //     name: "Obstetrician & Gynecology",
-        //     path: "/specialities/obstetrics-gynecology",
-        // },
-        // {
-        //     name: "General Surgery",
-        //     path: "/specialities/general-surgery",
-        // },
-        // {
-        //     name: "Plastic Surgery",
-        //     path: "/specialities/plastic-and-reconstructive-surgery",
-        // },
-        // {
-        //     name: "Pediatrics ",
-        //     path: "/specialities/Pediatrics",
-        // },
+        {
+            name: "joint Replacement",
+            path: "/specialities/joint-replacement",
+        },
+        {
+            name: "Trauma & Fracture",
+            path: "/specialities/trauma-and-fracture",
+        },
+        {
+            name: "Spine Surgery",
+            path: "/specialities/spine-surgery",
+        },
+        {
+            name: "Arthroscopy",
+            path: "/specialities/arthroscopy",
+        },
+        {
+            name: "Rehabilation",
+            path: "/specialities/rehabilation",
+        },
+        {
+            name: "Minimal Invasive Techniques",
+            path: "/specialities/minimal-invasive-surgery",
+        },
     ];
 
     useEffect(() => {
@@ -119,13 +127,13 @@ const NavigationBar = () => {
                                 </div>
                             )}
                         </div>
-
+{/* 
                         <Link
                             to="/consultants"
                             className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-gray-50 hover:text-[#082c77] transition"
                         >
                             Consultants
-                        </Link>
+                        </Link> */}
 
                         <Link
                             to="/gallery"

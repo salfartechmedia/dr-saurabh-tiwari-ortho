@@ -4,10 +4,12 @@ import DrAnjaliB from '../assets/AboutHome/DrAnjaliB.jpeg'
 import DrSaurabhLogo from '../assets/DrSaurabhLogo.png'
 import DrLalA from '../assets/AboutHome/DrLalA.jpeg'
 import DrSaurabhPhoto from '../assets/DrSaurabhPhoto.png'
+import DrSaurabhInOt from '../assets/DrSaurabhInOt.jpeg'
+import DrSaurabhOT from '../assets/DrSaurabhOT.jpeg'
 import { Link } from "react-router-dom";
 
 const stats = [
-  { value: "3+", label: "Years of Excellence" },
+  { value: "5+", label: "Years of Excellence" },
   { value: "10K+", label: "Patients Treated" },
   { value: "5+", label: "Specialists" },
   { value: "24/7", label: "Emergency Care" },
@@ -274,7 +276,7 @@ export default function AboutSection() {
                   }}
                 >
                   <img
-                    src={DrSaurabhLogo}
+                    src={DrSaurabhOT}
                     alt="Patient Care"
                     className="w-full h-full object-cover"
                     style={{ transform: "rotate(-3.5deg) scale(1.08)" }}
@@ -308,7 +310,7 @@ export default function AboutSection() {
                   }}
                 >
                   <img
-                    src={DrSaurabhPhoto}
+                    src={DrSaurabhInOt}
                     alt="Expert Team"
                     className="w-full h-full object-cover"
                     style={{ transform: "rotate(-6deg) scale(1.12)" }}
@@ -373,7 +375,7 @@ export default function AboutSection() {
                     boxShadow: "0 6px 20px rgba(252,163,17,0.4)",
                   }}
                 >
-                  <div className="font-extrabold text-lg leading-none" style={{ color: "#172554" }}>3+</div>
+                  <div className="font-extrabold text-lg leading-none" style={{ color: "#172554" }}>5+</div>
                   <div className="text-[9px] font-semibold leading-tight" style={{ color: "#172554" }}>Years of<br />Trust</div>
                 </div>
 

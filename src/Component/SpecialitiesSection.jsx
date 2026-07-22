@@ -25,25 +25,25 @@ export const specializationData = [
   },
   {
     id: 5,
-    title: "Fracture Care",
+    title: "Rehabilation",
     image:
       "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800",
   },
   {
     id: 6,
-    title: "Sports Injury",
+    title: "Knee Replacement",
     image:
       "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800",
   },
   {
     id: 7,
-    title: "Shoulder Surgery",
+    title: "Trauma and Fracture",
     image:
       "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800",
   },
   {
     id: 8,
-    title: "Joint Pain",
+    title: "Joint Replacement",
     image:
       "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800",
   },

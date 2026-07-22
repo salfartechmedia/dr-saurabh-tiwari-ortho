@@ -164,7 +164,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-[#FCA311]/50 pt-5 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="border-t border-green-700 pt-5 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-slate-500 text-sm text-center md:text-left">
             © 2026 Dr Saurabh Tiwari. All Rights Reserved.
           </p>
