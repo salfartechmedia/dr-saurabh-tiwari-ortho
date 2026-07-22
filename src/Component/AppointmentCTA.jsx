@@ -69,7 +69,6 @@ export default function AppointmentCTA() {
                 <p className="mt-2 text-slate-500">
                   Call us for more details
                 </p>
-
               </div>
 
             </div>
