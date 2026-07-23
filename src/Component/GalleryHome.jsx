@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import OTa from '../assets/gallery/OTa.jpeg'
-import OTb from '../assets/gallery/OTb.jpeg'
+import OTaa from '../assets/gallery/OTaa.jpeg'
+import OTbb from '../assets/gallery/OTbb.jpeg'
 import OTc from '../assets/gallery/OTc.jpeg'
 import OTd from '../assets/gallery/OTd.jpeg'
 import OTe from '../assets/gallery/OTe.jpeg'
@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 
 
 
-const images = [DrSaurabhOPD, OTa, OTb, OTc, DrSaurabhOPDa, OTd, OTe, OTf, OTg, OTh];
+const images = [DrSaurabhOPD, OTaa, OTbb, OTc, DrSaurabhOPDa, OTd, OTe, OTf, OTg, OTh];
 
 export default function InfiniteGallerySlider() {
   function useReveal() {

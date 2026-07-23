@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import OTa from '../assets/gallery/OTa.jpeg'
+import OTaa from '../assets/gallery/OTaa.jpeg'
 
 export default function HospitalPhotoBanner() {
     return (
@@ -7,7 +7,7 @@ export default function HospitalPhotoBanner() {
 
             {/* Hospital photo */}
             <img
-                src={OTa}
+                src={OTaa}
                 alt="Abhay Jeevan Hospital"
                 className="absolute inset-0 w-full h-full object-cover object-center"
             />

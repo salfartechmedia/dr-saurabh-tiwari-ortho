@@ -4,7 +4,7 @@ import { GiBrokenBone } from "react-icons/gi";
 import { GiJoint } from "react-icons/gi";
 
 
-import OTb from '../assets/gallery/OTb.jpeg'
+import OTbb from '../assets/gallery/OTbb.jpeg'
 import OTc from '../assets/gallery/OTc.jpeg'
 import OTd from '../assets/gallery/OTd.jpeg'
 import OTe from '../assets/gallery/OTe.jpeg'
@@ -28,7 +28,7 @@ export const specializationData = [
     id: 3,
     title: "Arthroscopy Surgery",
     image:
-      OTb,
+      OTbb,
       icons: <GiKneeCap />
   },
   {

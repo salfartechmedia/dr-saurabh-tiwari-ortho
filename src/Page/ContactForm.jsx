@@ -1,5 +1,5 @@
 import { useState } from "react";
-import OTa from '../assets/gallery/OTa.jpeg'
+import OTaa from '../assets/gallery/OTaa.jpeg'
 export default function ContactForm() {
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
@@ -82,7 +82,7 @@ export default function ContactForm() {
 
               <div className="rounded-2xl overflow-hidden relative flex-1" style={{ minHeight: "150px" }}>
                 <img
-                  src={OT}
+                  src={OTaa}
                   alt="Medical team"
                   className="w-full h-full object-cover"
                 />
