@@ -13,6 +13,7 @@ import { ArrowRight, Images } from "lucide-react";
 import { Link } from "react-router-dom";
 
 
+
 const images = [DrSaurabhOPD, OTa, OTb, OTc, DrSaurabhOPDa, OTd, OTe, OTf, OTg, OTh];
 
 export default function InfiniteGallerySlider() {
