@@ -6,7 +6,7 @@ import Hero from './Hero'
 import GalleryHome from './GalleryHome'
 import HeroSection from './HeroSection'
 import AboutSection from './AboutSection'
-import PreFooterCTA from './PreFooterCTA'
+// import PreFooterCTA from './PreFooterCTA'
 import HospitalPhotoBanner from './HospitalPhotoBanner'
 import Contact from './Contact'
 import SpecialtiesSection from './SpecialitiesSection'
@@ -18,8 +18,6 @@ import AppointmentCTA from './AppointmentCTA'
 const Home = () => {
   return (
     <>
-      {/* <NavigationBar/> */}
-      {/* <AppBre1ad/> */}
       {/* <BreadCrumb/> */}
 
       {/* <Hero/> */}

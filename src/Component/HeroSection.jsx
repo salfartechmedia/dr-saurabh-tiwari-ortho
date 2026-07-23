@@ -1,12 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import AHHero from '../assets/AHHero.png'
-import DrAnjaliC from '../assets/DrAnjaliC.jpeg'
-import DrLalOPD from '../assets/DrLalOPD.png'
+// import DrAnjaliC from '../assets/DrAnjaliC.jpeg'
+// import DrLalOPD from '../assets/DrLalOPD.png'
 import DrSaurabhHero from '../assets/DrSaurabhHero.png'
-import DrAnjali from '../assets/Consultants/DrAnjali.jpeg'
-// import DrAnjaliCverticle from '../assets/DrAnjaliCverticle.jpeg'
-import DrAnjaliCverticle from '../assets/DrAnjaliCverticle.jpg'
-import DrLal from '../assets/Consultants/DrLal.jpeg'
 import DrSaurabhPhoto from '../assets/DrSaurabhPhoto.png'
 import { Link } from "react-router-dom";
 
@@ -333,9 +328,9 @@ export default function HeroSection() {
                 }}
               />
               <div className="flex items-center gap-6 sm:gap-10">
-                <StatCounter end={3} suffix="+" label="Years of Trust" />
+                <StatCounter end={5} suffix="+" label="Years of Trust" />
                 <div className="stat-divider self-stretch" />
-                <StatCounter end={5} suffix="+" label="Expert Doctors" />
+                <StatCounter end={8} suffix="+" label="Expertise" />
                 <div className="stat-divider self-stretch" />
                 <StatCounter end={10000} suffix="+" label="Lives Touched" />
                 <div className="stat-divider self-stretch hidden sm:block" />

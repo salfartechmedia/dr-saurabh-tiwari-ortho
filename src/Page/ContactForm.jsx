@@ -1,6 +1,5 @@
 import { useState } from "react";
-import OT from '../assets/gallery/OT.jpeg'
-import ReceptionB from '../assets/gallery/ReceptionB.jpeg'
+import OTa from '../assets/gallery/OTa.jpeg'
 export default function ContactForm() {
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);

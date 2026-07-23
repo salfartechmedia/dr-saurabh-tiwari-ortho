@@ -1,51 +1,70 @@
+import { SiSpine } from "react-icons/si";
+import { GiKneeCap } from "react-icons/gi";
+import { GiBrokenBone } from "react-icons/gi";
+import { GiJoint } from "react-icons/gi";
+
+
+import OTb from '../assets/gallery/OTb.jpeg'
+import OTc from '../assets/gallery/OTc.jpeg'
+import OTd from '../assets/gallery/OTd.jpeg'
+import OTe from '../assets/gallery/OTe.jpeg'
+
 export const specializationData = [
   {
     id: 1,
     title: "Knee Replacement",
     image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800",
+      OTd,
+      icons: <GiKneeCap />
   },
   {
     id: 2,
     title: "Hip Replacement",
     image:
-      "https://images.unsplash.com/photo-1584515933487-779824d29309?w=800",
+      OTc,
+      icons: <GiKneeCap />
   },
   {
     id: 3,
     title: "Arthroscopy Surgery",
     image:
-      "https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800",
+      OTb,
+      icons: <GiKneeCap />
   },
   {
     id: 4,
     title: "Spine Treatment",
     image:
-      "https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?w=800",
+      OTe,
+      icons: <SiSpine />
   },
   {
     id: 5,
     title: "Rehabilation",
     image:
-      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800",
+      OTe,
+      icons: <GiKneeCap />
   },
   {
     id: 6,
     title: "Knee Replacement",
     image:
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800",
+      OTe,
+      icons: <GiKneeCap />
   },
   {
     id: 7,
     title: "Trauma and Fracture",
     image:
-      "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800",
+      OTe,
+      icons: <GiBrokenBone />
   },
   {
     id: 8,
     title: "Joint Replacement",
     image:
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800",
+      OTe,
+      icons: <GiJoint />
   },
 ];
 
@@ -118,7 +137,7 @@ export default function SpecialitiesSection() {
 
                   <div className="absolute -top-6 left-5 w-12 h-12 rounded-full bg-green-500 border-4 border-white flex items-center justify-center">
 
-                    <svg
+                    {/* <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="22"
                       height="22"
@@ -128,7 +147,9 @@ export default function SpecialitiesSection() {
                       viewBox="0 0 24 24"
                     >
                       <path d="M12 5v14M5 12h14" />
-                    </svg>
+                    </svg> */}
+                    {/*  */}
+                    {item.icons}
 
                   </div>
 

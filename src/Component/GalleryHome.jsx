@@ -1,20 +1,19 @@
 import { useEffect, useRef, useState } from "react";
-
-import DrAnjaliC from '../assets/gallery/DrAnjaliC.jpeg'
-import DrAnjaliOPDA from '../assets/gallery/DrAnjaliOPDA.jpeg'
-
-import DrLalOPDA from '../assets/gallery/DrLalOPDA.jpeg'
-import AHOutA from '../assets/gallery/AHOutA.jpeg'
-import Reception from '../assets/gallery/Reception.jpeg'
-import ReceptionA from '../assets/gallery/ReceptionA.jpeg'
-import ReceptionB from '../assets/gallery/ReceptionB.jpeg'
-import OT from '../assets/gallery/OT.jpeg'
-import DrSaurabhLogo from '../assets//DrSaurabhLogo.png'
+import OTa from '../assets/gallery/OTa.jpeg'
+import OTb from '../assets/gallery/OTb.jpeg'
+import OTc from '../assets/gallery/OTc.jpeg'
+import OTd from '../assets/gallery/OTd.jpeg'
+import OTe from '../assets/gallery/OTe.jpeg'
+import OTf from '../assets/gallery/OTf.jpeg'
+import OTg from '../assets/gallery/OTg.jpeg'
+import OTh from '../assets/gallery/OTh.jpeg'
+import DrSaurabhOPD from '../assets/gallery/DrSaurabhOPD.jpeg'
+import DrSaurabhOPDa from '../assets/gallery/DrSaurabhOPDa.jpeg'
 import { ArrowRight, Images } from "lucide-react";
 import { Link } from "react-router-dom";
 
 
-const images = [DrSaurabhLogo, DrSaurabhLogo, DrSaurabhLogo, DrSaurabhLogo, DrSaurabhLogo, DrSaurabhLogo, DrSaurabhLogo, DrSaurabhLogo];
+const images = [DrSaurabhOPD, OTa, OTb, OTc, DrSaurabhOPDa, OTd, OTe, OTf, OTg, OTh];
 
 export default function InfiniteGallerySlider() {
   function useReveal() {

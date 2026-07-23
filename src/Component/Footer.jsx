@@ -1,5 +1,6 @@
 import React from "react";
-import DrSaurabhLogo from '../assets/DrSaurabhLogo.png'
+// import DrSaurabhLogo from '../assets/DrSaurabhLogo.png'
+import LogoWhite from '../assets/LogoWhite.png'
 import { Link } from "react-router-dom";
 
 const NAV_LINKS = [
@@ -27,8 +28,8 @@ const Footer = () => {
           {/* Hospital Info */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                 <img src={DrSaurabhLogo} className="w-11 h-11 flex items-center justify-center text-xl " alt="" />
+              <div className="w-14 h-14 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                 <img src={LogoWhite} className="w-14 h-14 flex items-center justify-center text-xl " alt="" />
               </div>
 
               <div>
