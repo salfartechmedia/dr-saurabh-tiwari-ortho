@@ -13,7 +13,10 @@ import {
   MoveRight,
 } from "lucide-react";
 
-import DrSaurabhPhoto from "../assets/DrSaurabhPhoto.png";
+import DrSaurabhInOt from "../assets/DrSaurabhInOt.jpeg";
+import OTaa from "../assets/gallery/OTaa.jpeg";
+import OTbb from "../assets/gallery/OTbb.jpeg";
+import DrSaurabhOPDa from "../assets/gallery/DrSaurabhOPDa.jpeg";
 // import DrSaurabhPhoto from "../assets/about/DrSaurabhPhoto.png";
 
 const highlights = [
@@ -84,9 +87,9 @@ export default function About() {
       <section className="relative overflow-hidden">
 
         <img
-          src={DrSaurabhPhoto}
+          src={OTaa}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-5"
+          className="absolute inset-0 h-full w-full object-cover opacity-25"
         />
 
         <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-blue-100 blur-3xl"></div>
@@ -155,7 +158,7 @@ export default function About() {
               <div className="relative rounded-[40px] overflow-hidden bg-gradient-to-br from-blue-50 to-white shadow-2xl">
 
                 <img
-                  src={DrSaurabhPhoto}
+                  src={DrSaurabhInOt}
                   alt="Dr Saurabh"
                   className="w-full"
                 />
@@ -197,7 +200,7 @@ export default function About() {
             <div>
 
               <img
-                src={DrSaurabhPhoto}
+                src={DrSaurabhOPDa}
                 alt=""
                 className="rounded-[35px] shadow-xl"
               />
@@ -469,7 +472,7 @@ export default function About() {
             <div className="relative">
 
               <img
-                src={DrSaurabhPhoto}
+                src={OTbb}
                 alt="Patient Care"
                 className="rounded-[32px] shadow-xl"
               />

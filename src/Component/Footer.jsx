@@ -7,7 +7,6 @@ const NAV_LINKS = [
   "Home",
   "About",
   "Specialities",
-  "Consultants",
   "Gallery",
 ];
 
@@ -33,7 +32,7 @@ const Footer = () => {
               </div>
 
               <div>
-                <h3 className="text-white font-bold text-lg">
+                <h3 className="text-white border-b-[1px] font-bold text-lg">
                   Dr Saurabh Tiwari
                 </h3>
 
@@ -58,7 +57,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold text-base mb-4 border-b border-[#FCA311]/20 pb-3">
+            <h4 className="text-white font-semibold text-base mb-4 border-b border-green-500/20 pb-3">
               Quick Links
             </h4>
 
@@ -66,7 +65,7 @@ const Footer = () => {
               {NAV_LINKS.map((link) => (
                 <Link to ={link}
                   key={link}
-                  className="block text-slate-400 hover:text-red-600 transition-colors duration-200 text-sm"
+                  className="block text-slate-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   {link}
                 </Link>
@@ -76,7 +75,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-white font-semibold text-base mb-4 border-b border-[#FCA311]/20 pb-3">
+            <h4 className="text-white font-semibold text-base mb-4 border-b border-green-500/20 pb-3">
               Our Specialities
             </h4>
 
@@ -110,33 +109,75 @@ const Footer = () => {
                   Arthroscopy
                   </Link>
                 </p>
+                <p
+                  className="text-slate-400 text-sm"
+                >
+                  <Link to='/specialities/knee-replacement'>
+                  Total Knee Replacement
+                  </Link>
+                </p>
+                <p
+                  className="text-slate-400 text-sm"
+                >
+                  <Link to='/specialities/Rehabilation'>
+                  Rehabilation
+                  </Link>
+                </p>
+                <p
+                  className="text-slate-400 text-sm"
+                >
+                  <Link to='/specialities/minimal-invasive-surgery'>
+                  Minimal Invasive Surgery
+                  </Link>
+                </p>
+                <p
+                  className="text-slate-400 text-sm"
+                >
+                  <Link to='/specialities/arthroscopy'>
+                  Joint Replacement
+                  </Link>
+                </p>
               {/* ))} */}
             </div>
           </div>
 
           {/* OPD Timing */}
           <div>
-            <h4 className="text-white font-semibold text-base mb-4 border-b border-[#FCA311]/20 pb-3">
+            <h4 className="text-white font-semibold text-base mb-4 border-b border-green-500/20 pb-3">
               OPD Timing
             </h4>
 
             <div className="space-y-4">
               <div>
+                <h1 className="text-green-500 text-lg">jeevan Jyoti Hospital</h1>
+                <p className="text-slate-500 text-xs font-semibold">
+                  Monday – Saturday
+                </p>
+                <p className="text-white font-bold">
+                  10:00 AM – 03:00 PM
+                </p>
+              </div>
+              <div>
+                <h1 className="text-green-500 text-lg">Shubh Ortho Clinic</h1>
                 <p className="text-slate-500 text-xs font-semibold">
                   Monday – Saturday
                 </p>
 
-                <p className="text-green-500 font-bold">
-                  9:00 AM – 2:00 PM
+                <p className="text-white font-bold">
+                  07:00 AM – 09:00 AM
+                </p>
+                <p className="text-white font-bold">
+                  06:00 PM – 08:00 PM
                 </p>
               </div>
 
               <div>
+                <h1 className="text-green-500 text-lg">MGM Hospital</h1>
                 <p className="text-slate-500 text-xs font-semibold">
                   Monday – Saturday
                 </p>
 
-                <p className="text-green-500 font-bold">
+                <p className="text-white font-bold">
                   5:00 PM – 8:00 PM
                 </p>
               </div>

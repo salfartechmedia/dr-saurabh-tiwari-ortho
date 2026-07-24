@@ -146,7 +146,7 @@ export default function HeroSection() {
       `}</style>
 
       <section
-        className="relative w-full min-h-screen flex items-center overflow-hidden"
+        className="relative w-full mt-10 min-h-screen flex items-center overflow-hidden"
       >
         {/* ── Background Hospital Photo ── */}
         <div className="absolute inset-0">
@@ -347,9 +347,9 @@ export default function HeroSection() {
 
           </div>
         </div>
-        <div className="w-11/12 z-50 mx-10">
+        {/* <div className="w-11/12 z-50 mx-10">
           <img src={DrSaurabhPhoto} alt="" />
-        </div>
+        </div> */}
       </section>
     </>
   );

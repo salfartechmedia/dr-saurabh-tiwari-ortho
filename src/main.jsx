@@ -82,6 +82,10 @@ const router = createBrowserRouter([
         path: 'specialities/arthroscopy',
         element: <Arthroscopy/>
       },
+      // {
+      //   path: 'book-appointment',
+      //   element: <BookAppointment/>
+      // },
     ]
   }
 ])

@@ -77,7 +77,7 @@ const NavigationBar = () => {
                         />
 
                         <div>
-                            <h2 className="text-xl font-extrabold text-[#082c77] underline leading-none">
+                            <h2 className="text-xl font-extrabold text-[#082c77] border-b-[2px] leading-none">
                                 DR SAURABH TIWARI
                             </h2>
 

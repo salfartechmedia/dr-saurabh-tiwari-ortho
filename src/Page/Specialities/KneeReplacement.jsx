@@ -8,7 +8,8 @@ import {
   HeartPulse,
   CheckCircle2,
 } from "lucide-react";
-
+import OTf from '../../assets/gallery/OTf.jpeg'
+import OTc from '../../assets/gallery/OTc.jpeg'
 const conditions = [
   {
     title: "Knee Osteoarthritis",
@@ -100,7 +101,7 @@ export default function KneeReplacement() {
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10">
                 <img
-                  src="/images/knee-replacement.jpg"
+                  src={OTf}
                   alt="Knee Replacement"
                   className="w-full h-[500px] object-cover"
                 />
@@ -125,7 +126,7 @@ export default function KneeReplacement() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="/images/knee-treatment.jpg"
+                src={OTc}
                 alt="Knee Treatment"
                 className="rounded-3xl shadow-lg object-cover w-full h-[500px]"
               />

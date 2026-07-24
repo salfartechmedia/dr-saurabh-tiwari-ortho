@@ -1,5 +1,6 @@
 import { useState } from "react";
 import OTaa from '../assets/gallery/OTaa.jpeg'
+import DrSaurabhInOt from '../assets/DrSaurabhInOt.jpeg'
 export default function ContactForm() {
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
@@ -29,15 +30,15 @@ export default function ContactForm() {
 
           {/* Section Label */}
           <div className="flex items-center gap-3 mb-2">
-            <div className="h-0.5 w-8 rounded-full" style={{ background: "#FCA311" }} />
-            <span className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "#FCA311" }}>
-              Abhay Jeevan Hospital
+            <div className="h-0.5 w-8 rounded-full bg-green-500"/>
+            <span className="text-xs font-bold uppercase text-green-500 tracking-[0.2em]">
+              Dr Saurabh Tiwari
             </span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-black leading-tight mb-1" style={{ color: "#0B1F3A" }}>
             We're Here <br />
-            <span style={{ color: "#FCA311" }}>When You Need Us.</span>
+            <span className="text-green-500">When You Need Us.</span>
           </h2>
           <p className="text-sm text-gray-400 leading-relaxed mb-4 max-w-sm">
             Reach out for appointments, queries, or emergency assistance. Our team responds promptly.
@@ -49,7 +50,7 @@ export default function ContactForm() {
             {/* Tall left photo */}
             <div className="flex-1 rounded-2xl overflow-hidden relative" style={{ minHeight: "320px" }}>
               <img
-                src={ReceptionB}
+                src={DrSaurabhInOt}
                 alt="Hospital corridor"
                 className="w-full h-full object-cover"
               />
@@ -112,7 +113,7 @@ export default function ContactForm() {
               <span className="text-lg">📞</span>
               <div>
                 <p className="text-xs text-gray-400 font-semibold uppercase tracking-wide">Call Us</p>
-                <a href="tel:+917554001234" className="text-sm font-bold" style={{ color: "#0B1F3A" }}>+91 9335399454</a>
+                <a href="tel:+917554001234" className="text-sm font-bold" style={{ color: "#0B1F3A" }}>+91 7983437886</a>
               </div>
             </div>
             <div className="flex items-center gap-2.5 flex-1 rounded-xl px-4 py-3 border border-gray-100">
@@ -120,7 +121,7 @@ export default function ContactForm() {
               <div>
                 <p className="text-xs text-gray-400 font-semibold uppercase tracking-wide">Location</p>
 
-                <a href="https://maps.app.goo.gl/YLUbSP6AHAZbG5eT8" target="_blank" className="text-sm font-bold" style={{ color: "#0B1F3A" }}>Jhunsi, Prayagraj</a>
+                <a href="https://maps.app.goo.gl/zwftnaKtXkKM1ZneA" target="_blank" className="text-sm font-bold" style={{ color: "#0B1F3A" }}>Jeevan Jyoti Hospital, Prayagraj</a>
               </div>
             </div>
           </div>
@@ -135,8 +136,8 @@ export default function ContactForm() {
             {/* Form header */}
             <div className="mb-8">
               <span
-                className="inline-block text-xs font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full mb-4"
-                style={{ background: "rgba(252,163,17,0.15)", color: "#FCA311" }}
+                className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-green-500 px-3 py-1.5 rounded-full mb-4"
+                style={{ background: "rgba(252,163,17,0.15)" }}
               >
                 Get in Touch
               </span>
@@ -205,41 +206,6 @@ export default function ContactForm() {
                   onFocus={(e) => (e.target.style.borderColor = "#FCA311")}
                   onBlur={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.1)")}
                 />
-              </div>
-
-              {/* Doctor Selection */}
-              <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-widest text-white/50">
-                  Select Doctor
-                </label>
-                <select
-                  name="doctor"
-                  required
-                  defaultValue=""
-                  className="w-full rounded-xl px-4 py-3.5 text-sm font-medium text-white outline-none transition-all duration-200"
-                  style={{
-                    background: "rgba(255,255,255,0.06)",
-                    border: "1px solid rgba(255,255,255,0.1)",
-                  }}
-                  onFocus={(e) => (e.target.style.borderColor = "#FCA311")}
-                  onBlur={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.1)")}
-                >
-                  <option value="" disabled style={{ color: "#000" }}>
-                    Select Doctor
-                  </option>
-                  <option value="Dr. Lal Ratnakar Singh" style={{ color: "#000" }}>
-                    Dr. Lal Ratnakar Singh
-                  </option>
-                  <option value="Dr. Anjali Singh" style={{ color: "#000" }}>
-                    Dr. Anjali Singh
-                  </option>
-                  <option value="Dr. Amit Kumar" style={{ color: "#000" }}>
-                    Dr. Amit Kumar
-                  </option>
-                  <option value="Dr. Priya Sharma" style={{ color: "#000" }}>
-                    Dr. Priya Sharma
-                  </option>
-                </select>
               </div>
 
 

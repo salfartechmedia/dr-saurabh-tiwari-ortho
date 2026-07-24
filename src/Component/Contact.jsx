@@ -221,7 +221,7 @@ export default function Contact() {
                   </h5>
 
                   <p className="text-gray-600 mt-2 break-all">
-                    hospitalabhayjeevan@gmail.com
+                    drsaurabhtiwariortho@gmail.com
                   </p>
 
                 </div>

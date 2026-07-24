@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
-// Apni images import karo
-// import img1 from '../assets/gallery/1.jpg';
-// import img2 from '../assets/gallery/2.jpg';
-// import img3 from '../assets/gallery/3.jpg';
-// import img4 from '../assets/gallery/4.jpg';
-// import img5 from '../assets/gallery/5.jpg';
-// import img6 from '../assets/gallery/6.jpg';
-// import img7 from '../assets/gallery/7.jpg';
-// import img8 from '../assets/gallery/8.jpg';
 import DrSaurabhPhoto from "../assets/DrSaurabhPhoto.png"
+import OTbb from "../assets/gallery/OTbb.jpeg"
+import OTaa from "../assets/gallery/OTaa.jpeg"
+import OTk from "../assets/gallery/OTk.jpeg"
+import OTf from "../assets/gallery/OTf.jpeg"
+import OTh from "../assets/gallery/OTh.jpeg"
+import Logothird from "../assets/gallery/Logothird.png"
+import DrSaurabhOPDa from "../assets/gallery/DrSaurabhOPDa.jpeg"
+import DrSaurabhOT from "../assets/gallery/DrSaurabhOT.jpeg"
+import { Link } from 'react-router-dom';
 
 const galleryImages = [
   {
@@ -20,44 +20,50 @@ const galleryImages = [
   },
   {
     id: 2,
-    src: DrSaurabhPhoto,
+    src: OTaa,
     category: 'Hospital',
     title: 'Modern Orthopedic Facility',
   },
   {
     id: 3,
-    src: DrSaurabhPhoto,
-    category: 'Patients',
+    src: OTbb,
+    category: 'Surgery',
     title: 'Post Surgery Recovery',
   },
   {
     id: 4,
-    src: DrSaurabhPhoto,
+    src: DrSaurabhOT,
     category: 'Surgery',
     title: 'Advanced Joint Procedure',
   },
   {
     id: 5,
-    src: DrSaurabhPhoto,
-    category: 'Events',
+    src: DrSaurabhOPDa,
+    category: 'Surgery',
     title: 'Medical Awareness Camp',
   },
   {
     id: 6,
-    src: DrSaurabhPhoto,
+    src: OTk,
     category: 'Hospital',
     title: 'Operation Theatre',
   },
   {
     id: 7,
-    src: DrSaurabhPhoto,
-    category: 'Patients',
+    src: OTh,
+    category: 'Surgery',
     title: 'Successful Recovery',
   },
   {
     id: 8,
-    src: DrSaurabhPhoto,
-    category: 'Awards',
+    src: OTf,
+    category: 'Surgery',
+    title: 'Professional Recognition',
+  },
+  {
+    id: 8,
+    src: Logothird,
+    category: 'Surgery',
     title: 'Professional Recognition',
   },
 ];
@@ -274,13 +280,13 @@ export default function GalleryPremium() {
           </p>
 
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <button className='bg-white text-blue-950 px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg'>
+            <Link to='/book-appointment' className='bg-white text-blue-950 px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg'>
               Book Appointment
-            </button>
+            </Link>
 
-            <button className='border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white hover:text-blue-950 transition-all duration-300 hover:scale-105'>
+            <a href='tel:+917983437886' className='border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white hover:text-blue-950 transition-all duration-300 hover:scale-105'>
               Call Now
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -307,7 +313,7 @@ export default function GalleryPremium() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={lightboxImage.src}
+              src={DrSaurabhPhoto}
               alt={lightboxImage.title}
               className='max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl'
             />
