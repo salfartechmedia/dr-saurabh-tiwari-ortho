@@ -21,7 +21,7 @@ const Home = () => {
       {/* <BreadCrumb/> */}
 
       {/* <Hero/> */}
-      <HeroSection />
+      {/* <HeroSection /> */}
       <AboutSection />
       <GalleryHome />
 
