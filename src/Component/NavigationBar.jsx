@@ -77,11 +77,11 @@ const NavigationBar = () => {
                         />
 
                         <div>
-                            <h2 className="text-xl font-extrabold text-[#082c77] border-b-[2px] leading-none">
+                            <h2 className="text-lg font-extrabold text-[#082c77] border-b-[2px] leading-none">
                                 DR SAURABH TIWARI
                             </h2>
 
-                            <p className="text-[19px] tracking-widest font-semibol text-green-500">
+                            <p className="text-[10px] tracking-widest font-semibol text-green-500">
                                 Orthopedic Surgeon
                             </p>
                         </div>
