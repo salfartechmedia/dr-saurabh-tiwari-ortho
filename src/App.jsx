@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       {/* <Home/> */}
-      <NavigationBar />
+      {/* <NavigationBar /> */}
       {/* <Home/> */}
       {/* <AbhayJeevanHospital/> */}
       <main id='main-content'>
