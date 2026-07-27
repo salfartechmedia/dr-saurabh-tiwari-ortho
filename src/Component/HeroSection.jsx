@@ -266,7 +266,7 @@ export default function HeroSection() {
 
             {/* Sub-copy */}
             <p
-              className="hero-fade-up text-blue-950 text-base sm:text-lg leading-relaxed max-w-xl"
+              className="hero-fade-up text-black md:text-blue-950 text-base sm:text-lg leading-relaxed max-w-xl"
               style={{ animationDelay: "0.52s" }}
             >
               Expert Orthopedic Surgeon Dr Saurabh Tiwari specializing in Joint Replacement, Spine Surgery, Sports Injuries, and Advanced Trauma Care, dedicated to restoring pain-free movement and a better quality of life.
