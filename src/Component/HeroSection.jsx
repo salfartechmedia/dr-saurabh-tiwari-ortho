@@ -215,7 +215,7 @@ export default function HeroSection() {
                   style={{ animation: "pulse-dot 1.8s ease-in-out infinite" }}
                 />
                 <span className="Text-blue-950 text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase">
-                  Dr Saurabh Tiwari Orthopedic Surgeon
+                  Dr Saurabh Tiwari
                 </span>
               </span>
               {/* Gold accreditation badge */}
@@ -269,7 +269,7 @@ export default function HeroSection() {
               className="hero-fade-up text-blue-950 text-base sm:text-lg leading-relaxed max-w-xl"
               style={{ animationDelay: "0.52s" }}
             >
-              Prayagraj’s trusted multi-specialty hospital, delivering comprehensive healthcare through experienced doctors, advanced operation theatres, and round-the-clock emergency services.
+              Expert Orthopedic Surgeon Dr Saurabh Tiwari specializing in Joint Replacement, Spine Surgery, Sports Injuries, and Advanced Trauma Care, dedicated to restoring pain-free movement and a better quality of life.
             </p>
 
             {/* Trust badges — mobile wraps */}
@@ -307,7 +307,7 @@ export default function HeroSection() {
                 Book Your Appointment
               </Link>
               <a href="tel:+919876543210"
-                className="btn-ghost px-7 sm:px-9 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base"
+                className="btn-ghost hidden md:flex px-7 sm:px-9 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base"
                 style={{
                   border: "1.5px solid #172554",
                 }}
