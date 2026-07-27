@@ -8,20 +8,21 @@ import OTbb from '../assets/gallery/OTbb.jpeg'
 import OTc from '../assets/gallery/OTc.jpeg'
 import OTd from '../assets/gallery/OTd.jpeg'
 import OTe from '../assets/gallery/OTe.jpeg'
+import KneeReplacementCard from '../assets/KneeReplacementCard.png'
 
 export const specializationData = [
   {
     id: 1,
     title: "Knee Replacement",
     image:
-      OTd,
+      KneeReplacementCard,
       icons: <GiKneeCap />
   },
   {
     id: 2,
     title: "Hip Replacement",
     image:
-      OTc,
+      OTe,
       icons: <GiKneeCap />
   },
   {
@@ -47,20 +48,13 @@ export const specializationData = [
   },
   {
     id: 6,
-    title: "Knee Replacement",
-    image:
-      OTe,
-      icons: <GiKneeCap />
-  },
-  {
-    id: 7,
     title: "Trauma and Fracture",
     image:
       OTe,
       icons: <GiBrokenBone />
   },
   {
-    id: 8,
+    id: 7,
     title: "Joint Replacement",
     image:
       OTe,
