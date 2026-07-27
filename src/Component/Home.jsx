@@ -25,9 +25,9 @@ const Home = () => {
       <AboutSection />
       <GalleryHome />
 
-      <SpecialtiesSection />
+      {/* <SpecialtiesSection /> */}
       {/* <Consultant /> */}
-      {/* <AppointmentCTA /> */}
+      <AppointmentCTA />
 
       {/* <!-- Elfsight Google Reviews | Untitled Google Reviews --> */}
       <script src="https://elfsightcdn.com/platform.js" async></script>
