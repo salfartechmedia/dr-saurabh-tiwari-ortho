@@ -59,7 +59,7 @@ export default function InfiniteGallerySlider() {
           </span> */}
 
         <h2 className="mt-3 text-3xl font-bold text-white md:text-5xl">
-          Our Hospital Infrastructure
+          Gallery
         </h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-slate-400">

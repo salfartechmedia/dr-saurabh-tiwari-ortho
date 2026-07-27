@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 // import AHHero from '../assets/AHHero.png'
-import DrSaurabhPhoto from '../assets/DrSaurabhPhoto.png'
+// import DrSaurabhPhoto from '../assets/DrSaurabhPhoto.png'
+import DrSaurabhOPD from '../assets/gallery/DrSaurabhOPD.jpeg'
 import DrSaurabhInOt from '../assets/DrSaurabhInOt.jpeg'
 // import DrSaurabhLogo from '../assets/DrSaurabhLogo.png'
 import DrSaurabhOT from '../assets/DrSaurabhOT.jpeg'
@@ -241,7 +242,8 @@ export default function AboutSection() {
                   }}
                 >
                   <img
-                    src={DrSaurabhPhoto}
+                    src={DrSaurabhOT}
+                    // src={DrSaurabhOPD}
                     alt="Advanced Surgery"
                     className="w-full h-full object-cover"
                     style={{ transform: "rotate(4deg) scale(1.08)" }}
@@ -274,7 +276,7 @@ export default function AboutSection() {
                   }}
                 >
                   <img
-                    src={DrSaurabhOT}
+                    src={DrSaurabhOPD}
                     alt="Patient Care"
                     className="w-full h-full object-cover"
                     style={{ transform: "rotate(-3.5deg) scale(1.08)" }}
@@ -315,8 +317,8 @@ export default function AboutSection() {
                   />
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(23,37,84,0.5) 0%, transparent 50%)" }} />
                   <span
-                    className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-[10px] font-bold tracking-wider uppercase whitespace-nowrap px-2.5 py-1 rounded-full"
-                    style={{ background: "#FCA311", color: "#172554" }}
+                    className="absolute bottom-4 left-1/2 bg-blue-950 -translate-x-1/2 text-white text-[10px] font-bold tracking-wider uppercase whitespace-nowrap px-2.5 py-1 rounded-full"
+                    style={{ color: "#ffffff" }}
                   >
                     Expert Team
                   </span>
@@ -365,15 +367,14 @@ export default function AboutSection() {
 
                 {/* ─── Experience badge ─── */}
                 <div
-                  className="absolute z-20 rounded-2xl px-3.5 py-2.5 text-center"
+                  className="absolute z-20 rounded-2xl px-3.5 py-2.5 bg-green-500 text-center"
                   style={{
                     top: "8px",
                     left: "-10px",
-                    background: "#FCA311",
                     boxShadow: "0 6px 20px rgba(252,163,17,0.4)",
                   }}
                 >
-                  <div className="font-extrabold text-lg leading-none" style={{ color: "#172554" }}>5+</div>
+                  <div className="font-extrabold text-lg leading-none bg-green-500">5+</div>
                   <div className="text-[9px] font-semibold leading-tight" style={{ color: "#172554" }}>Years of<br />Trust</div>
                 </div>
 

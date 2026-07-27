@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 // import DrAnjaliC from '../assets/DrAnjaliC.jpeg'
 // import DrLalOPD from '../assets/DrLalOPD.png'
 import DrSaurabhHero from '../assets/DrSaurabhHero.png'
+import Heroc  from '../assets/Heroc.png'
+import HeroPhoto from '../assets/HeroPhoto.png'
 import DrSaurabhPhoto from '../assets/DrSaurabhPhoto.png'
 import { Link } from "react-router-dom";
 
@@ -153,7 +155,7 @@ export default function HeroSection() {
           <img
             // src={AHHero}
             // src={DrAnjaliC}
-            src={DrSaurabhHero}
+            src={Heroc}
             // src={DrLalOPD}
             alt="Abhay Jeevan Hospital"
             className="w-full md:hidden h-full object-cover object-center"
