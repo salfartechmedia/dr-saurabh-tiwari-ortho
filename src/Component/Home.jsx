@@ -25,13 +25,12 @@ const Home = () => {
       <AboutSection />
       <GalleryHome />
 
-      {/* <SpecialtiesSection /> */}
-      {/* <Consultant /> */}
+      <SpecialtiesSection />
       <AppointmentCTA />
 
       {/* <!-- Elfsight Google Reviews | Untitled Google Reviews --> */}
-      <script src="https://elfsightcdn.com/platform.js" async></script>
-      <div class="elfsight-app-ddb813d5-5c55-4316-ab25-635783e96df6" data-elfsight-app-lazy></div>
+      {/* <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-ddb813d5-5c55-4316-ab25-635783e96df6" data-elfsight-app-lazy></div> */}
 
       {/* <PreFooterCTA /> */}
       <Contact />
