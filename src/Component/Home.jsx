@@ -22,12 +22,12 @@ const Home = () => {
 
       {/* <Hero/> */}
       <HeroSection />
-      {/* <AboutSection /> */}
+      <AboutSection />
       <GalleryHome />
 
       <SpecialtiesSection />
       {/* <Consultant /> */}
-      <AppointmentCTA />
+      {/* <AppointmentCTA /> */}
 
       {/* <!-- Elfsight Google Reviews | Untitled Google Reviews --> */}
       <script src="https://elfsightcdn.com/platform.js" async></script>
