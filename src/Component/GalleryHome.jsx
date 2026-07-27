@@ -157,7 +157,7 @@ export default function InfiniteGallerySlider() {
 
         <a
           href="/gallery"
-          className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-[#FCA311] px-8 py-4 font-semibold text-white shadow-xl transition-all duration-500 hover:scale-105 hover:bg-[#FCA311] hover:shadow-[0_15px_40px_rgba(252,163,17,0.35)]"
+          className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-green-500 px-8 py-4 font-semibold text-white shadow-xl transition-all duration-500 hover:scale-105 hover:bg-[#FCA311] hover:shadow-[0_15px_40px_rgba(252,163,17,0.35)]"
           >
           {/* Animated Circle */}
           <span className="absolute -left-10 top-1/2 h-20 w-20 -translate-y-1/2 rounded-full bg-white/10 transition-all duration-700 group-hover:left-[110%]" />
