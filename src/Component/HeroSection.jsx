@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-// import DrAnjaliC from '../assets/DrAnjaliC.jpeg'
-// import DrLalOPD from '../assets/DrLalOPD.png'
 import DrSaurabhHero from '../assets/DrSaurabhHero.png'
 import Heroc  from '../assets/Heroc.png'
 import HeroPhoto from '../assets/HeroPhoto.png'
