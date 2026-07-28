@@ -238,7 +238,7 @@ export default function HeroSection() {
                 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.2rem] font-black text-blue-950 leading-[1.08] tracking-tight"
               >
                 Your Health,{" "}
-                <span className="text-green-500"
+                <span className="text-blue-950"
                   style={{
                     background:
                       "linear-gradient(90deg, #06B6D4, #38bdf8, #7dd3fc)",
