@@ -10,6 +10,7 @@ import MobileActionBar from './Component/MobileActionBar'
 import HospitalPhotoBanner from './Component/HospitalPhotoBanner'
 import Breadcrumb from './Component/BreadCrumb'
 import SocialBar from './Component/SocialBar'
+import ScrollToTop from './Component/ScrollToTop'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
       {/* <AbhayJeevanHospital/> */}
       <main id='main-content'>
       <SocialBar/>
+      <ScrollToTop/>
         <WhatsAppButton />
         <Breadcrumb />
         <Outlet />

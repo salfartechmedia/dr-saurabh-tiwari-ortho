@@ -89,13 +89,11 @@ export default function AppointmentCTA() {
               <div>
 
                 <h3 className="text-xl font-bold text-slate-800">
-                  Jeevan Jyoti Hospital
+                  Shubh Orho Clinic
                 </h3>
 
                 <p className="mt-2 text-slate-500 leading-relaxed">
-                  162, Haima Kutir Road,
-                  Rambagh, Prayagraj,
-                  Uttar Pradesh - 211003
+                  BS C-37, Barsana Sector, Kalindipuram, Prayagraj, Daiwghat, Uttar Pradesh 211011
                 </p>
 
               </div>

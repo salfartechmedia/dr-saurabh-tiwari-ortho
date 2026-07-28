@@ -78,7 +78,7 @@ export default function SpecialitiesSection() {
 
         <h4 className="text-center uppercase tracking-[4px] text-white font-semibold mb-2">
           My
-          <span className="text-green-500">Specialities</span>
+          <span className="text-green-500"> Specialities</span>
         </h4>
 
         <Swiper

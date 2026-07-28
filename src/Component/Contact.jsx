@@ -1,301 +1,217 @@
+import { useState } from "react";
 import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock3,
-  Navigation,
-  CalendarDays,
-} from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+  FaHospital,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaClock,
+} from "react-icons/fa";
 
-export default function Contact() {
-  function useReveal() {
-    const ref = useRef(null);
-    const [visible, setVisible] = useState(false);
-    useEffect(() => {
-      const obs = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-        { threshold: 0.12 }
-      );
-      if (ref.current) obs.observe(ref.current);
-      return () => obs.disconnect();
-    }, []);
-    return [ref, visible];
-  }
+const hospitals = [
+  {
+    id: 1,
+    name: "Shub Ortho Clinic",
+    branch: "Rambagh, Prayagraj",
+    address:
+      "BS C-37, Barsana Sector, Kalindipuram, Prayagraj, Daiwghat, Uttar Pradesh 211011",
+    phone: "+91 7983437886",
+    email: "drsaurabhtiwariortho@gmail.com",
+    timing: "Mon - Sat : 10:00 AM - 07:00 PM",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.351195320277!2d81.7847297!3d25.426519700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398535597408564d%3A0xe4b4063ad5a7972f!2sDr%20Saurabh-%20Shubh%20Ortho%20Clinic!5e0!3m2!1sen!2sin!4v1785266478073!5m2!1sen!2sin", // Map 1
+  },
+  {
+    id: 2,
+    name: "Jeevan Jyoti Hospital",
+    branch: "162 Bai ka Bagh, Rambagh, Prayagraj",
+    address:
+      "Civil Lines, Prayagraj, Uttar Pradesh - 211001",
+    phone: "+91 9876543210",
+    email: "hospital2@gmail.com",
+    timing: "Mon - Sun : 09:00 AM - 08:00 PM",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.058149123799!2d81.84658139999999!3d25.4363194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399acab52d38021f%3A0x7a5c69d06d09297b!2z8J2XnfCdl7LwnZey8J2Yg_Cdl67wnZe7IPCdl53wnZiG8J2XvPCdmIHwnZe2IPCdl5vwnZe88J2YgPCdl73wnZe28J2YgfCdl67wnZe5IC0gQmVzdCBIb3NwaXRhbCB8RW1lcmdlbmN5IEhvc3BpdGFsIGluIEFsbGFoYWJhZCB8TGFwYXJvc2NvcGljIFN1cmdlb24gJiBIZXJuaWE!5e0!3m2!1sen!2sin!4v1785266562722!5m2!1sen!2sin", // Map 2
+  },
+];
 
-  /* ─── REVEAL WRAPPER ─── */
-  function Reveal({ children, delay = 0, className = "" }) {
-    const [ref, visible] = useReveal();
-    return (
-      <div
-        ref={ref}
-        className={className}
-        style={{
-          opacity: visible ? 1 : 0,
-          transform: visible ? "translateY(0)" : "translateY(32px)",
-          transition: `opacity 0.65s ease ${delay}ms, transform 0.65s ease ${delay}ms`,
-        }}
-      >
-        {children}
-      </div>
-    );
-  }
+const Contact = () => {
+  const [selected, setSelected] = useState(hospitals[0]);
+
   return (
-    <section className="bg-white py-20">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-5">
 
         {/* Heading */}
 
-        <div className="mb-12">
-          <Reveal>
+        <p className="text-green-500 uppercase tracking-[6px] font-semibold mb-3">
+          Get In Touch
+        </p>
 
+        <h2 className="text-5xl font-bold text-blue-950">
+          Hospital Location & Contact
+        </h2>
 
-            <p className="uppercase tracking-[5px] text-[#FCA311] font-semibold">
-              Get In Touch
-            </p>
+        <p className="text-gray-500 mt-4 max-w-2xl">
+          Select your preferred hospital to view its location,
+          contact details and clinic timings.
+        </p>
 
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0B1F3A] mt-3">
-              Hospital Location & Contact
-            </h2>
+        {/* Hospital Cards */}
 
-            <p className="text-gray-600 mt-5 max-w-3xl">
-              Visit Jeevan Jyoti Hospital for quality healthcare. Find our
-              location, contact details, and clinic timings below.
-            </p>
+        <div className="grid md:grid-cols-2 gap-6 mt-12">
 
-          </Reveal>
+          {hospitals.map((hospital) => (
+
+            <button
+              key={hospital.id}
+              onClick={() => setSelected(hospital)}
+              className={`group rounded-2xl p-6 border-2 transition-all duration-300 text-left
+
+              ${selected.id === hospital.id
+                  ? "bg-blue-950 border-blue-950 text-white shadow-xl"
+                  : "bg-white border-gray-200 hover:border-green-500 hover:-translate-y-1"
+                }`}
+            >
+
+              <div className="flex items-center gap-4">
+
+                <div
+                  className={`w-14 h-14 rounded-xl flex items-center justify-center text-2xl
+
+                  ${selected.id === hospital.id
+                      ? "bg-green-500 text-white"
+                      : "bg-blue-950 text-green-500"
+                    }`}
+                >
+                  <FaHospital />
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl">
+                    {hospital.name}
+                  </h3>
+
+                  {/* <p
+                    className={`mt-1 ${
+                      selected.id === hospital.id
+                        ? "text-gray-300"
+                        : "text-gray-500"
+                    }`}
+                  >
+                    {hospital.branch}
+                  </p> */}
+                </div>
+
+              </div>
+
+            </button>
+
+          ))}
+
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        {/* Details */}
 
-          {/* Left */}
+        <div className="grid lg:grid-cols-3 gap-8 mt-12">
 
-          <div className="lg:col-span-2">
-            <Reveal>
+          {/* Map */}
 
+          <div className="lg:col-span-2 rounded-3xl overflow-hidden border shadow-lg h-[550px]">
 
-              <div className="rounded-3xl overflow-hidden shadow-xl border">
-{/* 
-                <iframe
-                  src="https://www.google.com/maps/place/Dr.+Saurabh+Tiwari+%E2%80%93+Orthopedic+Surgeon+%7C+Jeevan+Jyoti+Hospital,+Prayagraj/@25.4363057,81.8466297,17z/data=!3m1!4b1!4m6!3m5!1s0x3985356429a9b1c1:0x277b4de2774fb785!8m2!3d25.4363057!4d81.8466297!16s%2Fg%2F11zk6nylb9?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
-                  className="w-full h-[500px]"
-                  loading="lazy"
-                  allowFullScreen
-                  referrerPolicy="strict-origin-when-cross-origin"
-                ></iframe> */}
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.058558876537!2d81.8466297!3d25.4363057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3985356429a9b1c1%3A0x277b4de2774fb785!2sDr.%20Saurabh%20Tiwari%20%E2%80%93%20Orthopedic%20Surgeon%20%7C%20Jeevan%20Jyoti%20Hospital%2C%20Prayagraj!5e0!3m2!1sen!2sin!4v1784572233871!5m2!1sen!2sin"
-                // width="600"
-                // height="450"
-                className="w-full h-[500px]"
-                // style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin">
-                </iframe>
-
-              </div>
-
-              <div className="bg-[#0B1F3A] rounded-3xl mt-6 p-8">
-
-                <div className="flex items-start gap-4">
-
-                  <div className="bg-[#FCA311] p-3 rounded-xl">
-
-                    <MapPin className="text-white" size={22} />
-
-                  </div>
-
-                  <div>
-
-                    <h4 className="text-white text-xl font-semibold">
-                      Jeevan Jyoti Hospital
-                    </h4>
-
-                    <p className="text-white/80 mt-2 leading-7">
-                      Bai ka Bagh, prayagraj
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <a
-                  href="https://maps.app.goo.gl/k3aK3Vujvvvc58PH6"
-                  target="_blank"
-                  className="inline-flex items-center gap-2 mt-6 bg-[#FCA311] text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 duration-300"
-                >
-                  <Navigation size={18} />
-                  Get Directions
-                </a>
-
-              </div>
-            </Reveal>
-
+            <iframe
+              src={selected.map}
+              width="100%"
+              height="100%"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
 
-          {/* Right */}
-
-          <div className="space-y-6">
-            <Reveal>
 
 
-              {/* Address */}
 
-              <div className="border rounded-3xl p-6 shadow-lg">
+          {/* Contact */}
 
-                <div className="flex gap-5">
+          <div className="space-y-5">
 
-                  <div className="bg-[#0B1F3A] w-14 h-14 rounded-2xl flex items-center justify-center">
+            <div className="border rounded-2xl p-6 flex gap-5 hover:shadow-lg transition">
 
-                    <MapPin className="text-[#FCA311]" />
-
-                  </div>
-
-                  <div>
-
-                    <h5 className="font-bold text-[#0B1F3A]">
-                      Hospital Address
-                    </h5>
-
-                    <p className="text-gray-600 mt-2">
-                      Jeevan Jyoti Hospial, Bai ka Bagh, prayagraj - 211003
-                    </p>
-
-                  </div>
-
-                </div>
-
-          </div>
-            </Reveal>
-
-          {/* Phone */}
-
-          <div className="border rounded-3xl p-6 shadow-lg">
-            <Reveal>
-
-
-              <div className="flex gap-5">
-
-                <div className="bg-[#0B1F3A] w-14 h-14 rounded-2xl flex items-center justify-center">
-
-                  <Phone className="text-[#FCA311]" />
-
-                </div>
-
-                <div>
-
-                  <h5 className="font-bold text-[#0B1F3A]">
-                    Phone
-                  </h5>
-
-                  <p className="text-gray-600 mt-2">
-                    +91 7983437886
-                  </p>
-
-                </div>
-
+              <div className="w-16 h-16 rounded-xl bg-blue-950 flex items-center justify-center text-green-500 text-2xl">
+                <FaMapMarkerAlt />
               </div>
 
-            </Reveal>
-          </div>
+              <div>
+                <h4 className="font-bold text-blue-950 text-xl">
+                  Address
+                </h4>
 
-          {/* Email */}
-
-          <div className="border rounded-3xl p-6 shadow-lg">
-            <Reveal>
-
-
-              <div className="flex gap-5">
-
-                <div className="bg-[#0B1F3A] w-14 h-14 rounded-2xl flex items-center justify-center">
-
-                  <Mail className="text-[#FCA311]" />
-
-                </div>
-
-                <div>
-
-                  <h5 className="font-bold text-[#0B1F3A]">
-                    Email
-                  </h5>
-
-                  <p className="text-gray-600 mt-2 break-all">
-                    drsaurabhtiwariortho@gmail.com
-                  </p>
-
-                </div>
-
+                <p className="text-gray-600 mt-2">
+                  {selected.address}
+                </p>
               </div>
-            </Reveal>
 
-          </div>
+            </div>
 
-          {/* Timing */}
+            <div className="border rounded-2xl p-6 flex gap-5 hover:shadow-lg transition">
 
-          <div className="border rounded-3xl p-6 shadow-lg">
-            <Reveal>
-
-
-              <div className="flex gap-5">
-
-                <div className="bg-[#0B1F3A] w-14 h-14 rounded-2xl flex items-center justify-center">
-
-                  <Clock3 className="text-[#FCA311]" />
-
-                </div>
-
-                <div>
-
-                  <h5 className="font-bold text-[#0B1F3A]">
-                    Clinic Hours
-                  </h5>
-
-                  <p className="text-gray-600 mt-2">
-                    Monday - Sunday
-                    <br />
-                    24×7 Emergency Services
-                  </p>
-
-                </div>
-
+              <div className="w-16 h-16 rounded-xl bg-blue-950 flex items-center justify-center text-green-500 text-2xl">
+                <FaPhoneAlt />
               </div>
-            </Reveal>
 
-          </div>
+              <div>
+                <h4 className="font-bold text-blue-950 text-xl">
+                  Phone
+                </h4>
 
-          {/* Buttons */}
+                <p className="text-gray-600 mt-2">
+                  {selected.phone}
+                </p>
+              </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
+            </div>
 
-            <a
-              href="tel:+917983437886"
-              className="bg-[#0B1F3A] text-white rounded-xl py-4 text-center font-semibold hover:bg-[#FCA311] duration-300"
-            >
-              Call Now
-            </a>
+            <div className="border rounded-2xl p-6 flex gap-5 hover:shadow-lg transition">
 
-            <a
-              href="mailto:drsaurabhtiwari1994@gmail.com"
-              className="border-2 border-[#0B1F3A] text-[#0B1F3A] rounded-xl py-4 text-center font-semibold hover:bg-[#0B1F3A] hover:text-white duration-300"
-            >
-              Email
-            </a>
+              <div className="w-16 h-16 rounded-xl bg-blue-950 flex items-center justify-center text-green-500 text-2xl">
+                <FaEnvelope />
+              </div>
 
-            <a
-              href="https://wa.me/917983437886"
-              className="bg-green-500 text-white rounded-xl py-4 text-center font-semibold hover:bg-[#0B1F3A] duration-300"
-            >
-              WhatsApp
-            </a>
+              <div>
+                <h4 className="font-bold text-blue-950 text-xl">
+                  Email
+                </h4>
+
+                <p className="text-gray-600 mt-2 break-all">
+                  {selected.email}
+                </p>
+              </div>
+
+            </div>
+
+            <div className="border rounded-2xl p-6 flex gap-5 hover:shadow-lg transition">
+
+              <div className="w-16 h-16 rounded-xl bg-blue-950 flex items-center justify-center text-green-500 text-2xl">
+                <FaClock />
+              </div>
+
+              <div>
+                <h4 className="font-bold text-blue-950 text-xl">
+                  Clinic Hours
+                </h4>
+
+                <p className="text-gray-600 mt-2">
+                  {selected.timing}
+                </p>
+              </div>
+
+            </div>
 
           </div>
 
         </div>
 
       </div>
-
-    </div>
-    </section >
+    </section>
   );
-}
+};
+
+export default Contact;
