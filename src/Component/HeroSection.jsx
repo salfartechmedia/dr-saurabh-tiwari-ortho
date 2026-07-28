@@ -330,7 +330,7 @@ export default function HeroSection() {
               <div className="flex items-center gap-6 sm:gap-10">
                 <StatCounter end={5} suffix="+" label="Years of Trust" />
                 <div className="stat-divider self-stretch" />
-                <StatCounter end={8} suffix="+" label="Expertise" />
+                <StatCounter end={5} suffix="*" label="Google Rating" />
                 <div className="stat-divider self-stretch" />
                 <StatCounter end={10000} suffix="+" label="Lives Touched" />
                 <div className="stat-divider self-stretch hidden sm:block" />
