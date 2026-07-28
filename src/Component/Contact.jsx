@@ -11,23 +11,21 @@ const hospitals = [
   {
     id: 1,
     name: "Shub Ortho Clinic",
-    branch: "Rambagh, Prayagraj",
     address:
       "BS C-37, Barsana Sector, Kalindipuram, Prayagraj, Daiwghat, Uttar Pradesh 211011",
     phone: "+91 7983437886",
     email: "drsaurabhtiwariortho@gmail.com",
-    timing: "Mon - Sat : 10:00 AM - 07:00 PM",
+    timing: "Mon - Sat : 07:00 AM - 09:00 AM, 06:00 PM - 08:00 PM",
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.351195320277!2d81.7847297!3d25.426519700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398535597408564d%3A0xe4b4063ad5a7972f!2sDr%20Saurabh-%20Shubh%20Ortho%20Clinic!5e0!3m2!1sen!2sin!4v1785266478073!5m2!1sen!2sin", // Map 1
   },
   {
     id: 2,
     name: "Jeevan Jyoti Hospital",
-    branch: "162 Bai ka Bagh, Rambagh, Prayagraj",
     address:
-      "Civil Lines, Prayagraj, Uttar Pradesh - 211001",
-    phone: "+91 9876543210",
-    email: "hospital2@gmail.com",
-    timing: "Mon - Sun : 09:00 AM - 08:00 PM",
+      "162, Lowther Rd, Himmat Ganj, Bai Ka Bagh, Prayagraj, Uttar Pradesh 211003",
+    phone: "+91 7983437886",
+    email: "drsaurabhtiwariortho@gmail.com",
+    timing: "Mon - Sun : 05:00 PM - 06:00 PM",
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.058149123799!2d81.84658139999999!3d25.4363194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399acab52d38021f%3A0x7a5c69d06d09297b!2z8J2XnfCdl7LwnZey8J2Yg_Cdl67wnZe7IPCdl53wnZiG8J2XvPCdmIHwnZe2IPCdl5vwnZe88J2YgPCdl73wnZe28J2YgfCdl67wnZe5IC0gQmVzdCBIb3NwaXRhbCB8RW1lcmdlbmN5IEhvc3BpdGFsIGluIEFsbGFoYWJhZCB8TGFwYXJvc2NvcGljIFN1cmdlb24gJiBIZXJuaWE!5e0!3m2!1sen!2sin!4v1785266562722!5m2!1sen!2sin", // Map 2
   },
 ];
