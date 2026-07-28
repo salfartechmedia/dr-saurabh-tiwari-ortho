@@ -12,7 +12,7 @@ const NavigationBar = () => {
 
     const specialities = [
         {
-            name: "Total Nee Replacement",
+            name: "Total Knee Replacement",
             path: "/specialities/knee-replacement",
         },
         {
@@ -36,7 +36,7 @@ const NavigationBar = () => {
             path: "/specialities/arthroscopy",
         },
         {
-            name: "Rehabilation",
+            name: "Rehabilitation",
             path: "/specialities/rehabilation",
         },
         {
@@ -111,7 +111,7 @@ const NavigationBar = () => {
                             onMouseLeave={() => setSpecialityOpen(false)}
                         >
                             <button className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-gray-50 hover:text-[#082c77] transition">
-                                Our Specialities ▼
+                                my Specialities ▼
                             </button>
 
                             {specialityOpen && (
@@ -205,7 +205,7 @@ const NavigationBar = () => {
                                     )
                                 }
                             >
-                                <span>Our Specialities</span>
+                                <span>my Specialities</span>
                                 <span>
                                     {mobileSpecialityOpen ? "−" : "+"}
                                 </span>
@@ -230,13 +230,13 @@ const NavigationBar = () => {
                             )}
                         </div>
 
-                        <Link
+                        {/* <Link
                             to="/consultants"
                             className="py-3 border-b"
                             onClick={() => setMenuOpen(false)}
                         >
                             Consultants
-                        </Link>
+                        </Link> */}
 
                         <Link
                             to="/gallery"
@@ -260,7 +260,7 @@ const NavigationBar = () => {
                             </p>
 
                             <p className="text-lg font-extrabold text-red-800">
-                                📞 +91 93353 99454
+                                📞 +91 7983437886
                             </p>
                         </div>
 

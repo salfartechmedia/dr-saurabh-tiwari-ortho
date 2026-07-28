@@ -77,8 +77,8 @@ export default function SpecialitiesSection() {
       <div className="max-w-7xl mx-auto px-5">
 
         <h4 className="text-center uppercase tracking-[4px] text-white font-semibold mb-2">
-          Our
-          <span className="text-green-500"> Specializations</span>
+          My
+          <span className="text-green-500">My Specialities</span>
         </h4>
 
         <Swiper

@@ -63,7 +63,7 @@ export default function InfiniteGallerySlider() {
         </h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-slate-400">
-          Explore our advanced facilities, modern equipment and patient care
+          Explore advanced facilities, modern equipment and patient care
           environment through our gallery.
         </p>
           </Reveal>

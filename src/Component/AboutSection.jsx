@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const stats = [
   { value: "5+", label: "Years of Excellence" },
   { value: "10K+", label: "Patients Treated" },
-  { value: "5+", label: "Specialists" },
+  { value: "58", label: "Google Rating" },
   { value: "24/7", label: "Emergency Care" },
 ];
 
@@ -320,7 +320,7 @@ export default function AboutSection() {
                     className="absolute bottom-4 left-1/2 bg-blue-950 -translate-x-1/2 text-white text-[10px] font-bold tracking-wider uppercase whitespace-nowrap px-2.5 py-1 rounded-full"
                     style={{ color: "#ffffff" }}
                   >
-                    Expert Team
+                    Trusted Care
                   </span>
                 </div>
 

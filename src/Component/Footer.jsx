@@ -178,7 +178,7 @@ const Footer = () => {
                 </p>
 
                 <p className="text-white font-bold">
-                  5:00 PM – 8:00 PM
+                  05:00 PM – 06:00 PM
                 </p>
               </div>
 
