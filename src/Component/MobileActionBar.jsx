@@ -18,7 +18,7 @@ const MobileActionBar = () => {
       <button
         onClick={handleCall}
         aria-label="Call now"
-        className="relative flex-1 flex items-center justify-center gap-2 bg-blue-9500 overflow-hidden active:brightness-95"
+        className="relative flex-1 flex items-center justify-center gap-2 bg-blue-950 overflow-hidden active:brightness-95"
       >
         <span
           className="absolute w-[70px] h-[70px] rounded-full bg-white/25"
