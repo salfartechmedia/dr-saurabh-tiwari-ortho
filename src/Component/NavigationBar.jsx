@@ -81,7 +81,7 @@ const NavigationBar = () => {
                                 DR SAURABH TIWARI
                             </h2>
 
-                            <p className="text-[10px] tracking-widest font-semibol text-green-500">
+                            <p className="text-[15px] tracking-widest font-semibol text-green-500">
                                 Orthopedic Surgeon
                             </p>
                         </div>
