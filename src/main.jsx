@@ -20,6 +20,7 @@ import Rehabilation from './Page/Specialities/Rehabilation.jsx'
 import MinimalInvasiveSurgery from './Page/Specialities/MinimalInvasiveSurgery.jsx'
 import SpineSurgery from './Page/Specialities/SpineSurgery.jsx'
 import Arthroscopy from './Page/Specialities/Arthroscopy.jsx'
+import PatientsEducation from './Page/PatientsEducation.jsx'
 
 const router = createBrowserRouter([
   {
@@ -81,6 +82,10 @@ const router = createBrowserRouter([
       {
         path: 'specialities/arthroscopy',
         element: <Arthroscopy/>
+      },
+      {
+        path: 'patients-education',
+        element: <PatientsEducation/>
       },
       // {
       //   path: 'book-appointment',

@@ -59,11 +59,10 @@ const NavigationBar = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-                scrolled
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled
                     ? "bg-white/95 backdrop-blur-md shadow-lg"
                     : "bg-white/90 backdrop-blur-md"
-            }`}
+                }`}
         >
             <div className="max-w-7xl mx-auto px-4 lg:px-8">
                 <div className="h-20 flex items-center justify-between">
@@ -142,7 +141,7 @@ const NavigationBar = () => {
                         >
                             Gallery
                         </Link>
-                                            </div>
+                    </div>
 
                     {/* Desktop CTA */}
                     <div className="hidden lg:flex items-center gap-3">
