@@ -128,13 +128,13 @@ const NavigationBar = () => {
                                 </div>
                             )}
                         </div>
-{/* 
+
                         <Link
-                            to="/consultants"
+                            to="/patients-education"
                             className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-gray-50 hover:text-[#082c77] transition"
                         >
-                            Consultants
-                        </Link> */}
+                            Patient's Education
+                        </Link>
 
                         <Link
                             to="/gallery"
@@ -238,6 +238,13 @@ const NavigationBar = () => {
                             Consultants
                         </Link> */}
 
+                        <Link
+                            to="/patients-education"
+                            className="py-3 border-b"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Patient's Education
+                        </Link>
                         <Link
                             to="/gallery"
                             className="py-3 border-b"
