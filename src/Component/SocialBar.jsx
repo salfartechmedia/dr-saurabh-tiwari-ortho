@@ -48,7 +48,7 @@ const SocialBar = () => {
           : "translate-x-24 opacity-0"
       }`}
     >
-      <div className="flex flex-col bg-blue-950 rounded-bl-3xl rounded-tl-3xl p-2 gap-3">
+      <div className="flex flex-col bg-blue-950 rounded-bl-2xl rounded-tl-2xl p-3 gap-3">
         {socialLinks.map((item, index) => (
           <a
             key={index}
@@ -59,7 +59,7 @@ const SocialBar = () => {
               w-8 h-8
               rounded-full
               flex items-center justify-center
-              text-blue-800
+              text-green-600
               shadow-lg
               hover:scale-110
               hover:rotate-6
