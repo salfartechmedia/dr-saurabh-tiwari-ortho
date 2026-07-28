@@ -22,8 +22,8 @@ function App() {
       {/* <Home/> */}
       {/* <AbhayJeevanHospital/> */}
       <main id='main-content'>
-      <SocialBar/>
-      <ScrollToTop/>
+        <SocialBar />
+        <ScrollToTop />
         <WhatsAppButton />
         <Breadcrumb />
         <Outlet />
