@@ -119,8 +119,8 @@ const Footer = () => {
                 <p
                   className="text-slate-400 text-sm"
                 >
-                  <Link to='/specialities/Rehabilation'>
-                  Rehabilation
+                  <Link to='/specialities/Rehabilitation'>
+                  Rehabilitation
                   </Link>
                 </p>
                 <p

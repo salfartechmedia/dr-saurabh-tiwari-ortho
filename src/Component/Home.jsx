@@ -33,10 +33,10 @@ const Home = () => {
       <div class="elfsight-app-ddb813d5-5c55-4316-ab25-635783e96df6" data-elfsight-app-lazy></div> */}
 
       {/* <!-- Elfsight Instagram Feed | Untitled Instagram Feed --> */}
-      <div className='max-w-full px-10'>
+      {/* <div className='max-w-full px-10'>
         <script src="https://elfsightcdn.com/platform.js" async></script>
         <div class="elfsight-app-1cfb2e0f-7a1e-459f-966b-63ce648d3d28" data-elfsight-app-lazy></div>
-      </div>
+      </div> */}
 
       <Contact />
       {/* <HospitalPhotoBanner/> */}

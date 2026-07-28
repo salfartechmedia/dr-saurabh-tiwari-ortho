@@ -67,7 +67,7 @@ const router = createBrowserRouter([
         element: <TraumaAndFractures/>
       },
       {
-        path: 'specialities/Rehabilation',
+        path: 'specialities/Rehabilitation',
         element: <Rehabilation/>
       },
       {

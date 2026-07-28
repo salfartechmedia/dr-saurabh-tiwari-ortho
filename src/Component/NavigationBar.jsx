@@ -37,7 +37,7 @@ const NavigationBar = () => {
         },
         {
             name: "Rehabilitation",
-            path: "/specialities/rehabilation",
+            path: "/specialities/rehabilitation",
         },
         {
             name: "Minimal Invasive Techniques",
