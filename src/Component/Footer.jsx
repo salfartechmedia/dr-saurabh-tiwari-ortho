@@ -8,6 +8,7 @@ const NAV_LINKS = [
   "About",
   "Specialities",
   "Gallery",
+  "Patients Education"
 ];
 
 const SERVICES = [
@@ -137,6 +138,13 @@ const Footer = () => {
                   Joint Replacement
                   </Link>
                 </p>
+                <p
+                  className="text-slate-400 text-sm"
+                >
+                  <Link to='/specialities/limb-salvage'>
+                  Limb Salvage
+                  </Link>
+                </p>
               {/* ))} */}
             </div>
           </div>
@@ -149,7 +157,7 @@ const Footer = () => {
 
             <div className="space-y-4">
               <div>
-                <h1 className="text-green-500 text-lg">jeevan Jyoti Hospital</h1>
+                <h1 className="text-green-500 text-lg">Jeevan Jyoti Hospital</h1>
                 <p className="text-slate-500 text-xs font-semibold">
                   Monday – Saturday
                 </p>

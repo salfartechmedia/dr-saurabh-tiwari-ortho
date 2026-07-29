@@ -21,6 +21,7 @@ import MinimalInvasiveSurgery from './Page/Specialities/MinimalInvasiveSurgery.j
 import SpineSurgery from './Page/Specialities/SpineSurgery.jsx'
 import Arthroscopy from './Page/Specialities/Arthroscopy.jsx'
 import PatientsEducation from './Page/PatientsEducation.jsx'
+import LimbSalvage from './Page/Specialities/LimbSalvage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -82,6 +83,10 @@ const router = createBrowserRouter([
       {
         path: 'specialities/arthroscopy',
         element: <Arthroscopy/>
+      },
+      {
+        path: 'specialities/limb-salvage',
+        element: <LimbSalvage/>
       },
       {
         path: 'patients-education',

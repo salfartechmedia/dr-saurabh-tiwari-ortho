@@ -89,7 +89,7 @@ export default function AppointmentCTA() {
               <div>
 
                 <h3 className="text-xl font-bold text-slate-800">
-                  Shubh Orho Clinic
+                  Shubh Ortho Clinic
                 </h3>
 
                 <p className="mt-2 text-slate-500 leading-relaxed">

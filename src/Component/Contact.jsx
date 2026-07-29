@@ -10,7 +10,7 @@ import {
 const hospitals = [
   {
     id: 1,
-    name: "Shub Ortho Clinic",
+    name: "Shubh Ortho Clinic",
     address:
       "BS C-37, Barsana Sector, Kalindipuram, Prayagraj, Daiwghat, Uttar Pradesh 211011",
     phone: "+91 7983437886",

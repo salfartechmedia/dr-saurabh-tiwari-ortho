@@ -169,13 +169,13 @@ export default function About() {
 
                 <p className="text-3xl font-black text-blue-950">
 
-                  DNB
+                  Orthopedic
 
                 </p>
 
                 <p className="text-gray-500">
 
-                  Orthopedics
+                  Surgeon
 
                 </p>
 

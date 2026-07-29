@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const stats = [
   { value: "5+", label: "Years of Excellence" },
   { value: "10K+", label: "Patients Treated" },
-  { value: "58", label: "Google Rating" },
+  { value: "5*", label: "Google Rating" },
   { value: "24/7", label: "Emergency Care" },
 ];
 

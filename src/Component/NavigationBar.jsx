@@ -16,11 +16,11 @@ const NavigationBar = () => {
             path: "/specialities/knee-replacement",
         },
         {
-            name: "Hip Replacement",
+            name: "Total Hip Replacement",
             path: "/specialities/hip-replacement",
         },
         {
-            name: "joint Replacement",
+            name: "Joint Replacement",
             path: "/specialities/joint-replacement",
         },
         {
@@ -42,6 +42,10 @@ const NavigationBar = () => {
         {
             name: "Minimal Invasive Techniques",
             path: "/specialities/minimal-invasive-surgery",
+        },
+        {
+            name: "Limb Salvage",
+            path: "/specialities/limb-salvage",
         },
     ];
 
@@ -110,7 +114,7 @@ const NavigationBar = () => {
                             onMouseLeave={() => setSpecialityOpen(false)}
                         >
                             <button className="px-4 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-gray-50 hover:text-[#082c77] transition">
-                                my Specialities ▼
+                                My Specialities ▼
                             </button>
 
                             {specialityOpen && (
@@ -204,7 +208,7 @@ const NavigationBar = () => {
                                     )
                                 }
                             >
-                                <span>my Specialities</span>
+                                <span>My Specialities</span>
                                 <span>
                                     {mobileSpecialityOpen ? "−" : "+"}
                                 </span>

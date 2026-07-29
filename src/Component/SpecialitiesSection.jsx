@@ -4,6 +4,9 @@ import { GiBrokenBone } from "react-icons/gi";
 import { GiJoint } from "react-icons/gi";
 
 
+import Hip from '../assets/Hip.png'
+import TraumaAndFracture from '../assets/TraumaAndFracture.jpeg'
+import Arthroscopic from '../assets/Arthroscopic.jpeg'
 import OTbb from '../assets/gallery/OTbb.jpeg'
 import OTc from '../assets/gallery/OTc.jpeg'
 import OTd from '../assets/gallery/OTd.jpeg'
@@ -15,21 +18,21 @@ export const specializationData = [
     id: 1,
     title: "Knee Replacement",
     image:
-      KneeReplacementCard,
+      OTe,
       icons: <GiKneeCap />
   },
   {
     id: 2,
-    title: "Hip Replacement",
+    title: "Total Hip Replacement",
     image:
-      OTe,
+      Hip,
       icons: <GiKneeCap />
   },
   {
     id: 3,
     title: "Arthroscopy Surgery",
     image:
-      OTbb,
+      Arthroscopic,
       icons: <GiKneeCap />
   },
   {
@@ -50,7 +53,7 @@ export const specializationData = [
     id: 6,
     title: "Trauma and Fracture",
     image:
-      OTe,
+      TraumaAndFracture,
       icons: <GiBrokenBone />
   },
   {
@@ -74,12 +77,19 @@ export default function SpecialitiesSection() {
   return (
     <section className="bg-[#071B38] py-20">
 
-      <div className="max-w-7xl mx-auto px-5">
+      <div className="max-w-dvw mx-auto px-5">
 
-        <h4 className="text-center uppercase tracking-[4px] text-white font-semibold mb-2">
-          My
-          <span className="text-green-500"> Specialities</span>
-        </h4>
+        <div className="text-center mb-10">
+
+          {/* <p className="text-green-500 uppercase tracking-[5px] font-semibold">
+             
+          </p> */}
+
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-3">
+            My Specialities
+          </h2>
+
+        </div>
 
         <Swiper
           modules={[Autoplay, Navigation]}
@@ -160,13 +170,13 @@ export default function SpecialitiesSection() {
 
         <div className="flex justify-center mt-14">
 
-          <button className="group border-2 border-white rounded-full px-8 py-4 text-white font-semibold flex items-center gap-3 hover:bg-white hover:text-[#071B38] duration-300">
+          <button className="group border-2 border-white rounded-full px-8 py-4 font-semibold flex items-center gap-3 bg-white text-[#071B38] duration-300">
 
             View All Treatments
 
             <ArrowRight
               size={20}
-              className="group-hover:translate-x-1 duration-300"
+              className="group-hover:translate-x-1 text-green-500 duration-300"
             />
 
           </button>
