@@ -45,6 +45,13 @@ export const specializationData = [
       icons: <SiSpine />
   },
   {
+    id: 7,
+    title: "Joint Replacement",
+    image:
+      OTe,
+      icons: <GiJoint />
+  },
+  {
     id: 5,
     title: "Rehabilation",
     image:
@@ -57,13 +64,6 @@ export const specializationData = [
     image:
       TraumaAndFracture,
       icons: <GiBrokenBone />
-  },
-  {
-    id: 7,
-    title: "Joint Replacement",
-    image:
-      OTe,
-      icons: <GiJoint />
   },
 ];
 
