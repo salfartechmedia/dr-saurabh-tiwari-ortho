@@ -21,7 +21,7 @@ const features = [
         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
       </svg>
     ),
-    text: "Comprehensive care for bone, joint & spine disorders",
+    text: "Every treatment plan is personalized to fit your lifestyle, goals, and recovery journey.",
   },
   {
     icon: (
@@ -29,7 +29,7 @@ const features = [
         <path d="M9 12l2 2 4-4" /><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z" />
       </svg>
     ),
-    text: "Comprehensive care for bone, joint & spine disorders",
+    text: "To restore movement, relieve pain, and help you get back to doing what you love, with confidence.",
   },
   {
     icon: (
@@ -37,7 +37,7 @@ const features = [
         <rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" />
       </svg>
     ),
-    text: "Comprehensive care for bone, joint & spine disorders",
+    text: "We believe great treatment starts with listening, and healing starts with trust",
   },
 ];
 
@@ -84,7 +84,7 @@ export default function AboutSection() {
 
   return (
     <section
-      className="relative w-full bg-white overflow-hidden lg:h-screen"
+      className="relative mb-10 w-full bg-white overflow-hidden lg:h-screen"
     // style={{ height: "100svh", minHeight: "620px", fontFamily: "'Inter', 'Segoe UI', sans-serif" }}
 
     >
@@ -119,7 +119,7 @@ export default function AboutSection() {
                 <span
                   className="text-xs font-bold tracking-[0.18em] uppercase text-blue-950"
                 >
-                  About Us
+                     Dedicated to Restoring Compassion & Mobility
                 </span>
               </div>
 
@@ -128,9 +128,9 @@ export default function AboutSection() {
                 className="font-extrabold leading-tight mb-4"
                 style={{ fontSize: "clamp(1.8rem, 3vw, 2.6rem)", color: "#172554" }}
               >
-                Dedicated to Restoring
+                About Dr Saurabh Tiwari
                 <br />
-                <span className="text-green-500">Compassion</span> Mobility &
+                <span className="text-green-500">Orthopedic Surgeon</span>
               </h2>
 
               {/* Divider */}
@@ -142,7 +142,12 @@ export default function AboutSection() {
 
               {/* Body text */}
               <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-[420px]">
-                Dr. Saurabh Tiwari is a highly dedicated Orthopedic Surgeon committed to providing advanced diagnosis, treatment, and surgical care for bone, joint, and spine disorders. With extensive clinical experience and a patient-first approach, he combines modern orthopedic techniques with compassionate care to help patients regain mobility, relieve pain, and return to an active lifestyle. Every treatment plan is personalized to ensure the best possible outcomes and long-term recovery.
+                Dr. Saurabh Tiwari is a dedicated orthopaedic specialist committed to helping patients live pain-free, active lives. With a patient-first approach and a focus on modern, evidence-based treatments, he provides comprehensive care for all bone, joint, and muscle conditions.
+
+              </p>
+              <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-[420px]">
+                In addition to leading Shubh Ortho Clinic, Dr. Tiwari also serves as a Consultant Orthopaedic Surgeon at Jeevan Jyoti Hospital and MGM Hospital, Allahabad — two of the city’s most trusted healthcare institutions. This allows him to offer patients access to advanced surgical facilities, 24/7 emergency orthopaedic care, and multidisciplinary support when needed.
+
               </p>
 
               {/* Feature list */}
@@ -386,7 +391,7 @@ export default function AboutSection() {
       </div>
 
       {/* Bottom gold line */}
-      <div className="absolute bottom-0 left-0 right-0 h-0.5 text-green-500" style={{ background: "linear-gradient(90deg, transparent, #FCA311 40%, transparent)" }} />
+      {/* <div className="absolute bottom-0 left-0 right-0 h-0.5 text-green-500" style={{ background: "linear-gradient(90deg, transparent, #FCA311 40%, transparent)" }} /> */}
     </section>
   );
 }

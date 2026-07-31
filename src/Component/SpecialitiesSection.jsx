@@ -11,6 +11,8 @@ import OTbb from '../assets/gallery/OTbb.jpeg'
 import OTc from '../assets/gallery/OTc.jpeg'
 import OTd from '../assets/gallery/OTd.jpeg'
 import OTe from '../assets/gallery/OTe.jpeg'
+import OTaa from '../assets/gallery/OTaa.jpeg'
+import OTi from '../assets/gallery/OTi.jpeg'
 import KneeReplacementCard from '../assets/KneeReplacementCard.png'
 
 export const specializationData = [
@@ -39,14 +41,14 @@ export const specializationData = [
     id: 4,
     title: "Spine Treatment",
     image:
-      OTe,
+      OTaa,
       icons: <SiSpine />
   },
   {
     id: 5,
     title: "Rehabilation",
     image:
-      OTe,
+      OTi,
       icons: <GiKneeCap />
   },
   {
