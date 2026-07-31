@@ -14,7 +14,7 @@ import BreadCrumb from './BreadCrumb'
 import AppointmentCTA from './AppointmentCTA'
 import InstagramFeed from './InstagramFeed'
 import GoogleReviews from './GoogleReview'
-import SEO from "../components/SEO";
+import SEO from "./SEO";
 
 // import AppBread from './Breadcrumb'
 
