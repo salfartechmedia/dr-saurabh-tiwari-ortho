@@ -112,12 +112,12 @@ export default function GalleryPremium() {
 
             <div className='mt-8 flex flex-wrap justify-center gap-6 text-white/90'>
               <div className='text-center'>
-                <div className='text-3xl font-bold text-blue-300'>500+</div>
+                <div className='text-3xl font-bold text-blue-300'>5000+</div>
                 <div className='text-sm'>Successful Procedures</div>
               </div>
               <div className='w-px bg-white/20 hidden sm:block'></div>
               <div className='text-center'>
-                <div className='text-3xl font-bold text-blue-300'>1000+</div>
+                <div className='text-3xl font-bold text-blue-300'>10000+</div>
                 <div className='text-sm'>Patients Treated</div>
               </div>
               <div className='w-px bg-white/20 hidden sm:block'></div>
