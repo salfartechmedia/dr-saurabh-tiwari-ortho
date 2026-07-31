@@ -17,11 +17,12 @@ import DrSaurabhInOt from "../assets/DrSaurabhInOt.jpeg";
 import OTaa from "../assets/gallery/OTaa.jpeg";
 import OTbb from "../assets/gallery/OTbb.jpeg";
 import DrSaurabhOPDa from "../assets/gallery/DrSaurabhOPDa.jpeg";
+import SEO from "../Component/SEO";
 // import DrSaurabhPhoto from "../assets/about/DrSaurabhPhoto.png";
 
 const highlights = [
   {
-    number: "210+",
+    number: "1500+",
     title: "Trauma\nSurgeries",
     icon: Activity,
   },
@@ -36,7 +37,7 @@ const highlights = [
     icon: ShieldCheck,
   },
   {
-    number: "1000+",
+    number: "10000+",
     title: "Patients\nTreated",
     icon: HeartHandshake,
   },
@@ -80,104 +81,194 @@ const reasons = [
 
 export default function About() {
   return (
-    <div className="bg-white">
+    <>
+      <SEO
+        title="About Dr. Saurabh Tiwari | Orthopedic Surgeon in Prayagraj"
+        description="Know more about Dr. Saurabh Tiwari, Orthopedic & Joint Replacement Surgeon dedicated to providing advanced bone, joint and spine care with modern surgical techniques."
+        keywords="About Dr Saurabh Tiwari, Orthopedic Doctor Prayagraj"
+        canonical="https://drsaurabhtiwariortho.com/about"
+        image="https://drsaurabhtiwariortho.com/og-image.jpg"
+      />
+      <div className="bg-white">
 
-      {/* ================= HERO ================= */}
+        {/* ================= HERO ================= */}
 
-      <section className="relative overflow-hidden">
+        <section className="relative overflow-hidden">
 
-        <img
-          src={OTaa}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-25"
-        />
+          <img
+            src={OTaa}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover opacity-25"
+          />
 
-        <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-blue-100 blur-3xl"></div>
+          <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-blue-100 blur-3xl"></div>
 
-        <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-blue-50 blur-3xl"></div>
+          <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-blue-50 blur-3xl"></div>
 
-        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="max-w-7xl mx-auto px-6 py-24">
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            {/* LEFT */}
+              {/* LEFT */}
 
-            <div>
+              <div>
 
-              <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold text-blue-700">
+                <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold text-blue-700">
 
-                ABOUT DR. SAURABH TIWARI
+                  ABOUT DR. SAURABH TIWARI
 
-              </span>
-
-              <h1 className="mt-6 text-4xl md:text-6xl font-black text-blue-950 leading-tight">
-
-                Dedicated To Restoring
-                <br />
-
-                Movement &
-                <span className="text-blue-600">
-                  {" "}Improving Lives
                 </span>
 
-              </h1>
+                <h1 className="mt-6 text-4xl md:text-6xl font-black text-blue-950 leading-tight">
 
-              <p className="mt-8 text-lg leading-8 text-gray-600">
+                  Dedicated To Restoring
+                  <br />
 
-                Dr. Saurabh Tiwari is a dedicated DNB Orthopedic Surgeon
-                committed to delivering advanced orthopedic care through
-                modern treatment techniques, compassionate care, and
-                personalized recovery plans for every patient.
+                  Movement &
+                  <span className="text-blue-600">
+                    {" "}Improving Lives
+                  </span>
 
-              </p>
+                </h1>
 
-              <div className="mt-10 flex flex-wrap gap-4">
+                <p className="mt-8 text-lg leading-8 text-gray-600">
 
-                <button className="rounded-xl bg-blue-950 px-8 py-4 text-white font-semibold transition hover:bg-blue-800">
+                  Dr. Saurabh Tiwari is a dedicated DNB Orthopedic Surgeon
+                  committed to delivering advanced orthopedic care through
+                  modern treatment techniques, compassionate care, and
+                  personalized recovery plans for every patient.
 
-                  Book Appointment
+                </p>
 
-                </button>
+                <div className="mt-10 flex flex-wrap gap-4">
 
-                <button className="rounded-xl border-2 border-blue-950 px-8 py-4 font-semibold text-blue-950 hover:bg-blue-950 hover:text-white transition">
+                  <button className="rounded-xl bg-blue-950 px-8 py-4 text-white font-semibold transition hover:bg-blue-800">
 
-                  Contact Now
+                    Book Appointment
 
-                </button>
+                  </button>
+
+                  <button className="rounded-xl border-2 border-blue-950 px-8 py-4 font-semibold text-blue-950 hover:bg-blue-950 hover:text-white transition">
+
+                    Contact Now
+
+                  </button>
+
+                </div>
+
+              </div>
+
+              {/* RIGHT */}
+
+              <div className="relative">
+
+                <div className="absolute -left-10 top-20 h-44 w-44 rounded-full bg-blue-100 blur-2xl"></div>
+
+                <div className="relative rounded-[40px] overflow-hidden bg-gradient-to-br from-blue-50 to-white shadow-2xl">
+
+                  <img
+                    src={DrSaurabhInOt}
+                    alt="Dr Saurabh"
+                    className="w-full"
+                  />
+
+                </div>
+
+                <div className="absolute left-8 bottom-8 rounded-2xl bg-white p-5 shadow-xl">
+
+                  <p className="text-3xl font-black text-blue-950">
+
+                    Orthopedic
+
+                  </p>
+
+                  <p className="text-gray-500">
+
+                    Surgeon
+
+                  </p>
+
+                </div>
 
               </div>
 
             </div>
 
-            {/* RIGHT */}
+          </div>
 
-            <div className="relative">
+        </section>
 
-              <div className="absolute -left-10 top-20 h-44 w-44 rounded-full bg-blue-100 blur-2xl"></div>
+        {/* ================= ABOUT ================= */}
 
-              <div className="relative rounded-[40px] overflow-hidden bg-gradient-to-br from-blue-50 to-white shadow-2xl">
+        <section className="py-24">
+
+          <div className="max-w-7xl mx-auto px-6">
+
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+              <div>
 
                 <img
-                  src={DrSaurabhInOt}
-                  alt="Dr Saurabh"
-                  className="w-full"
+                  src={DrSaurabhOPDa}
+                  alt=""
+                  className="rounded-[35px] shadow-xl"
                 />
 
               </div>
 
-              <div className="absolute left-8 bottom-8 rounded-2xl bg-white p-5 shadow-xl">
+              <div>
 
-                <p className="text-3xl font-black text-blue-950">
+                <span className="text-blue-600 font-semibold uppercase tracking-widest">
 
-                  Orthopedic
+                  Who We Are
+
+                </span>
+
+                <h2 className="mt-4 text-4xl font-black text-blue-950">
+
+                  Expert Orthopedic Care
+                  For Every Stage Of Recovery
+
+                </h2>
+
+                <p className="mt-8 text-gray-600 leading-8">
+
+                  Specializing in orthopedic trauma, joint replacement,
+                  sports injuries, and spine care, Dr. Saurabh Tiwari
+                  focuses on providing personalized treatment that restores
+                  mobility, reduces pain, and helps patients return to
+                  their everyday lives with confidence.
 
                 </p>
 
-                <p className="text-gray-500">
+                <div className="mt-10 grid sm:grid-cols-2 gap-5">
 
-                  Surgeon
+                  {[
+                    "Patient First Approach",
+                    "Advanced Technology",
+                    "Accurate Diagnosis",
+                    "Evidence-Based Care",
+                  ].map((item) => (
 
-                </p>
+
+                    <div
+                      key={item}
+                      className="flex items-center gap-3"
+                    >
+
+                      <BadgeCheck className="text-blue-600" />
+
+                      <span className="font-medium">
+
+                        {item}
+
+                      </span>
+
+                    </div>
+
+                  ))}
+
+                </div>
 
               </div>
 
@@ -185,199 +276,52 @@ export default function About() {
 
           </div>
 
-        </div>
+        </section>
 
-      </section>
+        {/* ================= HIGHLIGHTS ================= */}
 
-      {/* ================= ABOUT ================= */}
+        <section className="bg-blue-50 py-24">
 
-      <section className="py-24">
+          <div className="max-w-7xl mx-auto px-6">
 
-        <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center">
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <p className="text-blue-600 font-semibold">
 
-            <div>
-
-              <img
-                src={DrSaurabhOPDa}
-                alt=""
-                className="rounded-[35px] shadow-xl"
-              />
-
-            </div>
-
-            <div>
-
-              <span className="text-blue-600 font-semibold uppercase tracking-widest">
-
-                Who We Are
-
-              </span>
-
-              <h2 className="mt-4 text-4xl font-black text-blue-950">
-
-                Expert Orthopedic Care
-                For Every Stage Of Recovery
-
-              </h2>
-
-              <p className="mt-8 text-gray-600 leading-8">
-
-                Specializing in orthopedic trauma, joint replacement,
-                sports injuries, and spine care, Dr. Saurabh Tiwari
-                focuses on providing personalized treatment that restores
-                mobility, reduces pain, and helps patients return to
-                their everyday lives with confidence.
+                EXPERIENCE HIGHLIGHTS
 
               </p>
 
-              <div className="mt-10 grid sm:grid-cols-2 gap-5">
+              <h2 className="mt-3 text-4xl font-black text-blue-950">
 
-                {[
-                  "Patient First Approach",
-                  "Advanced Technology",
-                  "Accurate Diagnosis",
-                  "Evidence-Based Care",
-                ].map((item) => (
-
-                  <div
-                    key={item}
-                    className="flex items-center gap-3"
-                  >
-
-                    <BadgeCheck className="text-blue-600" />
-
-                    <span className="font-medium">
-
-                      {item}
-
-                    </span>
-
-                  </div>
-
-                ))}
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* ================= HIGHLIGHTS ================= */}
-
-      <section className="bg-blue-50 py-24">
-
-        <div className="max-w-7xl mx-auto px-6">
-
-          <div className="text-center">
-
-            <p className="text-blue-600 font-semibold">
-
-              EXPERIENCE HIGHLIGHTS
-
-            </p>
-
-            <h2 className="mt-3 text-4xl font-black text-blue-950">
-
-              Trusted Expertise In Orthopedic Care
-
-            </h2>
-
-          </div>
-
-          <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-            {highlights.map((item) => (
-
-              <div
-                key={item.number}
-                className="group rounded-3xl bg-white p-8 shadow hover:-translate-y-3 transition"
-              >
-
-                <item.icon className="h-12 w-12 text-blue-600" />
-
-                <h3 className="mt-6 text-5xl font-black text-blue-950">
-
-                  {item.number}
-
-                </h3>
-
-                <p className="mt-4 whitespace-pre-line text-gray-600">
-
-                  {item.title}
-
-                </p>
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* ================= WHY CHOOSE ================= */}
-
-      <section className="py-24">
-
-        <div className="max-w-7xl mx-auto px-6">
-
-          <div className="grid lg:grid-cols-2 gap-16">
-
-            <div>
-
-              <span className="text-blue-600 font-semibold">
-
-                WHY CHOOSE US
-
-              </span>
-
-              <h2 className="mt-4 text-4xl font-black text-blue-950">
-
-                Orthopedic Care Built Around You
+                Trusted Expertise In Orthopedic Care
 
               </h2>
 
-              <p className="mt-8 text-gray-600 leading-8">
-
-                Every patient receives an individualized treatment plan
-                based on their condition, lifestyle, and recovery goals.
-                Our priority is helping you regain movement safely and
-                confidently.
-
-              </p>
-
             </div>
 
-            <div className="grid gap-5">
+            <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-              {reasons.map((item) => (
+              {highlights.map((item) => (
 
                 <div
-                  key={item}
-                  className="flex items-center justify-between rounded-2xl border border-gray-200 p-5 hover:border-blue-600 transition"
+                  key={item.number}
+                  className="group rounded-3xl bg-white p-8 shadow hover:-translate-y-3 transition"
                 >
 
-                  <div className="flex items-center gap-4">
+                  <item.icon className="h-12 w-12 text-blue-600" />
 
-                    <ShieldCheck className="text-blue-600" />
+                  <h3 className="mt-6 text-5xl font-black text-blue-950">
 
-                    <span className="font-semibold">
+                    {item.number}
 
-                      {item}
+                  </h3>
 
-                    </span>
+                  <p className="mt-4 whitespace-pre-line text-gray-600">
 
-                  </div>
+                    {item.title}
 
-                  <ChevronRight />
+                  </p>
 
                 </div>
 
@@ -387,150 +331,63 @@ export default function About() {
 
           </div>
 
-        </div>
+        </section>
 
-      </section>
+        {/* ================= WHY CHOOSE ================= */}
 
-      {/* ================= EXPERTISE ================= */}
+        <section className="py-24">
 
-      <section className="pb-24">
+          <div className="max-w-7xl mx-auto px-6">
 
-        <div className="max-w-7xl mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-16">
 
-          <div className="text-center">
+              <div>
 
-            <span className="text-blue-600 font-semibold">
+                <span className="text-blue-600 font-semibold">
 
-              SPECIALIZED CARE
+                  WHY CHOOSE US
 
-            </span>
+                </span>
 
-            <h2 className="mt-4 text-4xl font-black text-blue-950">
+                <h2 className="mt-4 text-4xl font-black text-blue-950">
 
-              Areas Of Expertise
+                  Orthopedic Care Built Around You
 
-            </h2>
+                </h2>
 
-          </div>
+                <p className="mt-8 text-gray-600 leading-8">
 
-          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  Every patient receives an individualized treatment plan
+                  based on their condition, lifestyle, and recovery goals.
+                  Our priority is helping you regain movement safely and
+                  confidently.
 
-            {expertise.map((item) => (
-
-              <div
-                key={item.title}
-                className="group rounded-3xl border border-gray-200 p-8 hover:border-blue-600 hover:shadow-xl transition"
-              >
-
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100">
-
-                  <item.icon className="h-8 w-8 text-blue-700" />
-
-                </div>
-
-                <h3 className="mt-6 text-2xl font-bold text-blue-950">
-
-                  {item.title}
-
-                </h3>
-
-                <p className="mt-3 text-gray-600">
-
-                  Comprehensive diagnosis and advanced treatment
-                  focused on restoring mobility and improving quality
-                  of life.
-
-                </p>
-
-                <button className="mt-6 flex items-center gap-2 font-semibold text-blue-700">
-
-                  Learn More
-
-                  <MoveRight size={18} />
-
-                </button>
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
-
-            {/* ================= PATIENT CARE ================= */}
-
-      <section className="bg-slate-50 py-24">
-        <div className="max-w-7xl mx-auto px-6">
-
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-            {/* Left */}
-
-            <div className="relative">
-
-              <img
-                src={OTbb}
-                alt="Patient Care"
-                className="rounded-[32px] shadow-xl"
-              />
-
-              <div className="absolute -bottom-6 -right-6 rounded-3xl bg-blue-950 text-white p-8 shadow-2xl">
-
-                <h3 className="text-4xl font-black">100%</h3>
-
-                <p className="mt-2 text-blue-100">
-                  Dedicated to Patient-Centered Care
                 </p>
 
               </div>
 
-            </div>
+              <div className="grid gap-5">
 
-            {/* Right */}
-
-            <div>
-
-              <span className="text-blue-600 font-semibold uppercase tracking-widest">
-                PATIENT FIRST
-              </span>
-
-              <h2 className="mt-4 text-4xl font-black text-blue-950 leading-tight">
-                Compassionate Care With
-                <br />
-                Modern Orthopedic Solutions
-              </h2>
-
-              <p className="mt-8 text-gray-600 leading-8">
-                Every patient deserves personalized attention, accurate diagnosis,
-                and a treatment plan tailored to their lifestyle and recovery goals.
-                Our focus extends beyond relieving pain—we strive to restore
-                confidence, mobility, and overall quality of life.
-              </p>
-
-              <div className="mt-10 space-y-5">
-
-                {[
-                  "Personalized Treatment Plans",
-                  "Advanced Diagnostic Approach",
-                  "Minimally Invasive Techniques",
-                  "Comprehensive Rehabilitation Guidance",
-                ].map((item) => (
+                {reasons.map((item) => (
 
                   <div
                     key={item}
-                    className="flex items-center gap-4"
+                    className="flex items-center justify-between rounded-2xl border border-gray-200 p-5 hover:border-blue-600 transition"
                   >
 
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100">
-                      <BadgeCheck className="h-5 w-5 text-blue-700" />
+                    <div className="flex items-center gap-4">
+
+                      <ShieldCheck className="text-blue-600" />
+
+                      <span className="font-semibold">
+
+                        {item}
+
+                      </span>
+
                     </div>
 
-                    <span className="font-medium text-gray-700">
-                      {item}
-                    </span>
+                    <ChevronRight />
 
                   </div>
 
@@ -542,163 +399,318 @@ export default function About() {
 
           </div>
 
-        </div>
-      </section>
+        </section>
 
-      {/* ================= TREATMENT PROCESS ================= */}
+        {/* ================= EXPERTISE ================= */}
 
-      <section className="py-24">
+        <section className="pb-24">
 
-        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-7xl mx-auto px-6">
 
-          <div className="text-center">
+            <div className="text-center">
 
-            <span className="text-blue-600 font-semibold uppercase tracking-widest">
-              OUR PROCESS
-            </span>
+              <span className="text-blue-600 font-semibold">
 
-            <h2 className="mt-4 text-4xl font-black text-blue-950">
-              Your Journey Towards Better Mobility
-            </h2>
+                SPECIALIZED CARE
 
-          </div>
+              </span>
 
-          <div className="mt-20 grid md:grid-cols-5 gap-8">
+              <h2 className="mt-4 text-4xl font-black text-blue-950">
 
-            {[
-              {
-                no: "01",
-                title: "Consultation",
-              },
-              {
-                no: "02",
-                title: "Diagnosis",
-              },
-              {
-                no: "03",
-                title: "Treatment Plan",
-              },
-              {
-                no: "04",
-                title: "Procedure",
-              },
-              {
-                no: "05",
-                title: "Recovery",
-              },
-            ].map((step) => (
+                Areas Of Expertise
 
-              <div
-                key={step.no}
-                className="relative rounded-3xl border border-gray-200 bg-white p-8 text-center hover:border-blue-600 hover:shadow-xl transition"
-              >
+              </h2>
 
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-950 text-white text-xl font-black">
+            </div>
 
-                  {step.no}
+            <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+              {expertise.map((item) => (
+
+                <div
+                  key={item.title}
+                  className="group rounded-3xl border border-gray-200 p-8 hover:border-blue-600 hover:shadow-xl transition"
+                >
+
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100">
+
+                    <item.icon className="h-8 w-8 text-blue-700" />
+
+                  </div>
+
+                  <h3 className="mt-6 text-2xl font-bold text-blue-950">
+
+                    {item.title}
+
+                  </h3>
+
+                  <p className="mt-3 text-gray-600">
+
+                    Comprehensive diagnosis and advanced treatment
+                    focused on restoring mobility and improving quality
+                    of life.
+
+                  </p>
+
+                  <button className="mt-6 flex items-center gap-2 font-semibold text-blue-700">
+
+                    Learn More
+
+                    <MoveRight size={18} />
+
+                  </button>
 
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold text-blue-950">
+              ))}
 
-                  {step.title}
-
-                </h3>
-
-              </div>
-
-            ))}
+            </div>
 
           </div>
 
-        </div>
+        </section>
 
-      </section>
+        {/* ================= PATIENT CARE ================= */}
 
-      {/* ================= MISSION ================= */}
+        <section className="bg-slate-50 py-24">
+          <div className="max-w-7xl mx-auto px-6">
 
-      <section className="bg-blue-950 text-white py-24">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-        <div className="max-w-5xl mx-auto px-6 text-center">
+              {/* Left */}
 
-          <span className="text-blue-300 uppercase tracking-widest font-semibold">
-            OUR MISSION
-          </span>
+              <div className="relative">
 
-          <h2 className="mt-5 text-4xl md:text-5xl font-black leading-tight">
+                <img
+                  src={OTbb}
+                  alt="Patient Care"
+                  className="rounded-[32px] shadow-xl"
+                />
 
-            Helping People Move Better,
-            <br />
+                <div className="absolute -bottom-6 -right-6 rounded-3xl bg-blue-950 text-white p-8 shadow-2xl">
 
-            Live Better.
+                  <h3 className="text-4xl font-black">100%</h3>
 
-          </h2>
+                  <p className="mt-2 text-blue-100">
+                    Dedicated to Patient-Centered Care
+                  </p>
 
-          <p className="mt-8 text-blue-100 leading-8 text-lg">
+                </div>
 
-            Our mission is to provide ethical, evidence-based orthopedic care
-            using modern medical advancements while ensuring every patient
-            receives compassionate treatment, clear guidance, and long-term
-            support throughout their recovery journey.
+              </div>
 
-          </p>
-
-        </div>
-
-      </section>
-
-      {/* ================= CTA ================= */}
-
-      <section className="relative overflow-hidden py-24">
-
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900 to-blue-800"></div>
-
-        <div className="relative max-w-7xl mx-auto px-6">
-
-          <div className="rounded-[40px] bg-white p-10 md:p-16 shadow-2xl">
-
-            <div className="grid lg:grid-cols-2 gap-10 items-center">
+              {/* Right */}
 
               <div>
 
                 <span className="text-blue-600 font-semibold uppercase tracking-widest">
-
-                  BOOK APPOINTMENT
-
+                  PATIENT FIRST
                 </span>
 
-                <h2 className="mt-5 text-4xl font-black text-blue-950 leading-tight">
-
-                  Take The First Step
+                <h2 className="mt-4 text-4xl font-black text-blue-950 leading-tight">
+                  Compassionate Care With
                   <br />
-
-                  Towards Pain-Free Living
-
+                  Modern Orthopedic Solutions
                 </h2>
 
-                <p className="mt-6 text-gray-600 leading-8">
-
-                  Whether you're dealing with fractures, joint pain,
-                  sports injuries, or spine-related conditions,
-                  expert orthopedic care is just one appointment away.
-
+                <p className="mt-8 text-gray-600 leading-8">
+                  Every patient deserves personalized attention, accurate diagnosis,
+                  and a treatment plan tailored to their lifestyle and recovery goals.
+                  Our focus extends beyond relieving pain—we strive to restore
+                  confidence, mobility, and overall quality of life.
                 </p>
+
+                <div className="mt-10 space-y-5">
+
+                  {[
+                    "Personalized Treatment Plans",
+                    "Advanced Diagnostic Approach",
+                    "Minimally Invasive Techniques",
+                    "Comprehensive Rehabilitation Guidance",
+                  ].map((item) => (
+
+                    <div
+                      key={item}
+                      className="flex items-center gap-4"
+                    >
+
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100">
+                        <BadgeCheck className="h-5 w-5 text-blue-700" />
+                      </div>
+
+                      <span className="font-medium text-gray-700">
+                        {item}
+                      </span>
+
+                    </div>
+
+                  ))}
+
+                </div>
 
               </div>
 
-              <div className="flex flex-wrap justify-center lg:justify-end gap-5">
+            </div>
 
-                <button className="rounded-xl bg-blue-950 px-8 py-4 text-white font-semibold hover:bg-blue-800 transition">
+          </div>
+        </section>
 
-                  Book Appointment
+        {/* ================= TREATMENT PROCESS ================= */}
 
-                </button>
+        <section className="py-24">
 
-                <button className="rounded-xl border-2 border-blue-950 px-8 py-4 font-semibold text-blue-950 hover:bg-blue-950 hover:text-white transition">
+          <div className="max-w-7xl mx-auto px-6">
 
-                  Call Now
+            <div className="text-center">
 
-                </button>
+              <span className="text-blue-600 font-semibold uppercase tracking-widest">
+                OUR PROCESS
+              </span>
+
+              <h2 className="mt-4 text-4xl font-black text-blue-950">
+                Your Journey Towards Better Mobility
+              </h2>
+
+            </div>
+
+            <div className="mt-20 grid md:grid-cols-5 gap-8">
+
+              {[
+                {
+                  no: "01",
+                  title: "Consultation",
+                },
+                {
+                  no: "02",
+                  title: "Diagnosis",
+                },
+                {
+                  no: "03",
+                  title: "Treatment Plan",
+                },
+                {
+                  no: "04",
+                  title: "Procedure",
+                },
+                {
+                  no: "05",
+                  title: "Recovery",
+                },
+              ].map((step) => (
+
+                <div
+                  key={step.no}
+                  className="relative rounded-3xl border border-gray-200 bg-white p-8 text-center hover:border-blue-600 hover:shadow-xl transition"
+                >
+
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-950 text-white text-xl font-black">
+
+                    {step.no}
+
+                  </div>
+
+                  <h3 className="mt-6 text-xl font-bold text-blue-950">
+
+                    {step.title}
+
+                  </h3>
+
+                </div>
+
+              ))}
+
+            </div>
+
+          </div>
+
+        </section>
+
+        {/* ================= MISSION ================= */}
+
+        <section className="bg-blue-950 text-white py-24">
+
+          <div className="max-w-5xl mx-auto px-6 text-center">
+
+            <span className="text-blue-300 uppercase tracking-widest font-semibold">
+              OUR MISSION
+            </span>
+
+            <h2 className="mt-5 text-4xl md:text-5xl font-black leading-tight">
+
+              Helping People Move Better,
+              <br />
+
+              Live Better.
+
+            </h2>
+
+            <p className="mt-8 text-blue-100 leading-8 text-lg">
+
+              Our mission is to provide ethical, evidence-based orthopedic care
+              using modern medical advancements while ensuring every patient
+              receives compassionate treatment, clear guidance, and long-term
+              support throughout their recovery journey.
+
+            </p>
+
+          </div>
+
+        </section>
+
+        {/* ================= CTA ================= */}
+
+        <section className="relative overflow-hidden py-24">
+
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900 to-blue-800"></div>
+
+          <div className="relative max-w-7xl mx-auto px-6">
+
+            <div className="rounded-[40px] bg-white p-10 md:p-16 shadow-2xl">
+
+              <div className="grid lg:grid-cols-2 gap-10 items-center">
+
+                <div>
+
+                  <span className="text-blue-600 font-semibold uppercase tracking-widest">
+
+                    BOOK APPOINTMENT
+
+                  </span>
+
+                  <h2 className="mt-5 text-4xl font-black text-blue-950 leading-tight">
+
+                    Take The First Step
+                    <br />
+
+                    Towards Pain-Free Living
+
+                  </h2>
+
+                  <p className="mt-6 text-gray-600 leading-8">
+
+                    Whether you're dealing with fractures, joint pain,
+                    sports injuries, or spine-related conditions,
+                    expert orthopedic care is just one appointment away.
+
+                  </p>
+
+                </div>
+
+                <div className="flex flex-wrap justify-center lg:justify-end gap-5">
+
+                  <button className="rounded-xl bg-blue-950 px-8 py-4 text-white font-semibold hover:bg-blue-800 transition">
+
+                    Book Appointment
+
+                  </button>
+
+                  <button className="rounded-xl border-2 border-blue-950 px-8 py-4 font-semibold text-blue-950 hover:bg-blue-950 hover:text-white transition">
+
+                    Call Now
+
+                  </button>
+
+                </div>
 
               </div>
 
@@ -706,10 +718,9 @@ export default function About() {
 
           </div>
 
-        </div>
+        </section>
 
-      </section>
-
-    </div>
+      </div>
+    </>
   );
 }

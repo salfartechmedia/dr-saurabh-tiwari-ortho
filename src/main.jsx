@@ -22,27 +22,28 @@ import SpineSurgery from './Page/Specialities/SpineSurgery.jsx'
 import Arthroscopy from './Page/Specialities/Arthroscopy.jsx'
 import PatientsEducation from './Page/PatientsEducation.jsx'
 import LimbSalvage from './Page/Specialities/LimbSalvage.jsx'
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <><App/></>,
+    element: <><App /></>,
     children: [
       {
         path: '',
-        element: <Home/>
+        element: <Home />
       },
       {
         path: 'book-appointment',
-        element: <ContactForm/>
+        element: <ContactForm />
       },
       {
         path: 'about',
-        element: <About/>
+        element: <About />
       },
       {
         path: 'gallery',
-        element: <GalleryPremium/>
+        element: <GalleryPremium />
       },
       // {
       //   path: 'specialities',
@@ -54,43 +55,43 @@ const router = createBrowserRouter([
       // },
       {
         path: 'specialities/joint-replacement',
-        element: <JointReplacement/>
+        element: <JointReplacement />
       },
       {
         path: 'specialities/knee-replacement',
-        element: <KneeReplacement/>
+        element: <KneeReplacement />
       },
       {
         path: 'specialities/hip-replacement',
-        element: <HipReplacement/>
+        element: <HipReplacement />
       },
       {
         path: 'specialities/trauma-and-fracture',
-        element: <TraumaAndFractures/>
+        element: <TraumaAndFractures />
       },
       {
-        path: 'specialities/Rehabilitation',
-        element: <Rehabilation/>
+        path: 'specialities/rehabilitation',
+        element: <Rehabilation />
       },
       {
         path: 'specialities/minimal-invasive-surgery',
-        element: <MinimalInvasiveSurgery/>
+        element: <MinimalInvasiveSurgery />
       },
       {
         path: 'specialities/spine-surgery',
-        element: <SpineSurgery/>
+        element: <SpineSurgery />
       },
       {
         path: 'specialities/arthroscopy',
-        element: <Arthroscopy/>
+        element: <Arthroscopy />
       },
       {
         path: 'specialities/limb-salvage',
-        element: <LimbSalvage/>
+        element: <LimbSalvage />
       },
       {
         path: 'patients-education',
-        element: <PatientsEducation/>
+        element: <PatientsEducation />
       },
       // {
       //   path: 'book-appointment',
@@ -100,10 +101,12 @@ const router = createBrowserRouter([
   }
 ])
 createRoot(document.getElementById('root')).render(
-    // <BrowserRouter>
+  // <BrowserRouter>
   <React.StrictMode>
-    {/* <App /> */}
-    <RouterProvider router={router}/>
+    <HelmetProvider>
+      {/* <App /> */}
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </React.StrictMode>,
-    // </BrowserRouter>11
+  // </BrowserRouter>11
 )

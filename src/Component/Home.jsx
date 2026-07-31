@@ -14,6 +14,7 @@ import BreadCrumb from './BreadCrumb'
 import AppointmentCTA from './AppointmentCTA'
 import InstagramFeed from './InstagramFeed'
 import GoogleReviews from './GoogleReview'
+import SEO from "../components/SEO";
 
 // import AppBread from './Breadcrumb'
 
@@ -21,6 +22,13 @@ const Home = () => {
   return (
     <>
       {/* <BreadCrumb/> */}
+      <SEO
+        title="Dr. Saurabh Tiwari | Best Orthopedic Surgeon in Prayagraj"
+        description="Consult Dr. Saurabh Tiwari, experienced orthopedic surgeon in Prayagraj for joint replacement, knee replacement, hip replacement, trauma care, sports injuries and spine treatment."
+        keywords="Orthopedic Surgeon Prayagraj, Knee Replacement, Hip Replacement, Joint Replacement, Spine Surgeon, Bone Doctor"
+        canonical="https://drsaurabhtiwariortho.com/"
+        image="https://drsaurabhtiwari.com/og-image.jpg"
+      />
 
       {/* <Hero/> */}
       <HeroSection />
